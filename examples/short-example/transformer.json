@@ -1,0 +1,16 @@
+{
+    "transformations": [
+        {
+            "sourcePointer": "/preTransformed/datasetVersion/metadataBlocks/citation/title",
+            "resultPointer": "/title"
+        },
+        {
+            "sourcePointer": "/preTransformed/datasetVersion/metadataBlocks/citation/author[i]/authorName[i]",
+            "resultPointer": "/author[i]/authorName[i]"
+        },
+        {
+            "sourcePointer": "/datasetSchemaDotOrg/distribution[i]/contentUrl",
+            "resultPointer": "/files[i]"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "transformations": [
+        {
+            "resultPointer": "/hello",
+            "expressions": [
+                "\"World!\""
+            ]
+        }
+    ]
+}
