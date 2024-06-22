@@ -1,0 +1,220 @@
+{
+    "transformations": [
+        {
+            "sourcePointer": "/datasetJson",
+            "resultPointer": "/datasetJson"
+        },
+        {
+            "sourcePointer": "/datasetORE",
+            "resultPointer": "/datasetORE"
+        },
+        {
+            "sourcePointer": "/datasetSchemaDotOrg",
+            "resultPointer": "/datasetSchemaDotOrg"
+        },
+        {
+            "sourcePointer": "/datasetFileDetails",
+            "resultPointer": "/datasetFileDetails"
+        },
+        {
+            "sourcePointer": "/dataCiteXml",
+            "resultPointer": "/dataCiteXml"
+        },
+        {
+            "sourcePointer": "/preTransformed",
+            "resultPointer": "/preTransformed"
+        },
+        {
+            "sourcePointer": "/preTransformed/datasetVersion",
+            "resultPointer": "/example/dcterms:modified",
+            "expressions": [
+                "script(res = x.releaseTime.substring(0, 10))"
+            ]
+        },
+        {
+            "sourcePointer": "/preTransformed/publisher",
+            "resultPointer": "/example/dcterms:creator"
+        },
+        {
+            "resultPointer": "/example/@type",
+            "expressions": [
+                "\"ore:ResourceMap\""
+            ]
+        },
+        {
+            "sourcePointer": "/preTransformed/persistentUrl",
+            "resultPointer": "/example/@id",
+            "expressions": [
+                "script(res = 'https://demo.dataverse.org/api/datasets/export?exporter=OAI_ORE&persistentId=' + x)"
+            ]
+        },
+        {
+            "sourcePointer": "/preTransformed/datasetVersion/metadataBlocks/citation/author[i]/authorName[i]",
+            "resultPointer": "/example/ore:describes/author[i]/citation:authorName[i]"
+        },
+        {
+            "sourcePointer": "/preTransformed/datasetVersion/metadataBlocks/citation/author[i]/authorAffiliation[i]",
+            "resultPointer": "/example/ore:describes/author[i]/citation:authorAffiliation[i]"
+        },
+        {
+            "sourcePointer": "/preTransformed/datasetVersion/metadataBlocks/citation/dsDescription[i]/dsDescriptionValue[i]",
+            "resultPointer": "/example/ore:describes/citation:dsDescription[i]/citation:dsDescriptionValue[i]"
+        },
+        {
+            "sourcePointer": "/preTransformed/datasetVersion/metadataBlocks/citation/datasetContact[i]/datasetContactName[i]",
+            "resultPointer": "/example/ore:describes/citation:datasetContact[i]/citation:datasetContactName[i]"
+        },
+        {
+            "sourcePointer": "/preTransformed/datasetVersion/metadataBlocks/citation/datasetContact[i]/datasetContactEmail[i]",
+            "resultPointer": "/example/ore:describes/citation:datasetContact[i]/citation:datasetContactEmail[i]"
+        },
+        {
+            "sourcePointer": "/preTransformed/datasetVersion/metadataBlocks/citation/title",
+            "resultPointer": "/example/ore:describes/title"
+        },
+        {
+            "sourcePointer": "/preTransformed/datasetVersion/metadataBlocks/citation/subject[i][i]",
+            "resultPointer": "/example/ore:describes/subject"
+        },
+        {
+            "sourcePointer": "/preTransformed/persistentUrl",
+            "resultPointer": "/example/ore:describes/@id"
+        },
+        {
+            "resultPointer": "/example/ore:describes/@type",
+            "expressions": [
+                "script(res = new List(['ore:Aggregation', 'schema:Dataset']))"
+            ]
+        },
+        {
+            "sourcePointer": "/preTransformed/datasetVersion",
+            "resultPointer": "/example/ore:describes/schema:version",
+            "expressions": [
+                "script(res = x.versionNumber + '.' + x.versionMinorNumber)"
+            ]
+        },
+        {
+            "sourcePointer": "/preTransformed/datasetVersion/metadataBlocks/citation/title",
+            "resultPointer": "/example/ore:describes/schema:name"
+        },
+        {
+            "sourcePointer": "/preTransformed/datasetVersion",
+            "resultPointer": "/example/ore:describes/schema:dateModified",
+            "expressions": [
+                "script(res = x.releaseTime.substring(0, 10))"
+            ]
+        },
+        {
+            "sourcePointer": "/preTransformed/datasetVersion/publicationDate",
+            "resultPointer": "/example/ore:describes/schema:datePublished"
+        },
+        {
+            "sourcePointer": "/preTransformed/datasetVersion/license/uri",
+            "resultPointer": "/example/ore:describes/schema:license"
+        },
+        {
+            "sourcePointer": "/preTransformed/datasetVersion/fileAccessRequest",
+            "resultPointer": "/example/ore:describes/dvcore:fileTermsOfAccess/dvcore:fileRequestAccess"
+        },
+        {
+            "sourcePointer": "/preTransformed/publisher",
+            "resultPointer": "/example/ore:describes/schema:includedInDataCatalog"
+        },
+        {
+            "sourcePointer": "/preTransformed/datasetVersion/files[i]/dataFile",
+            "resultPointer": "/example/ore:describes/ore:aggregates[i]/schema:name",
+            "expressions": [
+                "script(res = x.originalFileName ? x.originalFileName : x.filename)"
+            ]
+        },
+        {
+            "sourcePointer": "/preTransformed/datasetVersion/files[i]/restricted",
+            "resultPointer": "/example/ore:describes/ore:aggregates[i]/dvcore:restricted"
+        },
+        {
+            "sourcePointer": "/preTransformed/datasetVersion/files[i]/version",
+            "resultPointer": "/example/ore:describes/ore:aggregates[i]/schema:version"
+        },
+        {
+            "sourcePointer": "/preTransformed/datasetVersion/files[i]/datasetVersionId",
+            "resultPointer": "/example/ore:describes/ore:aggregates[i]/dvcore:datasetVersionId"
+        },
+        {
+            "sourcePointer": "/preTransformed/datasetVersion/files[i]/dataFile/persistentId",
+            "resultPointer": "/example/ore:describes/ore:aggregates[i]/@id"
+        },
+        {
+            "sourcePointer": "/preTransformed/datasetVersion/files[i]/dataFile",
+            "resultPointer": "/example/ore:describes/ore:aggregates[i]/schema:sameAs",
+            "expressions": [
+                "script(res = 'https://demo.dataverse.org/api/access/datafile/:persistentId?persistentId=' + x.persistentId + (x.originalFileFormat ? '&format=original' : ''))"
+            ]
+        },
+        {
+            "sourcePointer": "/preTransformed/datasetVersion/files[i]",
+            "resultPointer": "/example/ore:describes/ore:aggregates[i]/@type",
+            "expressions": [
+                "\"ore:AggregatedResource\""
+            ]
+        },
+        {
+            "sourcePointer": "/preTransformed/datasetVersion/files[i]/dataFile",
+            "resultPointer": "/example/ore:describes/ore:aggregates[i]/schema:fileFormat",
+            "expressions": [
+                "script(res = x.originalFileFormat ? x.originalFileFormat : x.contentType)"
+            ]
+        },
+        {
+            "sourcePointer": "/preTransformed/datasetVersion/files[i]/dataFile",
+            "resultPointer": "/example/ore:describes/ore:aggregates[i]/dvcore:filesize",
+            "expressions": [
+                "script(res = x.originalFileSize ? x.originalFileSize : x.filesize)"
+            ]
+        },
+        {
+            "sourcePointer": "/preTransformed/datasetVersion/files[i]/dataFile/storageIdentifier",
+            "resultPointer": "/example/ore:describes/ore:aggregates[i]/dvcore:storageIdentifier"
+        },
+        {
+            "sourcePointer": "/preTransformed/datasetVersion/files[i]/dataFile",
+            "resultPointer": "/example/ore:describes/ore:aggregates[i]/dvcore:currentIngestedName",
+            "expressions": [
+                "script(res = x.originalFileFormat ? x.filename : JsonValue.NULL)"
+            ]
+        },
+        {
+            "sourcePointer": "/preTransformed/datasetVersion/files[i]/dataFile/UNF",
+            "resultPointer": "/example/ore:describes/ore:aggregates[i]/dvcore:UNF"
+        },
+        {
+            "sourcePointer": "/preTransformed/datasetVersion/files[i]/dataFile/rootDataFileId",
+            "resultPointer": "/example/ore:describes/ore:aggregates[i]/dvcore:rootDataFileId"
+        },
+        {
+            "sourcePointer": "/preTransformed/datasetVersion/files[i]/dataFile/checksum/type",
+            "resultPointer": "/example/ore:describes/ore:aggregates[i]/dvcore:checksum/@type"
+        },
+        {
+            "sourcePointer": "/preTransformed/datasetVersion/files[i]/dataFile/checksum/value",
+            "resultPointer": "/example/ore:describes/ore:aggregates[i]/dvcore:checksum/@value"
+        },
+        {
+            "sourcePointer": "/preTransformed/datasetVersion/files[i]/dataFile/persistentId",
+            "resultPointer": "/example/ore:describes/schema:hasPart"
+        },
+        {
+            "resultPointer": "/example/@context",
+            "expressions": [
+                "script(res = {author: 'http://purl.org/dc/terms/creator', citation: 'https://dataverse.org/schema/citation/', dcterms: 'http://purl.org/dc/terms/', dvcore: 'https://dataverse.org/schema/core#', ore: 'http://www.openarchives.org/ore/terms/', schema: 'http://schema.org/', subject: 'http://purl.org/dc/terms/subject', title: 'http://purl.org/dc/terms/title'})"
+            ]
+        },
+        {
+            "useResultAsSource": true,
+            "sourcePointer": "/example",
+            "resultPointer": "/example",
+            "expressions": [
+                "script(importJS /js/flatten.js endImport)"
+            ]
+        }
+    ]
+}

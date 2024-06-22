@@ -1,0 +1,10 @@
+{
+    "formatName": "transformer_json",
+    "harvestable": false,
+    "availableToUsers": true,
+    "mediaType": "application/json",
+    "displayName": "Default transformer example",
+    "displayName_en": "Transformer example",
+    "displayName_fr": "Exemple de transformer",
+    "displayName_fr-CA": "Exemple de transformateur"
+}

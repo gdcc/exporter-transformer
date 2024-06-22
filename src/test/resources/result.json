@@ -1,0 +1,87 @@
+{
+    "dcterms:modified": "2023-08-10",
+    "dcterms:creator": "Demo Dataverse",
+    "@type": "ore:ResourceMap",
+    "@id": "https://demo.dataverse.org/api/datasets/export?exporter=OAI_ORE&persistentId=https://doi.org/10.70122/FK2/MXUBHV",
+    "ore:describes": {
+        "author": {
+            "citation:authorName": "Finch, Fiona",
+            "citation:authorAffiliation": "Birds Inc."
+        },
+        "citation:dsDescription": {
+            "citation:dsDescriptionValue": "Darwin's finches (also known as the Galápagos finches) are a group of about fifteen species of passerine birds."
+        },
+        "citation:datasetContact": {
+            "citation:datasetContactName": "Finch, Fiona",
+            "citation:datasetContactEmail": "finch@mailinator.com"
+        },
+        "title": "Darwin's Finches",
+        "subject": "Medicine, Health and Life Sciences",
+        "@id": "https://doi.org/10.70122/FK2/MXUBHV",
+        "@type": [
+            "ore:Aggregation",
+            "schema:Dataset"
+        ],
+        "schema:version": "3.0",
+        "schema:name": "Darwin's Finches",
+        "schema:dateModified": "2023-08-10",
+        "schema:datePublished": "2023-02-02",
+        "schema:license": "http://creativecommons.org/publicdomain/zero/1.0",
+        "dvcore:fileTermsOfAccess": {
+            "dvcore:fileRequestAccess": true
+        },
+        "schema:includedInDataCatalog": "Demo Dataverse",
+        "ore:aggregates": [
+            {
+                "schema:name": "ETD_Checklist.pdf",
+                "dvcore:restricted": false,
+                "schema:version": 1,
+                "dvcore:datasetVersionId": 236791,
+                "@id": "doi:10.70122/FK2/MXUBHV/NYCBCL",
+                "schema:sameAs": "https://demo.dataverse.org/api/access/datafile/:persistentId?persistentId=doi:10.70122/FK2/MXUBHV/NYCBCL",
+                "@type": "ore:AggregatedResource",
+                "schema:fileFormat": "application/pdf",
+                "dvcore:filesize": 132784,
+                "dvcore:storageIdentifier": "s3://demo-dataverse-org:189e008067e-fea545873a8f",
+                "dvcore:rootDataFileId": -1,
+                "dvcore:checksum": {
+                    "@type": "MD5",
+                    "@value": "aa2aeb714e166fca1077191e90039afb"
+                }
+            },
+            {
+                "schema:name": "Figure 3.xlsx",
+                "dvcore:restricted": false,
+                "schema:version": 3,
+                "dvcore:datasetVersionId": 236791,
+                "@id": "doi:10.70122/FK2/MXUBHV/I9VN8N",
+                "schema:sameAs": "https://demo.dataverse.org/api/access/datafile/:persistentId?persistentId=doi:10.70122/FK2/MXUBHV/I9VN8N&format=original",
+                "@type": "ore:AggregatedResource",
+                "schema:fileFormat": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+                "dvcore:filesize": 20150,
+                "dvcore:storageIdentifier": "s3://demo-dataverse-org:189e00b0105-8dcfc40fd5bc",
+                "dvcore:currentIngestedName": "Figure 3.tab",
+                "dvcore:UNF": "UNF:6:5hb7OY8WCHe0WAmFMuo3rw==",
+                "dvcore:rootDataFileId": -1,
+                "dvcore:checksum": {
+                    "@type": "MD5",
+                    "@value": "a5429cb0cafb38d2bd6bcbb29db1566f"
+                }
+            }
+        ],
+        "schema:hasPart": [
+            "doi:10.70122/FK2/MXUBHV/NYCBCL",
+            "doi:10.70122/FK2/MXUBHV/I9VN8N"
+        ]
+    },
+    "@context": {
+        "author": "http://purl.org/dc/terms/creator",
+        "citation": "https://dataverse.org/schema/citation/",
+        "dcterms": "http://purl.org/dc/terms/",
+        "dvcore": "https://dataverse.org/schema/core#",
+        "ore": "http://www.openarchives.org/ore/terms/",
+        "schema": "http://schema.org/",
+        "subject": "http://purl.org/dc/terms/subject",
+        "title": "http://purl.org/dc/terms/title"
+    }
+}

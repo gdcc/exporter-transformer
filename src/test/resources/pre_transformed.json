@@ -1,0 +1,122 @@
+{
+    "id": 2023461,
+    "identifier": "FK2/MXUBHV",
+    "persistentUrl": "https://doi.org/10.70122/FK2/MXUBHV",
+    "protocol": "doi",
+    "authority": "10.70122",
+    "publisher": "Demo Dataverse",
+    "publicationDate": "2023-02-02",
+    "storageIdentifier": "s3://10.70122/FK2/MXUBHV",
+    "datasetVersion": {
+        "id": 236791,
+        "datasetId": 2023461,
+        "datasetPersistentId": "doi:10.70122/FK2/MXUBHV",
+        "storageIdentifier": "s3://10.70122/FK2/MXUBHV",
+        "versionNumber": 3,
+        "versionMinorNumber": 0,
+        "versionState": "RELEASED",
+        "UNF": "UNF:6:5hb7OY8WCHe0WAmFMuo3rw==",
+        "lastUpdateTime": "2023-08-10T15:23:21Z",
+        "releaseTime": "2023-08-10T15:23:21Z",
+        "createTime": "2023-08-10T15:22:48Z",
+        "publicationDate": "2023-02-02",
+        "citationDate": "2023-02-02",
+        "license": {
+            "name": "CC0 1.0",
+            "uri": "http://creativecommons.org/publicdomain/zero/1.0",
+            "iconUri": "https://licensebuttons.net/p/zero/1.0/88x31.png"
+        },
+        "fileAccessRequest": true,
+        "metadataBlocks": {
+            "citation": {
+                "title": [
+                    "Darwin's Finches"
+                ],
+                "author": [
+                    {
+                        "authorName": [
+                            "Finch, Fiona"
+                        ],
+                        "authorAffiliation": [
+                            "Birds Inc."
+                        ]
+                    }
+                ],
+                "datasetContact": [
+                    {
+                        "datasetContactName": [
+                            "Finch, Fiona"
+                        ],
+                        "datasetContactEmail": [
+                            "finch@mailinator.com"
+                        ]
+                    }
+                ],
+                "dsDescription": [
+                    {
+                        "dsDescriptionValue": [
+                            "Darwin's finches (also known as the Galápagos finches) are a group of about fifteen species of passerine birds."
+                        ]
+                    }
+                ],
+                "subject": [
+                    [
+                        "Medicine, Health and Life Sciences"
+                    ]
+                ]
+            }
+        },
+        "files": [
+            {
+                "label": "ETD_Checklist.pdf",
+                "restricted": false,
+                "version": 1,
+                "datasetVersionId": 236791,
+                "dataFile": {
+                    "id": 2077470,
+                    "persistentId": "doi:10.70122/FK2/MXUBHV/NYCBCL",
+                    "pidURL": "https://doi.org/10.70122/FK2/MXUBHV/NYCBCL",
+                    "filename": "ETD_Checklist.pdf",
+                    "contentType": "application/pdf",
+                    "filesize": 132784,
+                    "storageIdentifier": "s3://demo-dataverse-org:189e008067e-fea545873a8f",
+                    "rootDataFileId": -1,
+                    "md5": "aa2aeb714e166fca1077191e90039afb",
+                    "checksum": {
+                        "type": "MD5",
+                        "value": "aa2aeb714e166fca1077191e90039afb"
+                    },
+                    "creationDate": "2023-08-10"
+                }
+            },
+            {
+                "label": "Figure 3.tab",
+                "restricted": false,
+                "version": 3,
+                "datasetVersionId": 236791,
+                "dataFile": {
+                    "id": 2077471,
+                    "persistentId": "doi:10.70122/FK2/MXUBHV/I9VN8N",
+                    "pidURL": "https://doi.org/10.70122/FK2/MXUBHV/I9VN8N",
+                    "filename": "Figure 3.tab",
+                    "contentType": "text/tab-separated-values",
+                    "filesize": 3616,
+                    "storageIdentifier": "s3://demo-dataverse-org:189e00b0105-8dcfc40fd5bc",
+                    "originalFileFormat": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+                    "originalFormatLabel": "MS Excel Spreadsheet",
+                    "originalFileSize": 20150,
+                    "originalFileName": "Figure 3.xlsx",
+                    "UNF": "UNF:6:5hb7OY8WCHe0WAmFMuo3rw==",
+                    "rootDataFileId": -1,
+                    "md5": "a5429cb0cafb38d2bd6bcbb29db1566f",
+                    "checksum": {
+                        "type": "MD5",
+                        "value": "a5429cb0cafb38d2bd6bcbb29db1566f"
+                    },
+                    "creationDate": "2023-08-10"
+                }
+            }
+        ],
+        "citation": "Finch, Fiona, 2023, \"Darwin's Finches\", https://doi.org/10.70122/FK2/MXUBHV, Demo Dataverse, V3, UNF:6:5hb7OY8WCHe0WAmFMuo3rw== [fileUNF]"
+    }
+}
