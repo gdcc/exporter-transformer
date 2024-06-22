@@ -38,13 +38,13 @@ import jakarta.json.JsonObjectBuilder;
 // All Exporter implementations must implement this interface or the XMLExporter
 // interface that extends it.
 public class TransformerExporter implements Exporter {
-    private static final Logger logger = Logger.getLogger(TransformerFactory.class.getName());
-    private static final TransformerFactory factory = TransformerFactory.factory(new NashornScriptEngineFactory());
-    private static final Transformer preTransformer = transformer("pre_transformer/pre_transformer.json");
-    private static final Transformer transformer = transformer("transformer.json");
-    private static final Config config = config("config.json");
+    private final Logger logger = Logger.getLogger(TransformerFactory.class.getName());
+    private final TransformerFactory factory = TransformerFactory.factory(new NashornScriptEngineFactory());
+    private final Transformer preTransformer = transformer("pre_transformer.json");
+    private final Transformer transformer = transformer("transformer.json");
+    private final Config config = config("config.json");
 
-    private static Transformer transformer(final String fileName) {
+    private Transformer transformer(final String fileName) {
         try {
             // when running tests, etc.
             final Path path = Paths.get(TransformerExporter.class.getClassLoader().getResource(fileName).toURI());
@@ -61,7 +61,7 @@ public class TransformerExporter implements Exporter {
         }
     }
 
-    private static Config config(final String fileName) {
+    private Config config(final String fileName) {
         try {
             // when running tests, etc.
             final Path path = Paths.get(TransformerExporter.class.getClassLoader().getResource(fileName).toURI());
@@ -78,7 +78,7 @@ public class TransformerExporter implements Exporter {
         }
     }
 
-    private static Path getOutPath() throws URISyntaxException, IOException {
+    private Path getOutPath() throws URISyntaxException, IOException {
         // copy the transformers and config from the jar if they are not yet in the
         // exporters dir
         final URI jarUri = TransformerExporter.class.getProtectionDomain().getCodeSource().getLocation().toURI();
@@ -86,12 +86,13 @@ public class TransformerExporter implements Exporter {
         final Path outPath = Paths.get(jarUri.toString().substring("jar:file:".length(),
                 jarUri.toString().length() - ".jar!/".length()));
         Files.createDirectories(outPath.resolve("js"));
-        List.of(Paths.get("pre_transformer", "pre_transformer.json"), Paths.get("transformer.json"),
-                Paths.get("js", "flatten.js"), Paths.get("js", "map_metadata_fields.js"), Paths.get("config.json"))
+        List.of(Paths.get("pre_transformer.json"), Paths.get("transformer.json"), Paths.get("js", "flatten.js"),
+                Paths.get("js", "map_metadata_fields.js"), Paths.get("config.json"))
                 .stream().filter(x -> !Files.exists(outPath.resolve(x))).forEach(x -> {
                     try {
                         Files.copy(fs.getPath(x.toString()), outPath.resolve(x));
                     } catch (final IOException e2) {
+                        logger.severe("file copy failed: " + e2);
                     }
                 });
         fs.close();
@@ -154,7 +155,6 @@ public class TransformerExporter implements Exporter {
             job.add("datasetORE", dataProvider.getDatasetORE());
             job.add("datasetSchemaDotOrg", dataProvider.getDatasetSchemaDotOrg());
             job.add("datasetFileDetails", dataProvider.getDatasetFileDetails());
-            job.add("dataCiteXml", dataProvider.getDataCiteXml());
             job.add("preTransformed", preTransformed);
 
             final JsonObject transformed = transformer.transform(job.build());
