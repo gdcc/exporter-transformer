@@ -1,0 +1,47 @@
+entityName,targetPropertyName,source,sourceField,value
+Metadata,,,,
+,__id,,,"""ro-crate-metadata.json"""
+,__type,,,"""CreativeWork"""
+,conformsTo ,,,"refersTo:""https://w3id.org/ro/crate/1.1"""
+,about,,,refersTo:Root
+Root,,,,
+,__id,,,"""./"""
+,__type,,,"""Dataset"""
+,identifier,,,persistentUrl
+,name,datasetVersion/metadataBlocks/citation,title,
+,description,datasetVersion/metadataBlocks/citation,dsDescription,dsDescriptionValue
+,license,,,refersTo:License
+,author,,,refersTo:Author
+,datePublished,datasetVersion,publicationDate,
+,keywords,datasetVersion/metadataBlocks/citation,keyword,keywordvalue
+,funder,,,refersTo:Funder
+Author,,datasetVersion/metadataBlocks/citation,author,
+,__id,,,authorName
+,__type,,,"""Person"""
+,affilliation,,,refersTo:AuthorAffiliation
+,name,,,authorName
+AuthorAffiliation,,datasetVersion/metadataBlocks/citation,author,
+,__id,,,authorAffiliation
+,__type,,,"""Organization"""
+,name,,,authorAffiliation
+,url,,,authorAffiliation
+License,,datasetVersion,license,
+,__id,,,uri
+,__type,,,"""CreativeWork"" "
+,name,,,name
+,description ,,,name
+,identifier,,,uri
+DatasetContact,,datasetVersion/metadataBlocks/citation,datasetContact,
+,__id,,,datasetContactEmail
+,__type,,,"""Person"""
+,name,,,datasetContactName
+,affiliation ,,,datasetContactAffiliation
+,contactPoint,,,refersTo: DatasetContactPoint
+,identifier,,,datasetContactEmail
+DatasetContactPoint,,datasetVersion/metadataBlocks/citation,datasetContact,
+,__id,,,datasetContactEmail
+,__type,,,"""Person"""
+,email,,,refersTo:DatasetContact
+Funder,,datasetVersion/metadataBlocks/citation,grantNumber,
+,__id,,,grantNumberValue
+,__type,,,"""Organization"""
