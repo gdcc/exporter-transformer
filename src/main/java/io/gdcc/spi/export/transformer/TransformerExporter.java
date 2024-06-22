@@ -9,6 +9,7 @@ import java.nio.file.FileSystems;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
@@ -38,13 +39,31 @@ import jakarta.json.JsonObjectBuilder;
 // All Exporter implementations must implement this interface or the XMLExporter
 // interface that extends it.
 public class TransformerExporter implements Exporter {
-    private final Logger logger = Logger.getLogger(TransformerFactory.class.getName());
-    private final TransformerFactory factory = TransformerFactory.factory(new NashornScriptEngineFactory());
-    private final Transformer preTransformer = transformer("pre_transformer.json");
-    private final Transformer transformer = transformer("transformer.json");
-    private final Config config = config("config.json");
+    private static final Logger logger = Logger.getLogger(TransformerFactory.class.getName());
+    private static final TransformerFactory factory = TransformerFactory.factory(new NashornScriptEngineFactory());
+    private final Transformer preTransformer;
+    private final Transformer transformer;
+    private final Config config;
 
-    private Transformer transformer(final String fileName) {
+    /**
+     * Default constructor
+     */
+    public TransformerExporter() {
+        this(0);
+    }
+
+    /**
+     * Constructor with index
+     * 
+     * @param index
+     */
+    public TransformerExporter(final int index) {
+        preTransformer = transformer("pre_transformer.json", index);
+        transformer = transformer("transformer.json", index);
+        config = config("config.json", index);
+    }
+
+    private Transformer transformer(final String fileName, final int index) {
         try {
             // when running tests, etc.
             final Path path = Paths.get(TransformerExporter.class.getClassLoader().getResource(fileName).toURI());
@@ -52,7 +71,7 @@ public class TransformerExporter implements Exporter {
         } catch (final Exception e) {
             try {
                 // on the server:
-                final Path outPath = getOutPath();
+                final Path outPath = getOutPath(index);
                 return factory.createFromJsonString(Files.readString(outPath.resolve(fileName)), outPath.toString());
             } catch (final Exception e3) {
                 logger.severe("transformer creation failed (using identity transformer): " + e3);
@@ -61,7 +80,7 @@ public class TransformerExporter implements Exporter {
         }
     }
 
-    private Config config(final String fileName) {
+    private Config config(final String fileName, final int index) {
         try {
             // when running tests, etc.
             final Path path = Paths.get(TransformerExporter.class.getClassLoader().getResource(fileName).toURI());
@@ -69,7 +88,7 @@ public class TransformerExporter implements Exporter {
         } catch (final Exception e) {
             try {
                 // on the server:
-                final String jsoString = Files.readString(getOutPath().resolve(fileName));
+                final String jsoString = Files.readString(getOutPath(index).resolve(fileName));
                 return new Config(jsoString);
             } catch (final Exception e3) {
                 logger.severe("reading config failed (using using default config): " + e3);
@@ -78,14 +97,26 @@ public class TransformerExporter implements Exporter {
         }
     }
 
-    private Path getOutPath() throws URISyntaxException, IOException {
-        // copy the transformers and config from the jar if they are not yet in the
-        // exporters dir
+    private Path getOutPath(final int index) throws URISyntaxException, IOException {
+        // lookup config dir
+        final List<Path> configs = new ArrayList<>();
         final URI jarUri = TransformerExporter.class.getProtectionDomain().getCodeSource().getLocation().toURI();
-        final FileSystem fs = FileSystems.newFileSystem(jarUri, new HashMap<>());
-        final Path outPath = Paths.get(jarUri.toString().substring("jar:file:".length(),
+        final Path jarPath = Paths.get(jarUri.toString().substring("jar:file:".length(),
                 jarUri.toString().length() - ".jar!/".length()));
+        final Path parent = jarPath.getParent();
+        Files.walk(parent).forEach(x -> {
+            if (x.toFile().isDirectory()) {
+                if (Files.exists(x.resolve("config.json")) && Files.exists(x.resolve("transformer.json"))) {
+                    configs.add(x);
+                }
+            }
+        });
+        final Path outPath = configs.size() == 0 ? jarPath : configs.get(index >= configs.size() ? 0 : index);
+
+        // copy the transformers and config from the jar if they are not yet in the
+        // config dir
         Files.createDirectories(outPath.resolve("js"));
+        final FileSystem fs = FileSystems.newFileSystem(jarUri, new HashMap<>());
         List.of(Paths.get("pre_transformer.json"), Paths.get("transformer.json"), Paths.get("js", "flatten.js"),
                 Paths.get("js", "map_metadata_fields.js"), Paths.get("config.json"))
                 .stream().filter(x -> !Files.exists(outPath.resolve(x))).forEach(x -> {
