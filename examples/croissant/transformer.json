@@ -1,0 +1,9 @@
+{
+    "transformations": [
+        {
+            "expressions": [
+                "script(importJS /js/croissant.js endImport)"
+            ]
+        }
+    ]
+}
