@@ -187,6 +187,7 @@ public class TransformerExporter implements Exporter {
             job.add("datasetSchemaDotOrg", dataProvider.getDatasetSchemaDotOrg());
             job.add("datasetFileDetails", dataProvider.getDatasetFileDetails());
             job.add("preTransformed", preTransformed);
+            job.add("config", config.asJsonValue());
 
             final JsonObject transformed = transformer.transform(job.build());
             // Write the output format to the output stream.

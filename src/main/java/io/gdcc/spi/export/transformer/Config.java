@@ -6,6 +6,7 @@ import java.util.Locale;
 import jakarta.json.Json;
 import jakarta.json.JsonObject;
 import jakarta.json.JsonReader;
+import jakarta.json.JsonValue;
 import jakarta.ws.rs.core.MediaType;
 
 /**
@@ -30,6 +31,15 @@ public class Config {
             final JsonObject object = jsonReader.readObject();
             this.object = object;
         }
+    }
+
+    /**
+     * Returns the JSON value of the config
+     * 
+     * @return the JSON value
+     */
+    public JsonValue asJsonValue() {
+        return object;
     }
 
     /**
