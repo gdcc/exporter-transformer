@@ -55,7 +55,7 @@ public class TransformerExporter implements Exporter {
     /**
      * Constructor with index
      * 
-     * @param index
+     * @param index the index
      */
     public TransformerExporter(final int index) {
         preTransformer = transformer("pre_transformer.json", index);
