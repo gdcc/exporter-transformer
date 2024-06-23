@@ -8,11 +8,11 @@ function getBibtex() {
     for (i = 1; i < creatorArray.length; i++) {
         creatorsFormatted = creatorsFormatted + " and " + creatorArray[i].name
     }
-    
+
     var publisher = x.datasetSchemaDotOrg.publisher.name
     var title = x.datasetSchemaDotOrg.name
     var pidAsUrl = oreDescribes["@id"]
-    
+
     var sb = ""
     sb = sb + "@data{" + identifier + "_" + publicationYear + ","
     sb = sb + "author = {" + creatorsFormatted + "},"
@@ -44,7 +44,7 @@ context["column"] = "cr:column"
 context["conformsTo"] = "dct:conformsTo"
 context["cr"] = "http://mlcommons.org/croissant/"
 context["rai"] = "http://mlcommons.org/croissant/RAI/"
-context["data"] = { "@id": "cr:data",  "@type": "@json" }
+context["data"] = { "@id": "cr:data", "@type": "@json" }
 context["dataType"] = { "@id": "cr:dataType", "@type": "@vocab" }
 context["dct"] = "http://purl.org/dc/terms/"
 context["examples"] = { "@id": "cr:examples", "@type": "@json" }
@@ -163,10 +163,10 @@ for (i = 0; i < x.datasetFileDetails.length; i++) {
             filedSet["name"] = dataVariableObject["name"]
             filedSet["description"] = dataVariableObject["label"]
             filedSet["dataType"] = dataType
-            filedSet["source"] = {"@id": variableId, "fileObject": {"@id": fileId}}
+            filedSet["source"] = { "@id": variableId, "fileObject": { "@id": fileId } }
             fieldSetArray.add(fieldSet)
         }
-        var recordSetContent = {"@type": "cr:RecordSet"}
+        var recordSetContent = { "@type": "cr:RecordSet" }
         recordSetContent["field"] = fieldSetArray
         recordSet.add(recordSetContent)
     }
