@@ -46,6 +46,11 @@ After restarting the Dataverse, you should be able to use the newly installed ex
 
 ![image](https://github.com/ErykKul/dataverse-transformer-exporter/assets/101262459/57241319-ce45-40b4-8777-401252f6c4d4)
 
+Each exporter will have at least these files after starting:
+
+![image](https://github.com/ErykKul/dataverse-transformer-exporter/assets/101262459/837405e1-4abe-4470-a9fe-0af3d1ee727d)
+
+All of these files can be edited, if needed. Typically you will only need to edit the `config.json` and the `transformation.json` files.
 
 ## Examples
 
