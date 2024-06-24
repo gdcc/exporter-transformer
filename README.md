@@ -1,9 +1,9 @@
 # Transformer Exporter
-This Dataverse exporter allows you to have up to a 100 exporters using one single pre-built jar. All you need to do is to download that jar into your exporters directory and create an other directory within the exporters directory (up to 100 of them) containing at least a `config.json` and a `transformer.json` files. Edit these files to achieve the exporter you need. Use the provided examples and the developer guide section as inspiration.
+This Dataverse exporter allows you to have up to a 100 exporters using one single pre-built jar. All you need to do is to download that jar into your exporters directory and create an other directory within the exporters directory (up to 100 of them) containing at least a `config.json` and a `transformer.json` files. Edit these files to achieve the exporter you need. Use the provided [examples](/examples/) and the developer guide section as inspiration.
 
 ## Installation
 
-If not yet configured, set the [dataverse-spi-exporters-directory](https://guides.dataverse.org/en/latest/installation/config.html#dataverse-spi-exporters-directory) configuration value first. Then `cd` into the directory you configured and download the [jar file](https://repo1.maven.org/maven2/io/github/erykkul/dataverse-transformer-exporter/1.0.1/dataverse-transformer-exporter-1.0.1-jar-with-dependencies.jar) together with the examples you want to try out:
+If not yet configured, set the [dataverse-spi-exporters-directory](https://guides.dataverse.org/en/latest/installation/config.html#dataverse-spi-exporters-directory) configuration value first. Then `cd` into that directory you configured and download the [jar file](https://repo1.maven.org/maven2/io/github/erykkul/dataverse-transformer-exporter/1.0.1/dataverse-transformer-exporter-1.0.1-jar-with-dependencies.jar) together with the examples you want to try out:
 
 ```shell
 # download the jar
@@ -42,8 +42,10 @@ wget -O generated-with-python/config.json https://raw.githubusercontent.com/eryk
 wget -O generated-with-python/transformer.json https://raw.githubusercontent.com/erykkul/dataverse-transformer-exporter/main/examples/generated-with-python/transformer.json
 ```
 
-After restarting the Dataverse, you should be able to use the newly installed exporters:
+After restarting the Dataverse, you should be able to use the newly installed exporters (next to the internal exporters):
 
 ![image](https://github.com/ErykKul/dataverse-transformer-exporter/assets/101262459/27203e12-5a38-45cb-bf7f-eaa76d5c432a)
 
 ## Examples
+
+## Developer guide
