@@ -42,6 +42,6 @@ wget -O generated-with-python/config.json https://raw.githubusercontent.com/eryk
 wget -O generated-with-python/transformer.json https://raw.githubusercontent.com/erykkul/dataverse-transformer-exporter/main/examples/generated-with-python/transformer.json
 ```
 
-After restarting the Dataverse, you should be able to use the newly installed RO-Crate exporter:
+After restarting the Dataverse, you should be able to use the newly installed exporters:
 
 ![image](https://github.com/ErykKul/dataverse-transformer-exporter/assets/101262459/27203e12-5a38-45cb-bf7f-eaa76d5c432a)
