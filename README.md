@@ -1,6 +1,6 @@
 # Transformer Exporter for Dataverse
 
-This exporter allows you to manage up to 100 exporters using a single pre-built JAR file. Supported Dataverse versions: 6.0 - recent.
+This exporter allows you to manage up to 100 exporters using a single pre-built JAR file. You can add new exporters by adding directories into the exporters directory (see the Installation section) and placing (and editing) the `config.json` and the `transformation.json` files in it. Supported Dataverse versions: 6.0 - recent.
 
 ## Installation
 
