@@ -99,7 +99,7 @@ After copying the resulting `transformer.json`, together with the provided `conf
 
 ## Developer guide
 
-The easiest way to start is to write JavasCript code. You can use the provided [Croissant](/examples/croissant/js/croissant.js) code as the start point. Note that the exporters use caching, you will need to either to wait until the cache is expired or delete the cached exporter output manually to see the changes. Also, the JavaScript supported by the transformer exporter is as provided by the [Project Nashorn](https://openjdk.org/projects/nashorn/), you can only use the syntax provided by that project. Additional limitation is that the multiple line statements are not supported. This could be circumvented by using a minimizer, or simply using only single line statements. Finally, you can also access mapped Java classes from the your scripts:
+The easiest way to start is to write JavasCript code. You can use the provided [Croissant](/examples/croissant/js/croissant.js) code as the start point. Note that the exporters use caching, you will need to either to wait until the cache is expired or delete the cached exporter output manually to see the changes. Also, the JavaScript supported by the transformer exporter is as provided by the [Project Nashorn](https://openjdk.org/projects/nashorn/), you can only use the syntax provided by that project. Additional limitation is that the multiple line statements are not supported. This could be circumvented by using a minimizer, or simply using only single line statements. Finally, you can also access these Java classes from your scripts:
 - `Map`: `java.util.LinkedHashMap`
 - `Set`: `java.util.LinkedHashSet`
 - `List`: `java.util.ArrayList`
