@@ -67,27 +67,27 @@ This exporter uses only the identity transformation on the provided source docum
 - `datasetJson`: native Dataverse JSON export
 - `datasetORE`: ORE Dataverse export
 - `datasetSchemaDotOrg`: Schema.org JSON-LD export
-- `datasetFileDetails`: files details from the native Dataverse JSON export
+- `datasetFileDetails`: file details from the native Dataverse JSON export
 - `preTransformed`: JSON-pointer friendly version of the native Dataverse JSON export
 - `config`: the content of the `config.json`
 
-## Short example
+### Short example
 
 This exporter copies only the title, the author names and the file download URL to the output.
 
-# Javascript transformer
+### Javascript transformer
 
 The same exporter as the "Short example", but it uses JavaScript instead of copy transformations.
 
-# Croissant
+### Croissant
 
 This exporter is entirely based on the [Croissant Exporter for Dataverse](https://github.com/gdcc/exporter-croissant). It is simply a port of that exporter into JavaScript that is bundled into a ready to use transformer. It is also a great example to start from when writing your own exporters.
 
-# Basic RO-Crate
+### Basic RO-Crate
 
 This exporter transforms the output from the Schema.org exporter into an RO-Crate compatible output.
 
-# Transformer generated with Python
+### Transformer generated with Python
 
 This exporter is based on the [Customizable RO-Crate Metadata Exporter for Dataverse](https://github.com/gdcc/exporter-ro-crate). You can edit the provided [CSV file](/examples/generated-with-python/dataverse2ro-crate.csv) and rerun the Python script to overwrite the default `transformer.json`:
 
