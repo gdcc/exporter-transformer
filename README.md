@@ -1,4 +1,4 @@
-# Transformer Exporter
+# Transformer Exporter for Dataverse
 This Dataverse exporter allows you to have up to a 100 exporters using one single pre-built jar. All you need to do is to download that jar into your exporters directory and create an other directory within the exporters directory (up to 100 of them) containing at least a `config.json` and a `transformer.json` files. Edit these files to achieve the exporter you need. Use the provided [examples](/examples/) and the developer guide section as inspiration.
 
 ## Installation
