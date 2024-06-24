@@ -44,7 +44,8 @@ wget -O generated-with-python/transformer.json https://raw.githubusercontent.com
 
 After restarting the Dataverse, you should be able to use the newly installed exporters (next to the internal exporters):
 
-![image](https://github.com/ErykKul/dataverse-transformer-exporter/assets/101262459/27203e12-5a38-45cb-bf7f-eaa76d5c432a)
+![image](https://github.com/ErykKul/dataverse-transformer-exporter/assets/101262459/57241319-ce45-40b4-8777-401252f6c4d4)
+
 
 ## Examples
 
