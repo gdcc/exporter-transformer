@@ -51,7 +51,7 @@ Each exporter will have at least these files after starting:
 
 ![image](https://github.com/ErykKul/dataverse-transformer-exporter/assets/101262459/837405e1-4abe-4470-a9fe-0af3d1ee727d)
 
-All of these files can be edited, if needed. Typically you will only need to edit the `config.json` and the `transformation.json` files.
+All of these files can be edited, if needed. Typically you will only need to edit the `config.json` and the `transformation.json` files. If you want to add more exporters, your own or from the provided examples, just add a new configuration directory in your exporters directory with at least the `config.json` and `transformer.json` files there. After restarting the servers the newly added exporters should be ready to use.
 
 ## Examples
 
