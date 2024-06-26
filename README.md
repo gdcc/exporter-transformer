@@ -1,6 +1,10 @@
 # Transformer Exporter for Dataverse
 
-This exporter allows you to manage up to 100 exporters using a single pre-built JAR file. You can add new exporters by adding directories into the exporters directory (see the Installation section) and placing (and editing) the `config.json` and the `transformation.json` files in it. Supported Dataverse versions: 6.0 - recent.
+This exporter allows you to have up to 100 exporters using a single pre-built JAR file. You can add new exporters by adding directories into the exporters directory (see the Installation section below) and placing (and editing) the `config.json` and the `transformation.json` files in it.
+
+Supported Dataverse versions: 6.0 - recent.
+
+As for now, only the JSON transformations are supporterd. Future release of this exporter (comming soon!) will also support the XSLT transformations (with at least two files `config.xml` and `transformer.xsl` in the configuration directory of the exporters directory).
 
 ## Installation
 
@@ -51,7 +55,7 @@ Each exporter will have at least these files after starting:
 
 ![image](https://github.com/ErykKul/dataverse-transformer-exporter/assets/101262459/837405e1-4abe-4470-a9fe-0af3d1ee727d)
 
-All of these files can be edited, if needed. Typically you will only need to edit the `config.json` and the `transformation.json` files.
+All of these files can be edited, if needed. Typically you will only need to edit the `config.json` and the `transformation.json` files. If you want to add more exporters, your own or from the provided examples, just add a new configuration directory in your exporters directory with at least the `config.json` and `transformer.json` files there. After restarting the servers the newly added exporters should be ready to use.
 
 ## Examples
 
@@ -101,11 +105,11 @@ After copying the resulting `transformer.json`, together with the provided `conf
 
 The easiest way to start is to write JavasCript code. You can use the provided [Croissant](/examples/croissant/js/croissant.js) code as the start point. You will need to restart the server after changing that code. Note that the exporters use caching, you will need to either to wait until the cache is expired or delete the cached exporter output manually to see the changes.
 
-The JavaScript supported by the transformer exporter is as provided by the [Project Nashorn](https://openjdk.org/projects/nashorn/), you can only use the syntax provided by that project. Additional limitation is that the multiple line statements are not supported. This could be circumvented by using a minimizer, or simply using only single line statements. Finally, you can access these Java classes from your scripts:
+The JavaScript supported by the transformer exporter is as provided by the [Project Nashorn](https://openjdk.org/projects/nashorn/), you can only use the syntax provided by that project. Additional limitation is that the multiple line statements are not supported. This could be circumvented by using a minimizer, or simply by using only single line statements (empty lines, comments, etc. are fine to include in the JavaScript files). Finally, you can access these Java classes from your scripts:
 - `Map`: `java.util.LinkedHashMap`
 - `Set`: `java.util.LinkedHashSet`
 - `List`: `java.util.ArrayList`
 - `Collectors`: `java.util.stream.Collectors`
 - `JsonValue`: `jakarta.json.JsonValue`
 
-You can also try writing the transformations using the transformation language as described [here](https://github.com/ErykKul/json-transformer). It is a preferred way for writing straight-forward exporters, for example, when you only need to add one or more fields to an already existing exporter format. In that case, you could use the identity transformation followed by simple copy transformations.
+You can also try writing the transformations using the transformation language as described [here](https://github.com/ErykKul/json-transformer). It is a preferred way for writing straight-forward exporters, for example, when you only need to add one or more fields to an already existing exporter format. In that case, you could use the identity transformation followed by simple copy transformations. You can also start from an already existing example and add new copy, remove, etc., transformations at the end of the `transformer.json` file.
