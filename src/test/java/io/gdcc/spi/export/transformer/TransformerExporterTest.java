@@ -106,6 +106,7 @@ public class TransformerExporterTest {
     public void testExportDataset() throws Exception {
         transformerExporter.exportDataset(dataProvider, outputStream);
         final String expected = parse("result.json").toString();
+        System.out.println(outputStream.toString());
         final JsonReader jsonReader = Json.createReader(new StringReader(outputStream.toString()));
         final JsonObject actual = jsonReader.readObject();
         jsonReader.close();
