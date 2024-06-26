@@ -9,6 +9,7 @@
         },
         {
             "append": true,
+            "sourcePointer": "/config",
             "resultPointer": "/@context",
             "expressions": [
                 "script(res = { \"@vocab\": \"https://schema.org/\" })"
@@ -29,15 +30,15 @@
             ]
         },
         {
-            "resultPointer": "/Metadata/conformsTo",
+            "resultPointer": "/Metadata/conformsTo/@id",
              "expressions": [
-                "script(res = { \"@id\": \"https://w3id.org/ro/crate/1.1\" })"
+                "\"https://w3id.org/ro/crate/1.1\""
             ]
         },
         {
-            "resultPointer": "/Metadata/about",
+            "resultPointer": "/Metadata/about/@id",
              "expressions": [
-                "script(res = { \"@id\": \"./\" })"
+                "\"./\""
             ]
         },
         {

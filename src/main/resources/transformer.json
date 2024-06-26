@@ -81,6 +81,7 @@
             "resultPointer": "/example/ore:describes/@id"
         },
         {
+            "sourcePointer": "/config",
             "resultPointer": "/example/ore:describes/@type",
             "expressions": [
                 "script(res = new List(['ore:Aggregation', 'schema:Dataset']))"
@@ -203,6 +204,7 @@
             "resultPointer": "/example/ore:describes/schema:hasPart"
         },
         {
+            "sourcePointer": "/config",
             "resultPointer": "/example/@context",
             "expressions": [
                 "script(res = {author: 'http://purl.org/dc/terms/creator', citation: 'https://dataverse.org/schema/citation/', dcterms: 'http://purl.org/dc/terms/', dvcore: 'https://dataverse.org/schema/core#', ore: 'http://www.openarchives.org/ore/terms/', schema: 'http://schema.org/', subject: 'http://purl.org/dc/terms/subject', title: 'http://purl.org/dc/terms/title'})"

@@ -9,6 +9,7 @@
         },
         {
             "append": true,
+            "useResultAsSource": true,
             "resultPointer": "/@context",
             "expressions": [
                 "script(res = { \"@vocab\": \"https://schema.org/\" })"
@@ -16,6 +17,7 @@
         },
         {
             "append": true,
+            "useResultAsSource": true,
             "resultPointer": "/@graph",
             "expressions": [
                 "script(res = {\"@id\": \"ro-crate-metadata.json\", \"@type\": \"CreativeWork\", \"about\": { \"@id\": \"./\"}, \"identifier\": \"ro-crate-metadata.json\", \"conformsTo\": { \"@id\": \"https://w3id.org/ro/crate/1.0\"}})"

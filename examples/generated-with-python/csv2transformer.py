@@ -11,6 +11,7 @@ res = """{
         },
         {
             "append": true,
+            "sourcePointer": "/config",
             "resultPointer": "/@context",
             "expressions": [
                 "script(res = { \\"@vocab\\": \\"https://schema.org/\\" })"
@@ -62,9 +63,9 @@ def ref_transformation(sourcePointer, target1, target2):
 def literal_ref_transformation(target1, target2, value):
     return (
         "        {\n"
-        + f'            "resultPointer": "/{target1}/{target2}",\n'
+        + f'            "resultPointer": "/{target1}/{target2}/@id",\n'
         + '             "expressions": [\n'
-        + '                "script(res = { \\"@id\\": \\"' + value + '\\" })"\n'
+        + '                "\\"' + value + '\\""\n'
         + '            ]\n'
         + "        },\n"
     )
