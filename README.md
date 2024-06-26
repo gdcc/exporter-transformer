@@ -46,11 +46,11 @@ wget -O generated-with-python/transformer.json https://raw.githubusercontent.com
 # download the debug-xml example
 mkdir debug-xml
 wget -O debug-xml/config.json https://raw.githubusercontent.com/erykkul/dataverse-transformer-exporter/main/examples/debug-xml/config.json
-wget -O debug-xml/transformer.xsl https://raw.githubusercontent.com/erykkul/dataverse-transformer-exporter/main/examples/debug-xml/transformer.xml
+wget -O debug-xml/transformer.xsl https://raw.githubusercontent.com/erykkul/dataverse-transformer-exporter/main/examples/debug-xml/transformer.xsl
 # download the short-example-xml example
 mkdir short-example-xml
 wget -O short-example-xml/config.json https://raw.githubusercontent.com/erykkul/dataverse-transformer-exporter/main/examples/short-example-xml/config.json
-wget -O short-example-xml/transformer.xsl https://raw.githubusercontent.com/erykkul/dataverse-transformer-exporter/main/examples/short-example-xml/transformer.xml
+wget -O short-example-xml/transformer.xsl https://raw.githubusercontent.com/erykkul/dataverse-transformer-exporter/main/examples/short-example-xml/transformer.xsl
 ```
 
 After restarting the Dataverse, you should be able to use the newly installed exporters (next to the internal exporters):
