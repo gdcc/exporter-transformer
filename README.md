@@ -1,10 +1,8 @@
-# Transformer Exporter for Dataverse
+# Transformer (JSON or XML) Exporter for Dataverse
 
-This exporter allows you to have up to 100 exporters using a single pre-built JAR file. You can add new exporters by adding directories into the exporters directory (see the Installation section below) and placing (and editing) the `config.json` and the `transformation.json` files in it.
+This exporter allows you to have up to 100 exporters using a single pre-built JAR file. You can add new exporters by adding directories into the exporters directory (see the Installation section below) and placing (and editing) the configuration (`config.json`) and the transformation (`transformer.json` or `transformer.xsl`, see also the examples below) files in it.
 
 Supported Dataverse versions: 6.0 - recent.
-
-As for now, only the JSON transformations are supporterd. Future release of this exporter (comming soon!) will also support the XSLT transformations (with at least two files `config.xml` and `transformer.xsl` in the configuration directory of the exporters directory).
 
 ## Installation
 
@@ -45,6 +43,14 @@ wget -O basic-ro-crate/transformer.json https://raw.githubusercontent.com/erykku
 mkdir generated-with-python
 wget -O generated-with-python/config.json https://raw.githubusercontent.com/erykkul/dataverse-transformer-exporter/main/examples/generated-with-python/config.json
 wget -O generated-with-python/transformer.json https://raw.githubusercontent.com/erykkul/dataverse-transformer-exporter/main/examples/generated-with-python/transformer.json
+# download the debug-xml example
+mkdir debug-xml
+wget -O debug-xml/config.json https://raw.githubusercontent.com/erykkul/dataverse-transformer-exporter/main/examples/debug-xml/config.json
+wget -O debug-xml/transformer.xsl https://raw.githubusercontent.com/erykkul/dataverse-transformer-exporter/main/examples/debug-xml/transformer.xml
+# download the short-example-xml example
+mkdir short-example-xml
+wget -O short-example-xml/config.json https://raw.githubusercontent.com/erykkul/dataverse-transformer-exporter/main/examples/short-example-xml/config.json
+wget -O short-example-xml/transformer.xsl https://raw.githubusercontent.com/erykkul/dataverse-transformer-exporter/main/examples/short-example-xml/transformer.xml
 ```
 
 After restarting the Dataverse, you should be able to use the newly installed exporters (next to the internal exporters):
@@ -55,7 +61,7 @@ Each exporter will have at least these files after starting:
 
 ![image](https://github.com/ErykKul/dataverse-transformer-exporter/assets/101262459/837405e1-4abe-4470-a9fe-0af3d1ee727d)
 
-All of these files can be edited, if needed. Typically you will only need to edit the `config.json` and the `transformation.json` files. If you want to add more exporters, your own or from the provided examples, just add a new configuration directory in your exporters directory with at least the `config.json` and `transformer.json` files there. After restarting the servers the newly added exporters should be ready to use.
+All of these files can be edited, if needed. Typically you will only need to edit the `config.json` and the `transformation.json` files. If you want to add more exporters, your own or from the provided examples, just add a new configuration directory in your exporters directory with at least the `config.json` and the `transformer.json` or `transformer.xsl` files there. After restarting the servers the newly added exporters should be ready to use.
 
 ## Examples
 
@@ -101,6 +107,14 @@ python3 csv2transformer.py
 
 After copying the resulting `transformer.json`, together with the provided `config.jar`, you will have a customized RO-Crate exporter (listed as "CSV RO-Crate" by default).
 
+### Debug XML
+
+This exporter outputs the XML version of the native JSON format that can be transformed with XSLT.
+
+### Short example XML
+
+This exporter copies only the title, the author names and the filenames of the dataset version, and outputs them in an XML document.
+
 ## Developer guide
 
 The easiest way to start is to write JavasCript code. You can use the provided [Croissant](/examples/croissant/js/croissant.js) code as the start point. You will need to restart the server after changing that code. Note that the exporters use caching, you will need to either to wait until the cache is expired or delete the cached exporter output manually to see the changes.
@@ -113,3 +127,5 @@ The JavaScript supported by the transformer exporter is as provided by the [Proj
 - `JsonValue`: `jakarta.json.JsonValue`
 
 You can also try writing the transformations using the transformation language as described [here](https://github.com/ErykKul/json-transformer). It is a preferred way for writing straight-forward exporters, for example, when you only need to add one or more fields to an already existing exporter format. In that case, you could use the identity transformation followed by simple copy transformations. You can also start from an already existing example and add new copy, remove, etc., transformations at the end of the `transformer.json` file.
+
+You can also write XML transformations in a similar way, but using the XSLT instead of JSON-transformations, as illustrated in the provided XML examples.
