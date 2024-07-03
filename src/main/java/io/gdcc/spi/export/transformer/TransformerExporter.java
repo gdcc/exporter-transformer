@@ -3,6 +3,7 @@ package io.gdcc.spi.export.transformer;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.io.StringReader;
+import java.io.StringWriter;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.nio.file.FileSystem;
@@ -26,6 +27,7 @@ import javax.xml.transform.stream.StreamResult;
 import javax.xml.transform.stream.StreamSource;
 
 import org.openjdk.nashorn.api.scripting.NashornScriptEngineFactory;
+import org.python.util.PythonInterpreter;
 
 import com.google.auto.service.AutoService;
 
@@ -121,6 +123,7 @@ public class TransformerExporter implements Exporter {
     private Transformer transformer;
     private javax.xml.transform.Transformer xmlTransformer;
     private boolean isXmlTransformer = false;
+    private String pyScript = null;
     private final Config config;
 
     // These methods provide information about the Exporter to Dataverse
@@ -153,6 +156,9 @@ public class TransformerExporter implements Exporter {
                 transformer = transformer("transformer.json", index);
                 logger.severe("reading XSLT failed: " + e);
             }
+        } else if (pyScript != null) {
+            xmlTransformer = null;
+            transformer = null;
         } else {
             xmlTransformer = null;
             transformer = transformer("transformer.json", index);
@@ -220,8 +226,20 @@ public class TransformerExporter implements Exporter {
                 job.add("preTransformed", preTransformed);
                 job.add("config", config.asJsonValue());
 
-                final JsonObject transformed = transformer.transform(job.build());
-                outputStream.write(transformed.toString().getBytes("UTF8"));
+                if (pyScript != null) {
+                    try (PythonInterpreter pyInterp = new PythonInterpreter()) {
+                        final StringWriter output = new StringWriter();
+                        //pyInterp.set("x", job.build());
+                        pyInterp.setOut(output);
+                        pyInterp.exec(pyScript);
+                        outputStream.write(output.toString().getBytes("UTF8"));
+                    } catch (final Exception e) {
+                        throw e;
+                    }
+                } else {
+                    final JsonObject transformed = transformer.transform(job.build());
+                    outputStream.write(transformed.toString().getBytes("UTF8"));
+                }
             }
             // Flush the output stream - The output stream is automatically closed by
             // Dataverse and should not be closed in the Exporter.
@@ -297,20 +315,24 @@ public class TransformerExporter implements Exporter {
                 jarUri.toString().length() - ".jar!/".length()));
         final Path parent = jarPath.getParent();
         final Set<Path> xmlTransformers = new HashSet<>();
+        final Set<Path> pyTransformers = new HashSet<>();
         Files.walk(parent).forEach(x -> {
             if (x.toFile().isDirectory()) {
                 if (Files.exists(x.resolve("config.json")) && (Files.exists(x.resolve("transformer.json"))
-                        || Files.exists(x.resolve("transformer.xsl")))) {
+                        || Files.exists(x.resolve("transformer.xsl")) || Files.exists(x.resolve("transformer.py")))) {
                     configs.add(x);
                     if (Files.exists(x.resolve("transformer.xsl"))) {
                         xmlTransformers.add(x);
+                    } else if (Files.exists(x.resolve("transformer.py"))) {
+                        pyTransformers.add(x);
                     }
                 }
             }
         });
         final Path outPath = configs.size() == 0 ? jarPath : configs.get(index >= configs.size() ? 0 : index);
-        if (xmlTransformers.contains(outPath)) {
-            isXmlTransformer = true;
+        isXmlTransformer = xmlTransformers.contains(outPath);
+        if (pyTransformers.contains(outPath)) {
+            pyScript = Files.readString(outPath.resolve("transformer.py"));
         }
 
         // copy the transformers and config from the jar if they are not yet in the

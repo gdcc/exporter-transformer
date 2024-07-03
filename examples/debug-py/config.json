@@ -1,0 +1,7 @@
+{
+    "formatName": "debug_py",
+    "harvestable": false,
+    "availableToUsers": true,
+    "mediaType": "application/json",
+    "displayName": "Debug Python"
+}
