@@ -13,6 +13,7 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
@@ -231,6 +232,7 @@ public class TransformerExporter implements Exporter {
                 if (pyScript != null) {
                     final ScriptEngine engine = pyFactory.getScriptEngine();
                     engine.put("x", Utils.asObject(job.build()));
+                    engine.put("res", new LinkedHashMap<String, Object>());
                     engine.eval(pyScript);
                     final Object res = engine.get("res");
                     outputStream.write(Utils.asJsonValue(res).toString().getBytes("UTF8"));
