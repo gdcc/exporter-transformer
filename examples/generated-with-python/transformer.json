@@ -18,40 +18,40 @@
         {
             "sourcePointer": "/preTransformed",
             "resultPointer": "/Metadata/@id",
-             "expressions": [
+            "expressions": [
                 "\"ro-crate-metadata.json\""
             ]
         },
         {
             "sourcePointer": "/preTransformed",
             "resultPointer": "/Metadata/@type",
-             "expressions": [
+            "expressions": [
                 "\"CreativeWork\""
             ]
         },
         {
             "resultPointer": "/Metadata/conformsTo/@id",
-             "expressions": [
+            "expressions": [
                 "\"https://w3id.org/ro/crate/1.1\""
             ]
         },
         {
             "resultPointer": "/Metadata/about/@id",
-             "expressions": [
+            "expressions": [
                 "\"./\""
             ]
         },
         {
             "sourcePointer": "/preTransformed",
             "resultPointer": "/Root/@id",
-             "expressions": [
+            "expressions": [
                 "\"./\""
             ]
         },
         {
             "sourcePointer": "/preTransformed",
             "resultPointer": "/Root/@type",
-             "expressions": [
+            "expressions": [
                 "\"Dataset\""
             ]
         },
@@ -94,7 +94,7 @@
         {
             "sourcePointer": "/preTransformed/datasetVersion/metadataBlocks/citation/author[i]",
             "resultPointer": "/Author[i]/@type",
-             "expressions": [
+            "expressions": [
                 "\"Person\""
             ]
         },
@@ -113,7 +113,7 @@
         {
             "sourcePointer": "/preTransformed/datasetVersion/metadataBlocks/citation/author[i]",
             "resultPointer": "/AuthorAffiliation[i]/@type",
-             "expressions": [
+            "expressions": [
                 "\"Organization\""
             ]
         },
@@ -132,7 +132,7 @@
         {
             "sourcePointer": "/preTransformed/datasetVersion/license[i]",
             "resultPointer": "/License[i]/@type",
-             "expressions": [
+            "expressions": [
                 "\"CreativeWork\""
             ]
         },
@@ -155,7 +155,7 @@
         {
             "sourcePointer": "/preTransformed/datasetVersion/metadataBlocks/citation/datasetContact[i]",
             "resultPointer": "/DatasetContact[i]/@type",
-             "expressions": [
+            "expressions": [
                 "\"Person\""
             ]
         },
@@ -182,7 +182,7 @@
         {
             "sourcePointer": "/preTransformed/datasetVersion/metadataBlocks/citation/datasetContact[i]",
             "resultPointer": "/DatasetContactPoint[i]/@type",
-             "expressions": [
+            "expressions": [
                 "\"Person\""
             ]
         },
@@ -197,7 +197,7 @@
         {
             "sourcePointer": "/preTransformed/datasetVersion/metadataBlocks/citation/grantNumber[i]",
             "resultPointer": "/Funder[i]/@type",
-             "expressions": [
+            "expressions": [
                 "\"Organization\""
             ]
         },
@@ -210,7 +210,8 @@
         {
             "expressions": [
                 "remove(/Metadata)"
-            ]        },
+            ]
+        },
         {
             "append": true,
             "useResultAsSource": true,
@@ -220,7 +221,8 @@
         {
             "expressions": [
                 "remove(/Root)"
-            ]        },
+            ]
+        },
         {
             "append": true,
             "useResultAsSource": true,
@@ -230,7 +232,8 @@
         {
             "expressions": [
                 "remove(/Author)"
-            ]        },
+            ]
+        },
         {
             "append": true,
             "useResultAsSource": true,
@@ -240,7 +243,8 @@
         {
             "expressions": [
                 "remove(/AuthorAffiliation)"
-            ]        },
+            ]
+        },
         {
             "append": true,
             "useResultAsSource": true,
@@ -250,7 +254,8 @@
         {
             "expressions": [
                 "remove(/License)"
-            ]        },
+            ]
+        },
         {
             "append": true,
             "useResultAsSource": true,
@@ -260,7 +265,8 @@
         {
             "expressions": [
                 "remove(/DatasetContact)"
-            ]        },
+            ]
+        },
         {
             "append": true,
             "useResultAsSource": true,
@@ -270,7 +276,8 @@
         {
             "expressions": [
                 "remove(/DatasetContactPoint)"
-            ]        },
+            ]
+        },
         {
             "append": true,
             "useResultAsSource": true,
@@ -280,7 +287,8 @@
         {
             "expressions": [
                 "remove(/Funder)"
-            ]        },
+            ]
+        },
         {
             "append": true,
             "sourcePointer": "/datasetSchemaDotOrg/distribution[i]",

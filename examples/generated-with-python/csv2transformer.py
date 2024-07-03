@@ -45,7 +45,7 @@ def literal_transformation(source1, source2, target1, target2, value):
         "        {\n"
         + f'            "sourcePointer": "/preTransformed{sep1}{source1}{sep2}{source2}{i}",\n'
         + f'            "resultPointer": "/{target1}{iTarget}{sep3}{target2}",\n'
-        + '             "expressions": [\n'
+        + '            "expressions": [\n'
         + '                "\\"' + value + '\\""\n'
         + '            ]\n'
         + "        },\n"
@@ -122,7 +122,7 @@ def append_and_delete(entity):
         + '        {\n'
         + '            "expressions": [\n'
         + f'                "remove(/{entity})"\n'
-        + '            ]'
+        + '            ]\n'
         + '        },\n'
     )
 
