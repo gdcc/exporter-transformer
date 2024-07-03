@@ -3,7 +3,6 @@ package io.gdcc.spi.export.transformer;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.io.StringReader;
-import java.io.StringWriter;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.nio.file.FileSystem;
@@ -21,13 +20,14 @@ import java.util.Set;
 import java.util.logging.Logger;
 import java.util.regex.Pattern;
 
+import javax.script.ScriptEngine;
 import javax.xml.transform.Source;
 import javax.xml.transform.URIResolver;
 import javax.xml.transform.stream.StreamResult;
 import javax.xml.transform.stream.StreamSource;
 
 import org.openjdk.nashorn.api.scripting.NashornScriptEngineFactory;
-import org.python.util.PythonInterpreter;
+import org.python.jsr223.PyScriptEngineFactory;
 
 import com.google.auto.service.AutoService;
 
@@ -36,6 +36,7 @@ import io.gdcc.spi.export.ExportException;
 import io.gdcc.spi.export.Exporter;
 import io.github.erykkul.json.transformer.Transformer;
 import io.github.erykkul.json.transformer.TransformerFactory;
+import io.github.erykkul.json.transformer.Utils;
 import jakarta.json.Json;
 import jakarta.json.JsonObject;
 import jakarta.json.JsonObjectBuilder;
@@ -56,6 +57,7 @@ import jakarta.json.JsonValue.ValueType;
 public class TransformerExporter implements Exporter {
     private static final Logger logger = Logger.getLogger(TransformerFactory.class.getName());
     private static final TransformerFactory factory = TransformerFactory.factory(new NashornScriptEngineFactory());
+    private static final PyScriptEngineFactory pyFactory = new PyScriptEngineFactory();
     private static final Pattern escapePattern = Pattern.compile("(\\<|\\>|\"|'|&)");
     private static final Map<String, String> escapeMap = Map.of(
             "<", "&lt;",
@@ -227,15 +229,11 @@ public class TransformerExporter implements Exporter {
                 job.add("config", config.asJsonValue());
 
                 if (pyScript != null) {
-                    try (PythonInterpreter pyInterp = new PythonInterpreter()) {
-                        final StringWriter output = new StringWriter();
-                        //pyInterp.set("x", job.build());
-                        pyInterp.setOut(output);
-                        pyInterp.exec(pyScript);
-                        outputStream.write(output.toString().getBytes("UTF8"));
-                    } catch (final Exception e) {
-                        throw e;
-                    }
+                    final ScriptEngine engine = pyFactory.getScriptEngine();
+                    engine.put("x", Utils.asObject(job.build()));
+                    engine.eval(pyScript);
+                    final Object res = engine.get("res");
+                    outputStream.write(Utils.asJsonValue(res).toString().getBytes("UTF8"));
                 } else {
                     final JsonObject transformed = transformer.transform(job.build());
                     outputStream.write(transformed.toString().getBytes("UTF8"));
@@ -246,6 +244,7 @@ public class TransformerExporter implements Exporter {
             outputStream.flush();
         } catch (final Exception e) {
             // If anything goes wrong, an Exporter should throw an ExportException.
+            logger.severe("transformation failed: " + e);
             throw new ExportException("Unknown exception caught during JSON export.");
         }
     }

@@ -7,14 +7,12 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.OutputStream;
 import java.io.StringReader;
-import java.io.StringWriter;
 import java.net.URISyntaxException;
 import java.util.Locale;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
-import org.python.util.PythonInterpreter;
 
 import io.gdcc.spi.export.ExportDataProvider;
 import jakarta.json.Json;
@@ -113,15 +111,5 @@ public class TransformerExporterTest {
         final JsonObject actual = jsonReader.readObject();
         jsonReader.close();
         assertEquals(expected.trim(), actual.get("example").toString().trim());
-    }
-
-    @Test
-    public void testPython() {
-        try (PythonInterpreter pyInterp = new PythonInterpreter()) {
-            final StringWriter output = new StringWriter();
-            pyInterp.setOut(output);
-            pyInterp.exec("print('hello')");
-            System.out.println(output.toString());
-        }
     }
 }
