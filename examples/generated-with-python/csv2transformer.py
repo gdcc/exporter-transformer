@@ -64,7 +64,7 @@ def literal_ref_transformation(target1, target2, value):
     return (
         "        {\n"
         + f'            "resultPointer": "/{target1}/{target2}/@id",\n'
-        + '             "expressions": [\n'
+        + '            "expressions": [\n'
         + '                "\\"' + value + '\\""\n'
         + '            ]\n'
         + "        },\n"
