@@ -5,16 +5,23 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import java.io.ByteArrayOutputStream;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.InputStream;
 import java.io.OutputStream;
 import java.io.StringReader;
 import java.net.URISyntaxException;
+import java.nio.charset.StandardCharsets;
+import java.util.LinkedHashMap;
 import java.util.Locale;
+
+import javax.script.ScriptEngine;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+import org.python.jsr223.PyScriptEngineFactory;
 
 import io.gdcc.spi.export.ExportDataProvider;
+import io.github.erykkul.json.transformer.Utils;
 import jakarta.json.Json;
 import jakarta.json.JsonArray;
 import jakarta.json.JsonObject;
@@ -111,5 +118,18 @@ public class TransformerExporterTest {
         final JsonObject actual = jsonReader.readObject();
         jsonReader.close();
         assertEquals(expected.trim(), actual.get("example").toString().trim());
+    }
+
+    @Test
+    public void testPythonScript() throws Exception {
+        final InputStream pyScriptStream = TransformerExporterTest.class.getClassLoader().getResourceAsStream("transformer.py");
+        final String pyScript = new String(pyScriptStream.readAllBytes(), StandardCharsets.UTF_8);
+        final ScriptEngine engine = new PyScriptEngineFactory().getScriptEngine();
+        engine.put("x", Utils.asObject(parse("py-input.json")));
+        engine.put("res", new LinkedHashMap<String, Object>());
+        engine.eval(pyScript);
+        final Object res = engine.get("res");
+        final String expected = parse("py-result.json").toString();
+        assertEquals(expected.trim(), Utils.asJsonValue(res).toString().trim());
     }
 }

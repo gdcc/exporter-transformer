@@ -1,0 +1,10 @@
+{
+    "title": "Some title",
+    "author": [
+        "Test Researcher, KU Leuven"
+    ],
+    "files": [
+        "https://localhost:7000/api/access/datafile/27",
+        "https://localhost:7000/api/access/datafile/28"
+    ]
+}

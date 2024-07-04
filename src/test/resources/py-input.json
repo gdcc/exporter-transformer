@@ -1,0 +1,521 @@
+{
+    "datasetJson": {
+        "id": 25,
+        "identifier": "FK2/77ZMJ0",
+        "persistentUrl": "https://doi.org/10.5072/FK2/77ZMJ0",
+        "protocol": "doi",
+        "authority": "10.5072",
+        "publisher": "KU Leuven RDR",
+        "publicationDate": "2024-05-07",
+        "storageIdentifier": "file://10.5072/FK2/77ZMJ0",
+        "datasetVersion": {
+            "id": 6,
+            "datasetId": 25,
+            "datasetPersistentId": "doi:10.5072/FK2/77ZMJ0",
+            "storageIdentifier": "file://10.5072/FK2/77ZMJ0",
+            "versionNumber": 2,
+            "versionMinorNumber": 0,
+            "versionState": "RELEASED",
+            "latestVersionPublishingState": "DRAFT",
+            "lastUpdateTime": "2024-05-12T11:27:20Z",
+            "releaseTime": "2024-05-12T11:27:20Z",
+            "createTime": "2024-05-07T15:24:40Z",
+            "publicationDate": "2024-05-07",
+            "citationDate": "2024-05-07",
+            "license": {
+                "name": "CC-BY-4.0",
+                "uri": "https://creativecommons.org/licenses/by/4.0/",
+                "iconUri": "https://i.creativecommons.org/l/by/4.0/88x31.png"
+            },
+            "fileAccessRequest": true,
+            "metadataBlocks": {
+                "citation": {
+                    "displayName": "Citation Metadata",
+                    "name": "citation",
+                    "fields": [
+                        {
+                            "typeName": "title",
+                            "multiple": false,
+                            "typeClass": "primitive",
+                            "value": "Some title"
+                        },
+                        {
+                            "typeName": "author",
+                            "multiple": true,
+                            "typeClass": "compound",
+                            "value": [
+                                {
+                                    "authorName": {
+                                        "typeName": "authorName",
+                                        "multiple": false,
+                                        "typeClass": "primitive",
+                                        "value": "Test Researcher, KU Leuven"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "typeName": "datasetContact",
+                            "multiple": true,
+                            "typeClass": "compound",
+                            "value": [
+                                {
+                                    "datasetContactEmail": {
+                                        "typeName": "datasetContactEmail",
+                                        "multiple": false,
+                                        "typeClass": "primitive",
+                                        "value": "test2@kuleuven.be"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "typeName": "dsDescription",
+                            "multiple": true,
+                            "typeClass": "compound",
+                            "value": [
+                                {
+                                    "dsDescriptionValue": {
+                                        "typeName": "dsDescriptionValue",
+                                        "multiple": false,
+                                        "typeClass": "primitive",
+                                        "value": "Description 2"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "typeName": "keyword",
+                            "multiple": true,
+                            "typeClass": "compound",
+                            "value": [
+                                {
+                                    "keywordValue": {
+                                        "typeName": "keywordValue",
+                                        "multiple": false,
+                                        "typeClass": "primitive",
+                                        "value": "keyword"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "typeName": "technicalFormat",
+                            "multiple": false,
+                            "typeClass": "primitive",
+                            "value": "pdf"
+                        },
+                        {
+                            "typeName": "access",
+                            "multiple": false,
+                            "typeClass": "compound",
+                            "value": {
+                                "accessRights": {
+                                    "typeName": "accessRights",
+                                    "multiple": false,
+                                    "typeClass": "controlledVocabulary",
+                                    "value": "open"
+                                }
+                            }
+                        }
+                    ]
+                }
+            },
+            "files": [
+                {
+                    "label": "cropped.pdf",
+                    "restricted": false,
+                    "version": 1,
+                    "datasetVersionId": 6,
+                    "dataFile": {
+                        "id": 27,
+                        "persistentId": "",
+                        "filename": "cropped.pdf",
+                        "contentType": "application/pdf",
+                        "friendlyType": "Adobe PDF",
+                        "filesize": 11713631,
+                        "storageIdentifier": "s3://dataverse-local:18f6c8b8ec7-55501e761084",
+                        "rootDataFileId": -1,
+                        "md5": "d43823749fdaf6364923338a619fca3e",
+                        "checksum": {
+                            "type": "MD5",
+                            "value": "d43823749fdaf6364923338a619fca3e"
+                        },
+                        "tabularData": false,
+                        "creationDate": "2024-05-12",
+                        "publicationDate": "2024-05-12",
+                        "fileAccessRequest": true
+                    }
+                },
+                {
+                    "label": "cropped2.pdf",
+                    "restricted": false,
+                    "version": 1,
+                    "datasetVersionId": 6,
+                    "dataFile": {
+                        "id": 28,
+                        "persistentId": "",
+                        "filename": "cropped2.pdf",
+                        "contentType": "application/pdf",
+                        "friendlyType": "Adobe PDF",
+                        "filesize": 10841422,
+                        "storageIdentifier": "s3://dataverse-local:18f6c8b905d-bacc272205d6",
+                        "rootDataFileId": -1,
+                        "md5": "b338dc70fac3b550ee9a8fdf8eae974e",
+                        "checksum": {
+                            "type": "MD5",
+                            "value": "b338dc70fac3b550ee9a8fdf8eae974e"
+                        },
+                        "tabularData": false,
+                        "creationDate": "2024-05-12",
+                        "publicationDate": "2024-05-12",
+                        "fileAccessRequest": true
+                    }
+                }
+            ],
+            "citation": "Test Researcher, KU Leuven, 2024, \"Some title\", https://doi.org/10.5072/FK2/77ZMJ0, KU Leuven RDR, V2"
+        }
+    },
+    "datasetORE": {
+        "dcterms:modified": "2024-07-04",
+        "dcterms:creator": "KU Leuven RDR",
+        "@type": "ore:ResourceMap",
+        "schema:additionalType": "Dataverse OREMap Format v1.0.0",
+        "dvcore:generatedBy": {
+            "@type": "schema:SoftwareApplication",
+            "schema:name": "Dataverse",
+            "schema:version": "6.2",
+            "schema:url": "https://github.com/iqss/dataverse"
+        },
+        "@id": "https://localhost:7000/api/datasets/export?exporter=OAI_ORE&persistentId=https://doi.org/10.5072/FK2/77ZMJ0",
+        "ore:describes": {
+            "author": {
+                "citation:authorName": "Test Researcher, KU Leuven"
+            },
+            "citation:datasetContact": {
+                "citation:datasetContactEmail": "test2@kuleuven.be"
+            },
+            "citation:access": {
+                "citation:accessRights": "open"
+            },
+            "citation:dsDescription": {
+                "citation:dsDescriptionValue": "Description 2"
+            },
+            "citation:keyword": {
+                "citation:keywordValue": "keyword"
+            },
+            "citation:technicalFormat": "pdf",
+            "title": "Some title",
+            "@id": "https://doi.org/10.5072/FK2/77ZMJ0",
+            "@type": [
+                "ore:Aggregation",
+                "schema:Dataset"
+            ],
+            "schema:version": "2.0",
+            "schema:name": "Some title",
+            "schema:dateModified": "Sun May 12 13:27:20 CEST 2024",
+            "schema:datePublished": "2024-05-07",
+            "schema:creativeWorkStatus": "RELEASED",
+            "schema:license": "https://creativecommons.org/licenses/by/4.0/",
+            "dvcore:fileTermsOfAccess": {
+                "dvcore:fileRequestAccess": true
+            },
+            "schema:includedInDataCatalog": "KU Leuven RDR",
+            "schema:isPartOf": {
+                "schema:name": "KU Leuven RDR",
+                "@id": "https://localhost:7000/dataverse/rdr",
+                "schema:description": "<h3>Welcome to the KU Leuven Research Data Repository.</h3>RDR is the institutional repository that helps KU Leuven researchers publish, share, cite, and preserve their research data in a findable, accessible, interoperable and reusable way."
+            },
+            "ore:aggregates": [
+                {
+                    "schema:name": "cropped.pdf",
+                    "dvcore:restricted": false,
+                    "schema:version": 1,
+                    "dvcore:datasetVersionId": 6,
+                    "@id": "https://localhost:7000/file.xhtml?fileId=27",
+                    "schema:sameAs": "https://localhost:7000/api/access/datafile/27",
+                    "@type": "ore:AggregatedResource",
+                    "schema:fileFormat": "application/pdf",
+                    "dvcore:filesize": 11713631,
+                    "dvcore:storageIdentifier": "s3://dataverse-local:18f6c8b8ec7-55501e761084",
+                    "dvcore:rootDataFileId": -1,
+                    "dvcore:checksum": {
+                        "@type": "MD5",
+                        "@value": "d43823749fdaf6364923338a619fca3e"
+                    }
+                },
+                {
+                    "schema:name": "cropped2.pdf",
+                    "dvcore:restricted": false,
+                    "schema:version": 1,
+                    "dvcore:datasetVersionId": 6,
+                    "@id": "https://localhost:7000/file.xhtml?fileId=28",
+                    "schema:sameAs": "https://localhost:7000/api/access/datafile/28",
+                    "@type": "ore:AggregatedResource",
+                    "schema:fileFormat": "application/pdf",
+                    "dvcore:filesize": 10841422,
+                    "dvcore:storageIdentifier": "s3://dataverse-local:18f6c8b905d-bacc272205d6",
+                    "dvcore:rootDataFileId": -1,
+                    "dvcore:checksum": {
+                        "@type": "MD5",
+                        "@value": "b338dc70fac3b550ee9a8fdf8eae974e"
+                    }
+                }
+            ],
+            "schema:hasPart": [
+                "https://localhost:7000/file.xhtml?fileId=27",
+                "https://localhost:7000/file.xhtml?fileId=28"
+            ]
+        },
+        "@context": {
+            "author": "http://purl.org/dc/terms/creator",
+            "citation": "https://dataverse.org/schema/citation/",
+            "dcterms": "http://purl.org/dc/terms/",
+            "dvcore": "https://dataverse.org/schema/core#",
+            "ore": "http://www.openarchives.org/ore/terms/",
+            "schema": "http://schema.org/",
+            "title": "http://purl.org/dc/terms/title"
+        }
+    },
+    "datasetSchemaDotOrg": {
+        "@context": "http://schema.org",
+        "@type": "Dataset",
+        "@id": "https://doi.org/10.5072/FK2/77ZMJ0",
+        "identifier": "https://doi.org/10.5072/FK2/77ZMJ0",
+        "name": "Some title",
+        "creator": [
+            {
+                "@type": "Organization",
+                "name": "Test Researcher, KU Leuven"
+            }
+        ],
+        "author": [
+            {
+                "@type": "Organization",
+                "name": "Test Researcher, KU Leuven"
+            }
+        ],
+        "datePublished": "2024-05-07",
+        "dateModified": "2024-05-12",
+        "version": "2",
+        "description": "Description 2",
+        "keywords": [
+            "keyword"
+        ],
+        "license": "https://creativecommons.org/licenses/by/4.0/",
+        "includedInDataCatalog": {
+            "@type": "DataCatalog",
+            "name": "KU Leuven RDR",
+            "url": "https://localhost:7000"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "KU Leuven RDR"
+        },
+        "provider": {
+            "@type": "Organization",
+            "name": "KU Leuven RDR"
+        },
+        "distribution": [
+            {
+                "@type": "DataDownload",
+                "name": "cropped.pdf",
+                "encodingFormat": "application/pdf",
+                "contentSize": 11713631,
+                "contentUrl": "https://localhost:7000/api/access/datafile/27"
+            },
+            {
+                "@type": "DataDownload",
+                "name": "cropped2.pdf",
+                "encodingFormat": "application/pdf",
+                "contentSize": 10841422,
+                "contentUrl": "https://localhost:7000/api/access/datafile/28"
+            }
+        ]
+    },
+    "datasetFileDetails": [
+        {
+            "id": 27,
+            "persistentId": "",
+            "filename": "cropped.pdf",
+            "contentType": "application/pdf",
+            "friendlyType": "Adobe PDF",
+            "filesize": 11713631,
+            "storageIdentifier": "s3://dataverse-local:18f6c8b8ec7-55501e761084",
+            "rootDataFileId": -1,
+            "md5": "d43823749fdaf6364923338a619fca3e",
+            "checksum": {
+                "type": "MD5",
+                "value": "d43823749fdaf6364923338a619fca3e"
+            },
+            "tabularData": false,
+            "creationDate": "2024-05-12",
+            "publicationDate": "2024-05-12",
+            "fileAccessRequest": true,
+            "restricted": false,
+            "fileMetadataId": 27,
+            "varGroups": []
+        },
+        {
+            "id": 28,
+            "persistentId": "",
+            "filename": "cropped2.pdf",
+            "contentType": "application/pdf",
+            "friendlyType": "Adobe PDF",
+            "filesize": 10841422,
+            "storageIdentifier": "s3://dataverse-local:18f6c8b905d-bacc272205d6",
+            "rootDataFileId": -1,
+            "md5": "b338dc70fac3b550ee9a8fdf8eae974e",
+            "checksum": {
+                "type": "MD5",
+                "value": "b338dc70fac3b550ee9a8fdf8eae974e"
+            },
+            "tabularData": false,
+            "creationDate": "2024-05-12",
+            "publicationDate": "2024-05-12",
+            "fileAccessRequest": true,
+            "restricted": false,
+            "fileMetadataId": 28,
+            "varGroups": []
+        }
+    ],
+    "preTransformed": {
+        "id": 25,
+        "identifier": "FK2/77ZMJ0",
+        "persistentUrl": "https://doi.org/10.5072/FK2/77ZMJ0",
+        "protocol": "doi",
+        "authority": "10.5072",
+        "publisher": "KU Leuven RDR",
+        "publicationDate": "2024-05-07",
+        "storageIdentifier": "file://10.5072/FK2/77ZMJ0",
+        "datasetVersion": {
+            "id": 6,
+            "datasetId": 25,
+            "datasetPersistentId": "doi:10.5072/FK2/77ZMJ0",
+            "storageIdentifier": "file://10.5072/FK2/77ZMJ0",
+            "versionNumber": 2,
+            "versionMinorNumber": 0,
+            "versionState": "RELEASED",
+            "latestVersionPublishingState": "DRAFT",
+            "lastUpdateTime": "2024-05-12T11:27:20Z",
+            "releaseTime": "2024-05-12T11:27:20Z",
+            "createTime": "2024-05-07T15:24:40Z",
+            "publicationDate": "2024-05-07",
+            "citationDate": "2024-05-07",
+            "license": {
+                "name": "CC-BY-4.0",
+                "uri": "https://creativecommons.org/licenses/by/4.0/",
+                "iconUri": "https://i.creativecommons.org/l/by/4.0/88x31.png"
+            },
+            "fileAccessRequest": true,
+            "metadataBlocks": {
+                "citation": {
+                    "title": [
+                        "Some title"
+                    ],
+                    "author": [
+                        {
+                            "authorName": [
+                                "Test Researcher, KU Leuven"
+                            ]
+                        }
+                    ],
+                    "datasetContact": [
+                        {
+                            "datasetContactEmail": [
+                                "test2@kuleuven.be"
+                            ]
+                        }
+                    ],
+                    "dsDescription": [
+                        {
+                            "dsDescriptionValue": [
+                                "Description 2"
+                            ]
+                        }
+                    ],
+                    "keyword": [
+                        {
+                            "keywordValue": [
+                                "keyword"
+                            ]
+                        }
+                    ],
+                    "technicalFormat": [
+                        "pdf"
+                    ],
+                    "access": [
+                        {
+                            "accessRights": {
+                                "typeName": "accessRights",
+                                "multiple": false,
+                                "typeClass": "controlledVocabulary",
+                                "value": "open"
+                            }
+                        }
+                    ]
+                }
+            },
+            "files": [
+                {
+                    "label": "cropped.pdf",
+                    "restricted": false,
+                    "version": 1,
+                    "datasetVersionId": 6,
+                    "dataFile": {
+                        "id": 27,
+                        "persistentId": "",
+                        "filename": "cropped.pdf",
+                        "contentType": "application/pdf",
+                        "friendlyType": "Adobe PDF",
+                        "filesize": 11713631,
+                        "storageIdentifier": "s3://dataverse-local:18f6c8b8ec7-55501e761084",
+                        "rootDataFileId": -1,
+                        "md5": "d43823749fdaf6364923338a619fca3e",
+                        "checksum": {
+                            "type": "MD5",
+                            "value": "d43823749fdaf6364923338a619fca3e"
+                        },
+                        "tabularData": false,
+                        "creationDate": "2024-05-12",
+                        "publicationDate": "2024-05-12",
+                        "fileAccessRequest": true
+                    }
+                },
+                {
+                    "label": "cropped2.pdf",
+                    "restricted": false,
+                    "version": 1,
+                    "datasetVersionId": 6,
+                    "dataFile": {
+                        "id": 28,
+                        "persistentId": "",
+                        "filename": "cropped2.pdf",
+                        "contentType": "application/pdf",
+                        "friendlyType": "Adobe PDF",
+                        "filesize": 10841422,
+                        "storageIdentifier": "s3://dataverse-local:18f6c8b905d-bacc272205d6",
+                        "rootDataFileId": -1,
+                        "md5": "b338dc70fac3b550ee9a8fdf8eae974e",
+                        "checksum": {
+                            "type": "MD5",
+                            "value": "b338dc70fac3b550ee9a8fdf8eae974e"
+                        },
+                        "tabularData": false,
+                        "creationDate": "2024-05-12",
+                        "publicationDate": "2024-05-12",
+                        "fileAccessRequest": true
+                    }
+                }
+            ],
+            "citation": "Test Researcher, KU Leuven, 2024, \"Some title\", https://doi.org/10.5072/FK2/77ZMJ0, KU Leuven RDR, V2"
+        }
+    },
+    "config": {
+        "formatName": "debug_py",
+        "harvestable": false,
+        "availableToUsers": true,
+        "mediaType": "application/json",
+        "displayName": "Debug Python"
+    }
+}
