@@ -1,3 +1,5 @@
 target
 .vscode
-.jython_cache
+.idea
+.flattened-pom.xml
+pom.xml.versionsBackup

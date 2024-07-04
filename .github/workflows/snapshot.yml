@@ -1,0 +1,39 @@
+name: Snapshot to Maven Central Repository
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    if: ${{ !contains(github.event.head_commit.message, '[maven-release-plugin]') }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Determine Java version from POM
+        run: |
+          echo "JAVA_VERSION=$(grep '<jdk.version>' pom.xml | cut -f2 -d'>' | cut -f1 -d'<')" >> ${GITHUB_ENV}
+
+      - name: Set up JDK ${{ env.JAVA_VERSION }}
+        uses: actions/setup-java@v4
+        with:
+          java-version: ${{ env.JAVA_VERSION }}
+          distribution: 'temurin'
+          cache: 'maven'
+      - name: Build, test, verify
+        run: mvn -B verify -Dflatten.skip -Psingle
+
+        # Running setup-java again overwrites the settings.xml - IT'S MANDATORY TO DO THIS SECOND SETUP!!!
+      - name: Set up Maven Central Repository
+        uses: actions/setup-java@v4
+        with:
+          java-version: ${{ env.JAVA_VERSION }}
+          distribution: 'temurin'
+          server-id: ossrh
+          server-username: MAVEN_USERNAME
+          server-password: MAVEN_PASSWORD
+      - name: Publish snapshot
+        run: mvn deploy -DskipUT -DskipIT -Dflatten.skip -Psingle
+        env:
+          MAVEN_USERNAME: ${{ secrets.DATAVERSEBOT_SONATYPE_USERNAME }}
+          MAVEN_PASSWORD: ${{ secrets.DATAVERSEBOT_SONATYPE_TOKEN }}
