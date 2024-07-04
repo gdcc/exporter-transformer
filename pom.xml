@@ -74,7 +74,7 @@
     <dependency>
       <groupId>io.github.erykkul</groupId>
       <artifactId>json-transformer</artifactId>
-      <version>1.0.3</version>
+      <version>1.0.4</version>
     </dependency> 
     <dependency>
       <groupId>org.openjdk.nashorn</groupId>
