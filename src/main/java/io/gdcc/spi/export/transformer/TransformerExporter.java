@@ -1,6 +1,7 @@
 package io.gdcc.spi.export.transformer;
 
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.io.StringReader;
 import java.net.URI;
@@ -17,6 +18,7 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
+import java.util.Optional;
 import java.util.Set;
 import java.util.logging.Logger;
 import java.util.regex.Pattern;
@@ -41,6 +43,7 @@ import io.github.erykkul.json.transformer.Utils;
 import jakarta.json.Json;
 import jakarta.json.JsonObject;
 import jakarta.json.JsonObjectBuilder;
+import jakarta.json.JsonReader;
 import jakarta.json.JsonString;
 import jakarta.json.JsonValue;
 import jakarta.json.JsonValue.ValueType;
@@ -201,6 +204,14 @@ public class TransformerExporter implements Exporter {
         return config.isAvailableToUsers();
     }
 
+    // Exporters can specify that they require, as input, the output of another
+    // exporter. This is done by providing the name of that format in response to a
+    // call to this method.
+    @Override
+    public Optional<String> getPrerequisiteFormatName() {
+        return Optional.ofNullable(config.getPrerequisiteFormatName());
+    }
+
     // Defines the mime type of the exported format - used when metadata is
     // downloaded, i.e. to trigger an appropriate viewer in the user's browser.
     @Override
@@ -214,32 +225,27 @@ public class TransformerExporter implements Exporter {
     public void exportDataset(final ExportDataProvider dataProvider, final OutputStream outputStream)
             throws ExportException {
         try {
-            final JsonObject datasetJson = dataProvider.getDatasetJson();
-            final JsonObject preTransformed = preTransformer.transform(datasetJson);
             // Write the output format to the output stream.
             if (xmlTransformer != null) {
-                final Source src = new StreamSource(new StringReader(jsonToXml(preTransformed)));
+                final Source src = getPrerequisiteFormatName().isEmpty() ? getInputAsSource(dataProvider)
+                        : getPrerequisiteInputAsSource(dataProvider);
                 xmlTransformer.transform(src, new StreamResult(outputStream));
+            } else if (pyScript != null) {
+                final ScriptEngine engine = pyFactory.getScriptEngine();
+                final JsonObject input = getPrerequisiteFormatName().isEmpty() ? getInputAsJsonObject(dataProvider)
+                        : getPrerequisiteInputAsJsonObject(dataProvider);
+                engine.put("x", Utils.asObject(input));
+                engine.put("res", new LinkedHashMap<String, Object>());
+                engine.eval(pyScript);
+                final Object res = engine.get("res");
+                final byte[] bytes = res instanceof String ? ((String) res).getBytes("UTF8")
+                        : Utils.asJsonValue(res).toString().getBytes("UTF8");
+                outputStream.write(bytes);
             } else {
-                final JsonObjectBuilder job = Json.createObjectBuilder();
-                job.add("datasetJson", datasetJson);
-                job.add("datasetORE", dataProvider.getDatasetORE());
-                job.add("datasetSchemaDotOrg", dataProvider.getDatasetSchemaDotOrg());
-                job.add("datasetFileDetails", dataProvider.getDatasetFileDetails());
-                job.add("preTransformed", preTransformed);
-                job.add("config", config.asJsonValue());
-
-                if (pyScript != null) {
-                    final ScriptEngine engine = pyFactory.getScriptEngine();
-                    engine.put("x", Utils.asObject(job.build()));
-                    engine.put("res", new LinkedHashMap<String, Object>());
-                    engine.eval(pyScript);
-                    final Object res = engine.get("res");
-                    outputStream.write(Utils.asJsonValue(res).toString().getBytes("UTF8"));
-                } else {
-                    final JsonObject transformed = transformer.transform(job.build());
-                    outputStream.write(transformed.toString().getBytes("UTF8"));
-                }
+                final JsonObject input = getPrerequisiteFormatName().isEmpty() ? getInputAsJsonObject(dataProvider)
+                        : getPrerequisiteInputAsJsonObject(dataProvider);
+                final JsonObject transformed = transformer.transform(input);
+                outputStream.write(transformed.toString().getBytes("UTF8"));
             }
             // Flush the output stream - The output stream is automatically closed by
             // Dataverse and should not be closed in the Exporter.
@@ -248,6 +254,39 @@ public class TransformerExporter implements Exporter {
             // If anything goes wrong, an Exporter should throw an ExportException.
             logger.severe("transformation failed: " + e);
             throw new ExportException("Unknown exception caught during JSON export.");
+        }
+    }
+
+    private Source getInputAsSource(final ExportDataProvider dataProvider) {
+        final JsonObject datasetJson = dataProvider.getDatasetJson();
+        final JsonObject preTransformed = preTransformer.transform(datasetJson);
+        return new StreamSource(new StringReader(jsonToXml(preTransformed)));
+    }
+
+    private JsonObject getInputAsJsonObject(final ExportDataProvider dataProvider) {
+        final JsonObject datasetJson = dataProvider.getDatasetJson();
+        final JsonObject preTransformed = preTransformer.transform(datasetJson);
+        final JsonObjectBuilder job = Json.createObjectBuilder();
+        job.add("datasetJson", datasetJson);
+        job.add("datasetORE", dataProvider.getDatasetORE());
+        job.add("datasetSchemaDotOrg", dataProvider.getDatasetSchemaDotOrg());
+        job.add("datasetFileDetails", dataProvider.getDatasetFileDetails());
+        job.add("preTransformed", preTransformed);
+        job.add("config", config.asJsonValue());
+        return job.build();
+    }
+
+    private Source getPrerequisiteInputAsSource(final ExportDataProvider dataProvider) {
+        return new StreamSource(dataProvider.getPrerequisiteInputStream().get());
+    }
+
+    private JsonObject getPrerequisiteInputAsJsonObject(final ExportDataProvider dataProvider) {
+        try (final JsonReader jsonReader = Json
+                .createReader(new InputStreamReader(dataProvider.getPrerequisiteInputStream().get()))) {
+            return jsonReader.readObject();
+        } catch (final Exception e) {
+            logger.severe("reading prerequisite input " + config.getPrerequisiteFormatName() + " failed");
+            return JsonObject.EMPTY_JSON_OBJECT;
         }
     }
 

@@ -17,6 +17,7 @@ public class Config {
     private static final String displayName = "displayName";
     private static final String harvestable = "harvestable";
     private static final String availableToUsers = "availableToUsers";
+    private static final String prerequisiteFormatName = "prerequisiteFormatName";
     private static final String mediaType = "mediaType";
 
     private final JsonObject object;
@@ -89,6 +90,17 @@ public class Config {
      */
     public Boolean isAvailableToUsers() {
         return object.containsKey(availableToUsers) ? object.getBoolean(availableToUsers) : true;
+    }
+
+    /**
+     * Exporters can specify that they require, as input, the output of another
+     * exporter. This is done by providing the name of that format in response to a
+     * call to this method.
+     * 
+     * @return The prerequisite format name
+     */
+    public String getPrerequisiteFormatName() {
+        return object.containsKey(prerequisiteFormatName) ? object.getString(prerequisiteFormatName) : null;
     }
 
     /**
