@@ -1,23 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <project xmlns="http://maven.apache.org/POM/4.0.0"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>io.gdcc.export</groupId>
-  <artifactId>exporter-transformer</artifactId>
-  <version>1.0.0-M2-SNAPSHOT</version>
+  <groupId>io.github.erykkul</groupId>
+  <artifactId>dataverse-transformer-exporter</artifactId>
+  <version>1.0.4</version>
   <packaging>jar</packaging>
-
-  <name>Dataverse Transformer Exporter</name>
-  <description>Dataverse configuration-driven transformer exporter using either a JSON-Transformer, JavaScript or Python.</description>
-  <url>https://github.com/gdcc/exporter-transformer</url>
-
-  <parent>
-    <groupId>io.gdcc.export</groupId>
-    <artifactId>parent</artifactId>
-    <version>2.0.0-M2</version>
-  </parent>
+  
+  <name>dataverse-transformer-exporter</name>
+  <description>Dataverse example exporter using JSON-Transformer.</description>
+  <url>https://github.com/erykkul/dataverse-transformer-exporter</url>
+  
+  <licenses>
+    <license>
+      <name>The Apache License, Version 2.0</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+    </license>
+  </licenses>
 
   <developers>
     <developer>
@@ -29,21 +32,50 @@
   </developers>
 
   <scm>
-    <connection>scm:git:git://github.com/gdcc/exporter-transformer.git</connection>
-    <developerConnection>scm:git:ssh://github.com:gdcc/exporter-transformer.git</developerConnection>
-    <url>http://github.com/gdcc/exporter-transformer/tree/main</url>
+    <connection>scm:git:git://github.com/erykkul/dataverse-transformer-exporter.git</connection>
+    <developerConnection>scm:git:ssh://github.com:erykkul/dataverse-transformer-exporter.git</developerConnection>
+    <url>http://github.com/erykkul/dataverse-transformer-exporter/tree/main</url>
   </scm>
 
   <properties>
-    <jdk.version>17</jdk.version>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>17</maven.compiler.source>
+    <maven.compiler.target>17</maven.compiler.target>
   </properties>
-
+  
   <dependencies>
+    <dependency>
+      <groupId>io.gdcc</groupId>
+      <artifactId>dataverse-spi</artifactId>
+      <version>2.0.0</version>
+    </dependency>
+    <dependency>
+      <groupId>com.google.auto.service</groupId>
+      <artifactId>auto-service</artifactId>
+      <version>1.1.1</version>
+    </dependency>
+    <dependency>
+      <groupId>jakarta.json</groupId>
+      <artifactId>jakarta.json-api</artifactId>
+      <scope>provided</scope>
+      <version>2.1.3</version>
+    </dependency>
+    <dependency>
+      <groupId>jakarta.ws.rs</groupId>
+      <artifactId>jakarta.ws.rs-api</artifactId>
+      <scope>provided</scope>
+      <version>4.0.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.eclipse.parsson</groupId>
+      <artifactId>parsson</artifactId>
+      <version>1.1.6</version>
+    </dependency>
     <dependency>
       <groupId>io.github.erykkul</groupId>
       <artifactId>json-transformer</artifactId>
       <version>1.0.4</version>
-    </dependency>
+    </dependency> 
     <dependency>
       <groupId>org.openjdk.nashorn</groupId>
       <artifactId>nashorn-core</artifactId>
@@ -54,10 +86,30 @@
       <artifactId>jython-standalone</artifactId>
       <version>2.7.3</version>
     </dependency>
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter</artifactId>
+      <version>5.10.3</version>
+      <scope>test</scope>
+    </dependency>
   </dependencies>
   <build>
-    <pluginManagement>
+    <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
       <plugins>
+        <!-- clean lifecycle, see https://maven.apache.org/ref/current/maven-core/lifecycles.html#clean_Lifecycle -->
+        <plugin>
+          <artifactId>maven-clean-plugin</artifactId>
+          <version>3.4.0</version>
+        </plugin>
+        <!-- default lifecycle, jar packaging: see https://maven.apache.org/ref/current/maven-core/default-bindings.html#Plugin_bindings_for_jar_packaging -->
+        <plugin>
+          <artifactId>maven-resources-plugin</artifactId>
+          <version>3.3.1</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <version>3.13.0</version>
+        </plugin>
         <plugin>
           <artifactId>maven-assembly-plugin</artifactId>
           <configuration>
@@ -75,9 +127,55 @@
             </execution>
           </executions>
         </plugin>
+        <plugin>
+          <artifactId>maven-surefire-plugin</artifactId>
+          <version>3.3.0</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-jar-plugin</artifactId>
+          <version>3.4.2</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-install-plugin</artifactId>
+          <version>3.1.2</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-deploy-plugin</artifactId>
+          <version>3.1.2</version>
+        </plugin>
+        <!-- site lifecycle, see https://maven.apache.org/ref/current/maven-core/lifecycles.html#site_Lifecycle -->
+        <plugin>
+          <artifactId>maven-site-plugin</artifactId>
+          <version>3.12.1</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-project-info-reports-plugin</artifactId>
+          <version>3.6.1</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-gpg-plugin</artifactId>
+          <version>3.2.4</version>
+          <executions>
+            <execution>
+              <id>sign-artifacts</id>
+              <phase>verify</phase>
+              <goals>
+                <goal>sign</goal>
+              </goals>
+            </execution>
+          </executions>
+        </plugin>
       </plugins>
     </pluginManagement>
   </build>
+  <distributionManagement>
+    <repository>
+      <id>github</id>
+      <name>GitHub Packages</name>
+      <url>https://maven.pkg.github.com/erykkul/dataverse-transformer-exporter</url>
+    </repository>
+  </distributionManagement>
   <profiles>
     <profile>
       <id>single</id>
@@ -90,49 +188,31 @@
       </build>
     </profile>
     <profile>
-      <id>release</id>
+      <id>central</id>
       <build>
         <plugins>
           <plugin>
             <artifactId>maven-assembly-plugin</artifactId>
           </plugin>
           <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-enforcer-plugin</artifactId>
-            <dependencies>
-              <dependency>
-                <groupId>org.kordamp.maven</groupId>
-                <artifactId>pomchecker-enforcer-rules</artifactId>
-                <version>${pomchecker.version}</version>
-              </dependency>
-            </dependencies>
-            <executions>
-              <execution>
-                <id>enforce</id>
-                <goals>
-                  <goal>enforce</goal>
-                </goals>
-                <phase>verify</phase>
-                <configuration>
-                  <rules>
-                    <CheckMavenCentral
-                      implementation="org.kordamp.maven.enforcer.checker.CheckMavenCentral">
-                      <failOnWarning>true</failOnWarning>
-                    </CheckMavenCentral>
-                  </rules>
-                </configuration>
-              </execution>
-            </executions>
+            <groupId>org.sonatype.central</groupId>
+            <artifactId>central-publishing-maven-plugin</artifactId>
+            <version>0.5.0</version>
+            <extensions>true</extensions>
+            <configuration>
+              <publishingServerId>central</publishingServerId>
+              <tokenAuth>true</tokenAuth>
+            </configuration>
           </plugin>
           <plugin>
             <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-gpg-plugin</artifactId>
+            <artifactId>maven-source-plugin</artifactId>
+            <version>3.3.1</version>
             <executions>
               <execution>
-                <id>sign-artifacts</id>
-                <phase>verify</phase>
+                <id>attach-sources</id>
                 <goals>
-                  <goal>sign</goal>
+                  <goal>jar-no-fork</goal>
                 </goals>
               </execution>
             </executions>
@@ -140,6 +220,7 @@
           <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-javadoc-plugin</artifactId>
+            <version>3.7.0</version>
             <executions>
               <execution>
                 <id>attach-javadocs</id>
@@ -148,20 +229,17 @@
                 </goals>
               </execution>
             </executions>
-            <configuration>
-              <source>${jdk.version}</source>
-              <detectJavaApiLink>false</detectJavaApiLink>
-              <doclint>${javadoc.lint}</doclint>
-            </configuration>
           </plugin>
           <plugin>
             <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-source-plugin</artifactId>
+            <artifactId>maven-gpg-plugin</artifactId>
+            <version>3.2.4</version>
             <executions>
               <execution>
-                <id>attach-sources</id>
+                <id>sign-artifacts</id>
+                <phase>verify</phase>
                 <goals>
-                  <goal>jar</goal>
+                  <goal>sign</goal>
                 </goals>
               </execution>
             </executions>
