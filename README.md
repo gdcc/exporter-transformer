@@ -1,4 +1,4 @@
-# Transformer (JSON or XML) Exporter for Dataverse
+# Transformer Exporter for Dataverse
 
 This exporter allows you to have up to 100 exporters using a single pre-built JAR file. You can add new exporters by adding directories into the exporters directory (see the Installation section below) and placing (and editing) the configuration (`config.json`) and the transformation (`transformer.json`, `transformer.py` or `transformer.xsl`, see also the examples below) files in it.
 
@@ -136,6 +136,10 @@ This exporter is identical to the Debug example in its output (the only differen
 ### Short example written in Python
 
 This exporter copies only the title, the author names and the filenames of the dataset version, and outputs them in a JSON document. It is written in Python.
+
+### HTML example written in Python
+
+This exporter takes JSON input from a prerequisite exporter (`short_example_py` by default), and displays it as HTML. It is written in Python. In order to change the JSON input for this exporter, change the `prerequisiteFormatName` value in the `config.json` to the format name of the exporter you wish to use as input.
 
 ## Developer guide
 
