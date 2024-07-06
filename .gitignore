@@ -3,3 +3,4 @@ target
 .idea
 .flattened-pom.xml
 pom.xml.versionsBackup
+src/test/resources/fop/output.pdf

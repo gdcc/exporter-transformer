@@ -1,0 +1,63 @@
+<codeBook xmlns="ddi:codebook:2_5" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="ddi:codebook:2_5 https://ddialliance.org/Specification/DDI-Codebook/2.5/XMLSchema/codebook.xsd"
+    version="2.5">
+    <docDscr>
+        <citation>
+            <titlStmt>
+                <titl>Some title</titl>
+                <IDNo agency="DOI">doi:10.5072/FK2/77ZMJ0</IDNo>
+            </titlStmt>
+            <distStmt>
+                <distrbtr source="archive">KU Leuven RDR</distrbtr>
+                <distDate>2024-05-07</distDate>
+            </distStmt>
+            <verStmt source="archive">
+                <version date="2024-05-12" type="RELEASED">2</version>
+            </verStmt>
+            <biblCit>Test Researcher, KU Leuven, 2024, "Some title",
+                https://doi.org/10.5072/FK2/77ZMJ0, KU Leuven RDR, V2</biblCit>
+        </citation>
+    </docDscr>
+    <stdyDscr>
+        <citation>
+            <titlStmt>
+                <titl>Some title</titl>
+                <IDNo agency="DOI">doi:10.5072/FK2/77ZMJ0</IDNo>
+            </titlStmt>
+            <rspStmt>
+                <AuthEnty>Test Researcher, KU Leuven</AuthEnty>
+            </rspStmt>
+            <prodStmt />
+            <distStmt>
+                <distrbtr source="archive">KU Leuven RDR</distrbtr>
+            </distStmt>
+            <holdings URI="https://doi.org/10.5072/FK2/77ZMJ0" />
+        </citation>
+        <stdyInfo>
+            <subject>
+                <keyword>keyword</keyword>
+            </subject>
+            <abstract>Description 2</abstract>
+            <sumDscr />
+        </stdyInfo>
+        <method>
+            <dataColl>
+                <sources />
+            </dataColl>
+            <anlyInfo />
+        </method>
+        <dataAccs>
+            <setAvail />
+            <useStmt />
+        </dataAccs>
+        <othrStdyMat />
+    </stdyDscr>
+    <otherMat ID="f27" URI="https://localhost:7000/api/access/datafile/27" level="datafile">
+        <labl>cropped.pdf</labl>
+        <notes level="file" type="DATAVERSE:CONTENTTYPE" subject="Content/MIME Type">application/pdf</notes>
+    </otherMat>
+    <otherMat ID="f28" URI="https://localhost:7000/api/access/datafile/28" level="datafile">
+        <labl>cropped2.pdf</labl>
+        <notes level="file" type="DATAVERSE:CONTENTTYPE" subject="Content/MIME Type">application/pdf</notes>
+    </otherMat>
+</codeBook>

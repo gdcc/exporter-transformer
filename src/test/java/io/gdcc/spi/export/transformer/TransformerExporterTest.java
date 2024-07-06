@@ -3,6 +3,7 @@ package io.gdcc.spi.export.transformer;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.io.ByteArrayOutputStream;
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.InputStream;
@@ -10,6 +11,7 @@ import java.io.OutputStream;
 import java.io.StringReader;
 import java.net.URISyntaxException;
 import java.nio.charset.StandardCharsets;
+import java.util.Base64;
 import java.util.LinkedHashMap;
 import java.util.Locale;
 
@@ -18,6 +20,7 @@ import javax.script.ScriptEngine;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+import org.python.google.common.io.Files;
 import org.python.jsr223.PyScriptEngineFactory;
 
 import io.gdcc.spi.export.ExportDataProvider;
@@ -122,7 +125,8 @@ public class TransformerExporterTest {
 
     @Test
     public void testPythonScript() throws Exception {
-        final InputStream pyScriptStream = TransformerExporterTest.class.getClassLoader().getResourceAsStream("transformer.py");
+        final InputStream pyScriptStream = TransformerExporterTest.class.getClassLoader()
+                .getResourceAsStream("transformer.py");
         final String pyScript = new String(pyScriptStream.readAllBytes(), StandardCharsets.UTF_8);
         final ScriptEngine engine = new PyScriptEngineFactory().getScriptEngine();
         engine.put("x", Utils.asObject(parse("py-input.json")));
@@ -131,5 +135,23 @@ public class TransformerExporterTest {
         final Object res = engine.get("res");
         final String expected = parse("py-result.json").toString();
         assertEquals(expected.trim(), Utils.asJsonValue(res).toString().trim());
+    }
+
+    @Test
+    public void testJythonScript() throws Exception {
+        final InputStream pyScriptStream = TransformerExporterTest.class.getClassLoader()
+                .getResourceAsStream("fop/transformer.py");
+        final String pyScript = new String(pyScriptStream.readAllBytes(), StandardCharsets.UTF_8);
+        final ScriptEngine engine = new PyScriptEngineFactory().getScriptEngine();
+        final String encoded = Base64.getEncoder().encodeToString(
+                (TransformerExporterTest.class.getClassLoader().getResourceAsStream("fop/input.xml").readAllBytes()));
+        engine.put("x", Utils.asObject(Json.createObjectBuilder().add("base64", encoded).build()));
+        engine.put("path",
+                TransformerExporterTest.class.getClassLoader().getResource(".").getPath().toString() + "fop");
+        engine.put("res", new LinkedHashMap<String, Object>());
+        engine.eval(pyScript);
+        final Object res = engine.get("res");
+        final byte[] decoded = Base64.getDecoder().decode(Utils.asJsonValue(res).asJsonObject().getString("base64"));
+        Files.write(decoded, new File("/home/eryk/projects/exporter-transformer/src/test/resources/fop/output.pdf"));
     }
 }

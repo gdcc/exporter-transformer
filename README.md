@@ -6,11 +6,11 @@ Supported Dataverse versions: 6.0 - recent.
 
 ## Installation
 
-If you haven’t already configured it, set the [dataverse-spi-exporters-directory](https://guides.dataverse.org/en/latest/installation/config.html#dataverse-spi-exporters-directory) configuration value first. Then navigate to the configured directory and download the [JAR file](https://repo1.maven.org/maven2/io/github/erykkul/dataverse-transformer-exporter/1.0.4/dataverse-transformer-exporter-1.0.4-jar-with-dependencies.jar) together with the examples you want to try out:
+If you haven’t already configured it, set the [dataverse-spi-exporters-directory](https://guides.dataverse.org/en/latest/installation/config.html#dataverse-spi-exporters-directory) configuration value first. Then navigate to the configured directory and download the [JAR file](https://repo1.maven.org/maven2/io/github/erykkul/dataverse-transformer-exporter/1.0.5/dataverse-transformer-exporter-1.0.5-jar-with-dependencies.jar) together with the examples you want to try out:
 
 ```shell
 # download the jar
-wget -O transformer-exporter-1.0.4.jar https://repo1.maven.org/maven2/io/github/erykkul/dataverse-transformer-exporter/1.0.4/dataverse-transformer-exporter-1.0.4-jar-with-dependencies.jar
+wget -O transformer-exporter-1.0.5.jar https://repo1.maven.org/maven2/io/github/erykkul/dataverse-transformer-exporter/1.0.5/dataverse-transformer-exporter-1.0.5-jar-with-dependencies.jar
 # download the hello-world example
 mkdir hello-world
 wget -O hello-world/config.json https://raw.githubusercontent.com/erykkul/dataverse-transformer-exporter/main/examples/hello-world/config.json
@@ -101,6 +101,10 @@ This exporter copies only the title, the author names and the filenames of the d
 ### HTML example written in Python
 
 This exporter takes JSON input from a prerequisite exporter (`short_example_py` by default), and displays it as HTML. It is written in Python. In order to change the JSON input for this exporter, change the `prerequisiteFormatName` value in the `config.json` to the format name of the exporter you wish to use as input.
+
+### DDI PDF codebook
+
+This exporter is entirely based on the [DDI PDF Exporter](https://github.com/gdcc/exporter-ddipdf). It is simply a port of that exporter into Python (Jython). It illustrates how to convert XML input to PDF in an exporter.
 
 ## Developer guide
 

@@ -1,7 +1,7 @@
 package io.gdcc.spi.export.transformer;
 
+import java.io.ByteArrayInputStream;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.io.StringReader;
 import java.io.UnsupportedEncodingException;
@@ -240,7 +240,9 @@ public class TransformerExporter implements Exporter {
                 final JsonObject input = getPrerequisiteFormatName().isEmpty() ? getInputAsJsonObject(dataProvider)
                         : getPrerequisiteInputAsJsonObject(dataProvider);
                 engine.put("x", Utils.asObject(input));
-                engine.put("path", outPath.toAbsolutePath().toString());
+                if (outPath != null) {
+                    engine.put("path", outPath.toAbsolutePath().toString());
+                }
                 engine.put("res", new LinkedHashMap<String, Object>());
                 engine.eval(pyScript);
                 final Object res = engine.get("res");
@@ -279,7 +281,9 @@ public class TransformerExporter implements Exporter {
         job.add("datasetFileDetails", dataProvider.getDatasetFileDetails());
         job.add("preTransformed", preTransformed);
         job.add("config", config.asJsonValue());
-        job.add("path", outPath.toAbsolutePath().toString());
+        if (outPath != null) {
+            job.add("path", outPath.toAbsolutePath().toString());
+        }
         return job.build();
     }
 
@@ -294,20 +298,14 @@ public class TransformerExporter implements Exporter {
         return new StreamSource(dataProvider.getPrerequisiteInputStream().get());
     }
 
-    private JsonObject getPrerequisiteInputAsJsonObject(final ExportDataProvider dataProvider) {
-        try (final JsonReader jsonReader = Json
-                .createReader(new InputStreamReader(dataProvider.getPrerequisiteInputStream().get()))) {
+    private JsonObject getPrerequisiteInputAsJsonObject(final ExportDataProvider dataProvider) throws IOException {
+        final byte[] bytes = dataProvider.getPrerequisiteInputStream().get().readAllBytes();
+        try (final JsonReader jsonReader = Json.createReader(new ByteArrayInputStream(bytes))) {
             return jsonReader.readObject();
         } catch (final Exception ignore) {
-            try {
-                final String encoded = Base64.getEncoder()
-                        .encodeToString(dataProvider.getPrerequisiteInputStream().get().readAllBytes());
-                return Json.createObjectBuilder().add(base64, encoded).build();
-            } catch (final Exception e) {
-                logger.severe("reading prerequisite input " + config.getPrerequisiteFormatName() + " failed");
-                return JsonObject.EMPTY_JSON_OBJECT;
-            }
         }
+        final String encoded = Base64.getEncoder().encodeToString(bytes);
+        return Json.createObjectBuilder().add(base64, encoded).build();
     }
 
     private URIResolver getResolver(final Path outPath) {
