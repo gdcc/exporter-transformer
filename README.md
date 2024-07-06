@@ -13,12 +13,12 @@ If you haven’t already configured it, set the [dataverse-spi-exporters-directo
 wget -O transformer-exporter-1.0.6.jar https://repo1.maven.org/maven2/io/github/erykkul/dataverse-transformer-exporter/1.0.6/dataverse-transformer-exporter-1.0.6-jar-with-dependencies.jar
 # download the hello-world example
 mkdir hello-world
-wget -O hello-world/config.json https://raw.githubusercontent.com/erykkul/dataverse-transformer-exporter/main/examples/hello-world/config.json
-wget -O hello-world/transformer.json https://raw.githubusercontent.com/erykkul/dataverse-transformer-exporter/main/examples/hello-world/transformer.json
+wget -O hello-world/config.json https://raw.githubusercontent.com/gdcc/exporter-transformer/main/examples/hello-world/config.json
+wget -O hello-world/transformer.json https://raw.githubusercontent.com/gdcc/exporter-transformer/main/examples/hello-world/transformer.json
 # download the debug example
 mkdir debug
-wget -O debug/config.json https://raw.githubusercontent.com/erykkul/dataverse-transformer-exporter/main/examples/debug/config.json
-wget -O debug/transformer.json https://raw.githubusercontent.com/erykkul/dataverse-transformer-exporter/main/examples/debug/transformer.json
+wget -O debug/config.json https://raw.githubusercontent.com/gdcc/exporter-transformer/main/examples/debug/config.json
+wget -O debug/transformer.json https://raw.githubusercontent.com/gdcc/exporter-transformer/main/examples/debug/transformer.json
 # etc.
 ```
 
