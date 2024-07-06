@@ -324,6 +324,8 @@ public class TransformerExporter implements Exporter {
         if (localeEnvVar != null) {
             if (localeEnvVar.indexOf('.') > 0) {
                 localeEnvVar = localeEnvVar.substring(0, localeEnvVar.indexOf('.'));
+            } else if (localeEnvVar.indexOf('_') > 0) {
+                localeEnvVar = localeEnvVar.substring(0, localeEnvVar.indexOf('_'));
             }
         } else {
             localeEnvVar = "en";
