@@ -19,46 +19,7 @@ wget -O hello-world/transformer.json https://raw.githubusercontent.com/erykkul/d
 mkdir debug
 wget -O debug/config.json https://raw.githubusercontent.com/erykkul/dataverse-transformer-exporter/main/examples/debug/config.json
 wget -O debug/transformer.json https://raw.githubusercontent.com/erykkul/dataverse-transformer-exporter/main/examples/debug/transformer.json
-# download the short-example example
-mkdir short-example
-wget -O short-example/config.json https://raw.githubusercontent.com/erykkul/dataverse-transformer-exporter/main/examples/short-example/config.json
-wget -O short-example/transformer.json https://raw.githubusercontent.com/erykkul/dataverse-transformer-exporter/main/examples/short-example/transformer.json
-# download the javascript-transformer example
-mkdir javascript-transformer
-wget -O javascript-transformer/config.json https://raw.githubusercontent.com/erykkul/dataverse-transformer-exporter/main/examples/javascript-transformer/config.json
-wget -O javascript-transformer/transformer.json https://raw.githubusercontent.com/erykkul/dataverse-transformer-exporter/main/examples/javascript-transformer/transformer.json
-mkdir javascript-transformer/js
-wget -O javascript-transformer/js/short_example.js https://raw.githubusercontent.com/erykkul/dataverse-transformer-exporter/main/examples/javascript-transformer/js/short_example.js
-# download the croissant example
-mkdir croissant
-wget -O croissant/config.json https://raw.githubusercontent.com/erykkul/dataverse-transformer-exporter/main/examples/croissant/config.json
-wget -O croissant/transformer.json https://raw.githubusercontent.com/erykkul/dataverse-transformer-exporter/main/examples/croissant/transformer.json
-mkdir croissant/js
-wget -O croissant/js/croissant.js https://raw.githubusercontent.com/erykkul/dataverse-transformer-exporter/main/examples/croissant/js/croissant.js
-# download the basic-ro-crate example
-mkdir basic-ro-crate
-wget -O basic-ro-crate/config.json https://raw.githubusercontent.com/erykkul/dataverse-transformer-exporter/main/examples/basic-ro-crate/config.json
-wget -O basic-ro-crate/transformer.json https://raw.githubusercontent.com/erykkul/dataverse-transformer-exporter/main/examples/basic-ro-crate/transformer.json
-# download the generated-with-python example
-mkdir generated-with-python
-wget -O generated-with-python/config.json https://raw.githubusercontent.com/erykkul/dataverse-transformer-exporter/main/examples/generated-with-python/config.json
-wget -O generated-with-python/transformer.json https://raw.githubusercontent.com/erykkul/dataverse-transformer-exporter/main/examples/generated-with-python/transformer.json
-# download the debug-xml example
-mkdir debug-xml
-wget -O debug-xml/config.json https://raw.githubusercontent.com/erykkul/dataverse-transformer-exporter/main/examples/debug-xml/config.json
-wget -O debug-xml/transformer.xsl https://raw.githubusercontent.com/erykkul/dataverse-transformer-exporter/main/examples/debug-xml/transformer.xsl
-# download the short-example-xml example
-mkdir short-example-xml
-wget -O short-example-xml/config.json https://raw.githubusercontent.com/erykkul/dataverse-transformer-exporter/main/examples/short-example-xml/config.json
-wget -O short-example-xml/transformer.xsl https://raw.githubusercontent.com/erykkul/dataverse-transformer-exporter/main/examples/short-example-xml/transformer.xsl
-# download the debug-py example
-mkdir debug-py
-wget -O debug-py/config.json https://raw.githubusercontent.com/erykkul/dataverse-transformer-exporter/main/examples/debug-py/config.json
-wget -O debug-py/transformer.py https://raw.githubusercontent.com/erykkul/dataverse-transformer-exporter/main/examples/debug-py/transformer.py
-# download the short-example-py example
-mkdir short-example-py
-wget -O short-example-py/config.json https://raw.githubusercontent.com/erykkul/dataverse-transformer-exporter/main/examples/short-example-py/config.json
-wget -O short-example-py/transformer.py https://raw.githubusercontent.com/erykkul/dataverse-transformer-exporter/main/examples/short-example-py/transformer.py
+# etc.
 ```
 
 After restarting the Dataverse, you should be able to use the newly installed exporters (next to the internal exporters):
