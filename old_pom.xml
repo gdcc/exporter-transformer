@@ -8,7 +8,7 @@
 
   <groupId>io.github.erykkul</groupId>
   <artifactId>dataverse-transformer-exporter</artifactId>
-  <version>1.0.5</version>
+  <version>1.0.6</version>
   <packaging>jar</packaging>
   
   <name>dataverse-transformer-exporter</name>
