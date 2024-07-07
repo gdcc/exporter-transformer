@@ -150,4 +150,4 @@ print('Running on Java version: ' + System.getProperty('java.version'))
 print('Unix time from Java: ' + str(System.currentTimeMillis()))
 ```
 
-See also the documentation from [Jython](https://www.jython.org/).
+See also the documentation from [Jython](https://www.jython.org/) and the [DDI-PDF](/examples/ddi-pdf/transformer.py) example for how it is used in practice.
