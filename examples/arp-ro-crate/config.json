@@ -1,0 +1,7 @@
+{
+    "formatName": "arp_ro_crate",
+    "harvestable": false,
+    "availableToUsers": true,
+    "mediaType": "application/json",
+    "displayName": "ARP RO-Crate"
+}
