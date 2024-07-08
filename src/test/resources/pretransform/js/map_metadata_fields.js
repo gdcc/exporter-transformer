@@ -1,23 +1,23 @@
 mapSubField = function (subField) {
     if (typeof subField === 'string') {
-        return subField;
+        return subField
     }
-    var mappedSubField = {};
+    var mappedSubField = {}
     subField.forEach(function (value) {
         if (value.keySet) {
             value.keySet().forEach(function (key) {
-                var mapped = mapSubField(value.get(key).value);
-                mappedSubField[key] = mappedSubField[key] ? mappedSubField[key].add(mapped) : new List([mapped]);
-            });
+                var mapped = mapSubField(value.get(key).value)
+                mappedSubField[key] = mappedSubField[key] ? mappedSubField[key].add(mapped) : new List([mapped])
+            })
         } else {
-            mappedSubField = subField;
+            mappedSubField = subField
         }
-    });
-    return mappedSubField;
-};
+    })
+    return mappedSubField
+}
 
-res = {};
+res = {}
 x.stream().forEach(function (field) {
-    var mapped = mapSubField(field.value);
-    res[field.typeName] = res[field.typeName] ? res[field.typeName].add(mapped) : new List([mapped]);
-});
+    var mapped = mapSubField(field.value)
+    res[field.typeName] = res[field.typeName] ? res[field.typeName].add(mapped) : new List([mapped])
+})
