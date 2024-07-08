@@ -76,59 +76,59 @@
             "title": "Water stable isotope data of Lake Balaton from 1991-2008",
             "title_hu": "Balaton vízizotóp összetételének adathalmaza",
             "otherId": {
-                "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/otherId/16102"
+                "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/otherId/1"
             },
             "author": {
-                "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/author/16101"
+                "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/author/2"
             },
             "datasetContact": {
-                "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/datasetContact/16100"
+                "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/datasetContact/3"
             },
             "dsDescription": {
-                "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/dsDescription/16103"
+                "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/dsDescription/4"
             },
             "subject": "Earth and Environmental Sciences",
             "keyword": [
                 {
-                    "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/keyword/16486"
+                    "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/keyword/5"
                 },
                 {
-                    "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/keyword/16510"
+                    "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/keyword/6"
                 },
                 {
-                    "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/keyword/16485"
+                    "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/keyword/7"
                 },
                 {
-                    "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/keyword/16511"
+                    "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/keyword/8"
                 }
             ],
             "dsDescription_hu": {
-                "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/dsDescription_hu/16419"
+                "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/dsDescription_hu/9"
             },
             "topicClassification": {
-                "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/topicClassification/16178"
+                "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/topicClassification/10"
             },
             "publication": [
                 {
-                    "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/publication/16487"
+                    "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/publication/11"
                 },
                 {
-                    "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/publication/16502"
+                    "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/publication/12"
                 },
                 {
-                    "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/publication/16512"
+                    "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/publication/13"
                 },
                 {
-                    "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/publication/16492"
+                    "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/publication/14"
                 },
                 {
-                    "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/publication/16491"
+                    "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/publication/15"
                 },
                 {
-                    "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/publication/16494"
+                    "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/publication/16"
                 },
                 {
-                    "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/publication/16497"
+                    "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/publication/17"
                 }
             ],
             "language": [
@@ -136,7 +136,7 @@
                 "Hungarian"
             ],
             "producer": {
-                "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/producer/16174"
+                "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/producer/18"
             },
             "productionPlace": [
                 "Budapest",
@@ -144,43 +144,43 @@
             ],
             "contributor": [
                 {
-                    "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/contributor/16499"
+                    "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/contributor/19"
                 },
                 {
-                    "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/contributor/16513"
+                    "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/contributor/20"
                 },
                 {
-                    "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/contributor/16514"
+                    "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/contributor/21"
                 },
                 {
-                    "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/contributor/16515"
+                    "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/contributor/22"
                 },
                 {
-                    "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/contributor/16505"
+                    "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/contributor/23"
                 },
                 {
-                    "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/contributor/16508"
+                    "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/contributor/24"
                 }
             ],
             "grantNumber": [
                 {
-                    "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/grantNumber/16490"
+                    "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/grantNumber/25"
                 },
                 {
-                    "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/grantNumber/16507"
+                    "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/grantNumber/26"
                 },
                 {
-                    "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/grantNumber/16496"
+                    "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/grantNumber/27"
                 }
             ],
             "distributionDate": "2024-04-15",
             "depositor": "Hatvani, István Gábor",
             "dateOfDeposit": "2024-04-02",
             "timePeriodCovered": {
-                "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/timePeriodCovered/16170"
+                "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/timePeriodCovered/28"
             },
             "dateOfCollection": {
-                "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/dateOfCollection/16175"
+                "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/dateOfCollection/29"
             },
             "kindOfData": [
                 "water stable isotope",
@@ -189,15 +189,15 @@
             ],
             "characteristicOfSources": "Measurements done on an isotope ration mass spectrometer (IRMS).",
             "geographicCoverage": {
-                "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/geographicCoverage/16182"
+                "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/geographicCoverage/30"
             },
             "geographicUnit": "decimal degrees (°)",
             "geographicBoundingBox": {
-                "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/geographicBoundingBox/16185"
+                "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/geographicBoundingBox/31"
             },
             "unitOfAnalysis": "The delta notation is reported in ‰ or per mil. It refers to the relative difference, in parts per thousand, of the isotopic ratios of a sample and of a reference standard.",
             "hasPart": {
-                "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/file/29831"
+                "@id": "https://hdl.handle.net/21.15109/ARP/PCKHRH/UMBAT9"
             }
         },
         {
