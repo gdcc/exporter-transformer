@@ -208,13 +208,14 @@
             "@type": "CreativeWork"
         },
         {
-            "@arpPid": "",
-            "hash": "caaf2efdd7b809807420409edb5270f7",
+            "@type": "DataDownload",
             "name": "Lake Balaton water stable isotopic data.tab",
+            "encodingFormat": "text/tab-separated-values",
             "contentSize": 894078,
-            "encodingFormat": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-            "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/file/29831",
-            "@type": "File"
+            "hash": "caaf2efdd7b809807420409edb5270f7",
+            "@id": "https://hdl.handle.net/21.15109/ARP/PCKHRH/UMBAT9",
+            "identifier": "https://hdl.handle.net/21.15109/ARP/PCKHRH/UMBAT9",
+            "contentUrl": "https://repo.researchdata.hu/api/access/datafile/29831"
         },
         {
             "keywordValue": "Lake Balaton",
