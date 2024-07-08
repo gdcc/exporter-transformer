@@ -6,11 +6,11 @@ Supported Dataverse versions: 6.0 - recent.
 
 ## Installation
 
-If you haven’t already configured it, set the [dataverse-spi-exporters-directory](https://guides.dataverse.org/en/latest/installation/config.html#dataverse-spi-exporters-directory) configuration value first. Then navigate to the configured directory and download the [JAR file](https://repo1.maven.org/maven2/io/github/erykkul/dataverse-transformer-exporter/1.0.6/dataverse-transformer-exporter-1.0.6-jar-with-dependencies.jar) together with the examples you want to try out:
+If you haven’t already configured it, set the [dataverse-spi-exporters-directory](https://guides.dataverse.org/en/latest/installation/config.html#dataverse-spi-exporters-directory) configuration value first. Then navigate to the configured directory and download the [JAR file](https://repo1.maven.org/maven2/io/github/erykkul/dataverse-transformer-exporter/1.0.7/dataverse-transformer-exporter-1.0.7-jar-with-dependencies.jar) together with the examples you want to try out:
 
 ```shell
 # download the jar
-wget -O transformer-exporter-1.0.6.jar https://repo1.maven.org/maven2/io/github/erykkul/dataverse-transformer-exporter/1.0.6/dataverse-transformer-exporter-1.0.6-jar-with-dependencies.jar
+wget -O transformer-exporter-1.0.7.jar https://repo1.maven.org/maven2/io/github/erykkul/dataverse-transformer-exporter/1.0.7/dataverse-transformer-exporter-1.0.7-jar-with-dependencies.jar
 # download the hello-world example
 mkdir hello-world
 wget -O hello-world/config.json https://raw.githubusercontent.com/gdcc/exporter-transformer/main/examples/hello-world/config.json
