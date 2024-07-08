@@ -20,10 +20,13 @@ import javax.script.ScriptEngine;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+import org.openjdk.nashorn.api.scripting.NashornScriptEngineFactory;
 import org.python.google.common.io.Files;
 import org.python.jsr223.PyScriptEngineFactory;
 
 import io.gdcc.spi.export.ExportDataProvider;
+import io.github.erykkul.json.transformer.Transformer;
+import io.github.erykkul.json.transformer.TransformerFactory;
 import io.github.erykkul.json.transformer.Utils;
 import jakarta.json.Json;
 import jakarta.json.JsonArray;
@@ -169,5 +172,15 @@ public class TransformerExporterTest {
         final Object res = engine.get("res");
         final String expected = parse("arp/result.json").toString();
         //assertEquals(expected.trim(), Utils.asJsonValue(res).toString().trim());
+    }
+
+    @Test
+    public void testPreTransformer() throws Exception {
+        final TransformerFactory factory = TransformerFactory.factory(new NashornScriptEngineFactory());
+        final String pathStr = TransformerExporterTest.class.getClassLoader().getResource(".").getPath().toString() + "pretransform";
+        final Transformer t = factory.createFromFile(pathStr + "/pre_transformer.json");
+        final JsonObject res = t.transform(parse("pretransform/input.json"));
+        final String expected = parse("pretransform/result.json").toString();
+        assertEquals(expected.trim(), Utils.asJsonValue(res).toString().trim());
     }
 }

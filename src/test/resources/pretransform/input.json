@@ -1,0 +1,695 @@
+{
+    "id": 29587,
+    "identifier": "ARP/PCKHRH",
+    "persistentUrl": "https://hdl.handle.net/21.15109/ARP/PCKHRH",
+    "protocol": "hdl",
+    "authority": "21.15109",
+    "publisher": "ARP",
+    "publicationDate": "2024-05-14",
+    "storageIdentifier": "s3-sztaki://21.15109/ARP/PCKHRH",
+    "metadataLanguage": "en",
+    "datasetVersion": {
+        "id": 2413,
+        "datasetId": 29587,
+        "datasetPersistentId": "hdl:21.15109/ARP/PCKHRH",
+        "storageIdentifier": "s3-sztaki://21.15109/ARP/PCKHRH",
+        "versionNumber": 1,
+        "versionMinorNumber": 1,
+        "versionState": "RELEASED",
+        "distributionDate": "2024-04-15",
+        "UNF": "UNF:6:QlWVYPy2qHexnNPGGD5SGw==",
+        "lastUpdateTime": "2024-05-29T10:43:14Z",
+        "releaseTime": "2024-05-29T10:43:14Z",
+        "createTime": "2024-05-25T10:52:32Z",
+        "publicationDate": "2024-05-14",
+        "citationDate": "2024-05-14",
+        "license": {
+            "name": "CC BY-NC-ND 4.0",
+            "uri": "http://creativecommons.org/licenses/by-nc-nd/4.0",
+            "iconUri": "https://licensebuttons.net/l/by-nc-nd/4.0/88x31.png"
+        },
+        "fileAccessRequest": false,
+        "metadataBlocks": {
+            "citation": {
+                "displayName": "Citation Metadata",
+                "name": "citation",
+                "fields": [
+                    {
+                        "typeName": "title",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "Water stable isotope data of Lake Balaton from 1991-2008"
+                    },
+                    {
+                        "typeName": "title_hu",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "Balaton vízizotóp összetételének adathalmaza"
+                    },
+                    {
+                        "typeName": "otherId",
+                        "multiple": true,
+                        "typeClass": "compound",
+                        "value": [
+                            {
+                                "otherIdAgency": {
+                                    "typeName": "otherIdAgency",
+                                    "multiple": false,
+                                    "typeClass": "primitive",
+                                    "value": "doi"
+                                },
+                                "otherIdValue": {
+                                    "typeName": "otherIdValue",
+                                    "multiple": false,
+                                    "typeClass": "primitive",
+                                    "value": "10.5158/ARP/PCKHRH"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "typeName": "author",
+                        "multiple": true,
+                        "typeClass": "compound",
+                        "value": [
+                            {
+                                "authorName": {
+                                    "typeName": "authorName",
+                                    "multiple": false,
+                                    "typeClass": "primitive",
+                                    "value": "Cserny, Tibor"
+                                },
+                                "authorAffiliation": {
+                                    "typeName": "authorAffiliation",
+                                    "multiple": false,
+                                    "typeClass": "primitive",
+                                    "value": "Hungarian Geological Institute"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "typeName": "datasetContact",
+                        "multiple": true,
+                        "typeClass": "compound",
+                        "value": [
+                            {
+                                "datasetContactName": {
+                                    "typeName": "datasetContactName",
+                                    "multiple": false,
+                                    "typeClass": "primitive",
+                                    "value": "Hatvani, István Gábor"
+                                },
+                                "datasetContactAffiliation": {
+                                    "typeName": "datasetContactAffiliation",
+                                    "multiple": false,
+                                    "typeClass": "primitive",
+                                    "value": "HUN-REN Research Centre for Astronomy and Earth Sciences"
+                                },
+                                "datasetContactEmail": {
+                                    "typeName": "datasetContactEmail",
+                                    "multiple": false,
+                                    "typeClass": "primitive",
+                                    "value": "hatvani.istvan@csfk.mta.hu"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "typeName": "dsDescription",
+                        "multiple": true,
+                        "typeClass": "compound",
+                        "value": [
+                            {
+                                "dsDescriptionValue": {
+                                    "typeName": "dsDescriptionValue",
+                                    "multiple": false,
+                                    "typeClass": "primitive",
+                                    "value": "Water stable isotopic data series of the largest shallow freshwater Lake in Europe, Lake Balaton, covering the period 1991-2008, with measurements from four sites, two from the centerline of the lake near Siófok and Balatonszéplak and two at the mouths of inputs to the lake, the River Zala and the Western Belt Canal. Sample frequency of δ18O and δ2H varies from weekly to monthly."
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "typeName": "subject",
+                        "multiple": true,
+                        "typeClass": "controlledVocabulary",
+                        "value": [
+                            "Earth and Environmental Sciences"
+                        ]
+                    },
+                    {
+                        "typeName": "keyword",
+                        "multiple": true,
+                        "typeClass": "compound",
+                        "value": [
+                            {
+                                "keywordValue": {
+                                    "typeName": "keywordValue",
+                                    "multiple": false,
+                                    "typeClass": "primitive",
+                                    "value": "water stable isotopes"
+                                }
+                            },
+                            {
+                                "keywordValue": {
+                                    "typeName": "keywordValue",
+                                    "multiple": false,
+                                    "typeClass": "primitive",
+                                    "value": "Lake Balaton"
+                                }
+                            },
+                            {
+                                "keywordValue": {
+                                    "typeName": "keywordValue",
+                                    "multiple": false,
+                                    "typeClass": "primitive",
+                                    "value": "Europe"
+                                }
+                            },
+                            {
+                                "keywordValue": {
+                                    "typeName": "keywordValue",
+                                    "multiple": false,
+                                    "typeClass": "primitive",
+                                    "value": "shallow freshwater lake"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "typeName": "dsDescription_hu",
+                        "multiple": true,
+                        "typeClass": "compound",
+                        "value": [
+                            {
+                                "dsDescriptionValue_hu": {
+                                    "typeName": "dsDescriptionValue_hu",
+                                    "multiple": false,
+                                    "typeClass": "primitive",
+                                    "value": "Európa legnagyobb sekély édesvizű tavának, a Balaton vízstabilizotópos adatsorai (1991-2008) négy mintavételi pontról: kettő a tó középvonaláról, Siófok és Balatonszéplak közelében, valamint kettő a beérkező vízfolyások, a Zala és a Nyugati Övcsatorna torkolatától. A δ18O és δ2H mintavételezése heti és havi gyakoriság között változott."
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "typeName": "topicClassification",
+                        "multiple": true,
+                        "typeClass": "compound",
+                        "value": [
+                            {
+                                "topicClassValue": {
+                                    "typeName": "topicClassValue",
+                                    "multiple": false,
+                                    "typeClass": "primitive",
+                                    "value": "lakewater stable isotopic composition"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "typeName": "publication",
+                        "multiple": true,
+                        "typeClass": "compound",
+                        "value": [
+                            {
+                                "publicationCitation": {
+                                    "typeName": "publicationCitation",
+                                    "multiple": false,
+                                    "typeClass": "primitive",
+                                    "value": "Cserny T. et al., 1995. Acta Geologica Hungarica 38(4): 355-376;   \nSchöll-Barna, G. 2011. Journal of Limnology 70 (2):272-82;   \nBarna G. and Fórizs I. 2007. Hidrológiai Közlöny, 87 (2):35-41;   \nKoroknai et al., 2005. Hidrológiai Közlöny 85(6):62-64\nKovács et al., 2006 Magyarország Környezetgeokémiai állapota. Innova print Kft., Budapest. p. 111–117.\nKovács et al., 2006 Acta Geodaetica et Geophysica Hungarica, 41(1): 45–54\n\nSee expanded Metadata for details"
+                                }
+                            },
+                            {
+                                "publicationCitation": {
+                                    "typeName": "publicationCitation",
+                                    "multiple": false,
+                                    "typeClass": "primitive",
+                                    "value": "<br>\nCserny T.,  Hertelendi E.,  Tarján S. 1995. Results of isotope-geochemical studies in sedimentological and environmental geologic investigations of Lake Balaton. Acta Geologica Hungarica 38(4): 355-376\n<br>"
+                                },
+                                "publicationURL": {
+                                    "typeName": "publicationURL",
+                                    "multiple": false,
+                                    "typeClass": "primitive",
+                                    "value": "https://real-j.mtak.hu/2990/1/ActaGeologica_38.pdf"
+                                }
+                            },
+                            {
+                                "publicationCitation": {
+                                    "typeName": "publicationCitation",
+                                    "multiple": false,
+                                    "typeClass": "primitive",
+                                    "value": "<br>\nSchöll-Barna, G. 2011. An Isotope Mass Balance Model for the Correlation of Freshwater Bivalve Shell (Unio Pictorum) Carbonate δ18O to Climatic Conditions and Water δ18O in Lake Balaton (Hungary). Journal of Limnology 70 (2):272-82.\n<br>"
+                                },
+                                "publicationIDType": {
+                                    "typeName": "publicationIDType",
+                                    "multiple": false,
+                                    "typeClass": "controlledVocabulary",
+                                    "value": "doi"
+                                },
+                                "publicationIDNumber": {
+                                    "typeName": "publicationIDNumber",
+                                    "multiple": false,
+                                    "typeClass": "primitive",
+                                    "value": "10.4081/jlimnol.2011.272"
+                                },
+                                "publicationURL": {
+                                    "typeName": "publicationURL",
+                                    "multiple": false,
+                                    "typeClass": "primitive",
+                                    "value": "https://www.jlimnol.it/index.php/jlimnol/article/view/jlimnol.2011.272"
+                                }
+                            },
+                            {
+                                "publicationCitation": {
+                                    "typeName": "publicationCitation",
+                                    "multiple": false,
+                                    "typeClass": "primitive",
+                                    "value": "<br>\nBarna G., Fórizs I. 2007. A Balaton stabilizotóp-hidrológiai karakterisztikája. Hidrológiai Közlöny, 87 (2):35-41.\n<br>"
+                                },
+                                "publicationIDType": {
+                                    "typeName": "publicationIDType",
+                                    "multiple": false,
+                                    "typeClass": "controlledVocabulary",
+                                    "value": "url"
+                                },
+                                "publicationURL": {
+                                    "typeName": "publicationURL",
+                                    "multiple": false,
+                                    "typeClass": "primitive",
+                                    "value": "https://library.hungaricana.hu/hu/view/HidrologiaiKozlony_2007/?query=barna%20gabriella&pg=109&layout=s"
+                                }
+                            },
+                            {
+                                "publicationCitation": {
+                                    "typeName": "publicationCitation",
+                                    "multiple": false,
+                                    "typeClass": "primitive",
+                                    "value": "<br>\nKoroknai Zs., Kovács J., Kovácsné Székely I. (2005): A Balaton “medence-felosztásának” vizsgálata többváltozós adatelemzéssel — Hidrológiai Közlöny 85(6):62-64\n<br>"
+                                }
+                            },
+                            {
+                                "publicationCitation": {
+                                    "typeName": "publicationCitation",
+                                    "multiple": false,
+                                    "typeClass": "primitive",
+                                    "value": "<br>\nKovács, J., Koroknai, Zs., Kovácsné Székely I.(2006): A Balaton környezeti állapotának vizsgálata többváltozós adatelemzõ módszerekkel. — In: Szendrei G. (szerk): Magyarország Környezetgeokémiai állapota. Innova print Kft., Budapest. p. 111–117.\n<br>"
+                                }
+                            },
+                            {
+                                "publicationCitation": {
+                                    "typeName": "publicationCitation",
+                                    "multiple": false,
+                                    "typeClass": "primitive",
+                                    "value": "<br>\nKovács, J., Koroknai, Zs., Futó, I., Kovácsné Székely I. (2006): Period estimation and using multivariable data analysis methods in Lake Balaton time-series — Acta Geodaetica et Geophysica Hungarica, 41(1): 45–54.\n<br>"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "typeName": "language",
+                        "multiple": true,
+                        "typeClass": "controlledVocabulary",
+                        "value": [
+                            "English",
+                            "Hungarian"
+                        ]
+                    },
+                    {
+                        "typeName": "producer",
+                        "multiple": true,
+                        "typeClass": "compound",
+                        "value": [
+                            {
+                                "producerName": {
+                                    "typeName": "producerName",
+                                    "multiple": false,
+                                    "typeClass": "primitive",
+                                    "value": "Cserny, Tibor"
+                                },
+                                "producerAffiliation": {
+                                    "typeName": "producerAffiliation",
+                                    "multiple": false,
+                                    "typeClass": "primitive",
+                                    "value": "Hungarian Geological Institute"
+                                },
+                                "producerAbbreviation": {
+                                    "typeName": "producerAbbreviation",
+                                    "multiple": false,
+                                    "typeClass": "primitive",
+                                    "value": "C.T."
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "typeName": "productionPlace",
+                        "multiple": true,
+                        "typeClass": "primitive",
+                        "value": [
+                            "Budapest",
+                            "Debrecen"
+                        ]
+                    },
+                    {
+                        "typeName": "contributor",
+                        "multiple": true,
+                        "typeClass": "compound",
+                        "value": [
+                            {
+                                "contributorType": {
+                                    "typeName": "contributorType",
+                                    "multiple": false,
+                                    "typeClass": "controlledVocabulary",
+                                    "value": "Project Member"
+                                },
+                                "contributorName": {
+                                    "typeName": "contributorName",
+                                    "multiple": false,
+                                    "typeClass": "primitive",
+                                    "value": "Fórizs, István"
+                                }
+                            },
+                            {
+                                "contributorType": {
+                                    "typeName": "contributorType",
+                                    "multiple": false,
+                                    "typeClass": "controlledVocabulary",
+                                    "value": "Project Member"
+                                },
+                                "contributorName": {
+                                    "typeName": "contributorName",
+                                    "multiple": false,
+                                    "typeClass": "primitive",
+                                    "value": "Futó, István"
+                                }
+                            },
+                            {
+                                "contributorType": {
+                                    "typeName": "contributorType",
+                                    "multiple": false,
+                                    "typeClass": "controlledVocabulary",
+                                    "value": "Other"
+                                },
+                                "contributorName": {
+                                    "typeName": "contributorName",
+                                    "multiple": false,
+                                    "typeClass": "primitive",
+                                    "value": "Kravinszkaja, Gabriella"
+                                }
+                            },
+                            {
+                                "contributorType": {
+                                    "typeName": "contributorType",
+                                    "multiple": false,
+                                    "typeClass": "controlledVocabulary",
+                                    "value": "Project Member"
+                                },
+                                "contributorName": {
+                                    "typeName": "contributorName",
+                                    "multiple": false,
+                                    "typeClass": "primitive",
+                                    "value": "Schöll-Barna, Gabriella"
+                                }
+                            },
+                            {
+                                "contributorType": {
+                                    "typeName": "contributorType",
+                                    "multiple": false,
+                                    "typeClass": "controlledVocabulary",
+                                    "value": "Hosting Institution"
+                                },
+                                "contributorName": {
+                                    "typeName": "contributorName",
+                                    "multiple": false,
+                                    "typeClass": "primitive",
+                                    "value": "Hungarian Geological Institute"
+                                }
+                            },
+                            {
+                                "contributorType": {
+                                    "typeName": "contributorType",
+                                    "multiple": false,
+                                    "typeClass": "controlledVocabulary",
+                                    "value": "Hosting Institution"
+                                },
+                                "contributorName": {
+                                    "typeName": "contributorName",
+                                    "multiple": false,
+                                    "typeClass": "primitive",
+                                    "value": "Central Transdanubian Water Directorate, Balaton Water Management Branch"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "typeName": "grantNumber",
+                        "multiple": true,
+                        "typeClass": "compound",
+                        "value": [
+                            {
+                                "grantNumberAgency": {
+                                    "typeName": "grantNumberAgency",
+                                    "multiple": false,
+                                    "typeClass": "primitive",
+                                    "value": "Hungarian Scientific Research Fund"
+                                },
+                                "grantNumberValue": {
+                                    "typeName": "grantNumberValue",
+                                    "multiple": false,
+                                    "typeClass": "primitive",
+                                    "value": "OTKA-550"
+                                }
+                            },
+                            {
+                                "grantNumberAgency": {
+                                    "typeName": "grantNumberAgency",
+                                    "multiple": false,
+                                    "typeClass": "primitive",
+                                    "value": "Hungarian Scientific Research Fund"
+                                },
+                                "grantNumberValue": {
+                                    "typeName": "grantNumberValue",
+                                    "multiple": false,
+                                    "typeClass": "primitive",
+                                    "value": "OTKA-T-014058"
+                                }
+                            },
+                            {
+                                "grantNumberAgency": {
+                                    "typeName": "grantNumberAgency",
+                                    "multiple": false,
+                                    "typeClass": "primitive",
+                                    "value": "Hungarian Scientific Research Fund"
+                                },
+                                "grantNumberValue": {
+                                    "typeName": "grantNumberValue",
+                                    "multiple": false,
+                                    "typeClass": "primitive",
+                                    "value": "OTKA-T-022371"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "typeName": "distributionDate",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "2024-04-15"
+                    },
+                    {
+                        "typeName": "depositor",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "Hatvani, István Gábor"
+                    },
+                    {
+                        "typeName": "dateOfDeposit",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "2024-04-02"
+                    },
+                    {
+                        "typeName": "timePeriodCovered",
+                        "multiple": true,
+                        "typeClass": "compound",
+                        "value": [
+                            {
+                                "timePeriodCoveredStart": {
+                                    "typeName": "timePeriodCoveredStart",
+                                    "multiple": false,
+                                    "typeClass": "primitive",
+                                    "value": "1991-11-13"
+                                },
+                                "timePeriodCoveredEnd": {
+                                    "typeName": "timePeriodCoveredEnd",
+                                    "multiple": false,
+                                    "typeClass": "primitive",
+                                    "value": "2008-05-13"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "typeName": "dateOfCollection",
+                        "multiple": true,
+                        "typeClass": "compound",
+                        "value": [
+                            {
+                                "dateOfCollectionStart": {
+                                    "typeName": "dateOfCollectionStart",
+                                    "multiple": false,
+                                    "typeClass": "primitive",
+                                    "value": "1991-11-13"
+                                },
+                                "dateOfCollectionEnd": {
+                                    "typeName": "dateOfCollectionEnd",
+                                    "multiple": false,
+                                    "typeClass": "primitive",
+                                    "value": "2008-05-13"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "typeName": "kindOfData",
+                        "multiple": true,
+                        "typeClass": "primitive",
+                        "value": [
+                            "water stable isotope",
+                            "oxygen stable isotope ratio",
+                            "hydrogen stable isotope ratio"
+                        ]
+                    },
+                    {
+                        "typeName": "characteristicOfSources",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "Measurements done on an isotope ration mass spectrometer (IRMS)."
+                    }
+                ]
+            },
+            "geospatial": {
+                "displayName": "Geospatial Metadata",
+                "name": "geospatial",
+                "fields": [
+                    {
+                        "typeName": "geographicCoverage",
+                        "multiple": true,
+                        "typeClass": "compound",
+                        "value": [
+                            {
+                                "country": {
+                                    "typeName": "country",
+                                    "multiple": false,
+                                    "typeClass": "controlledVocabulary",
+                                    "value": "Hungary"
+                                },
+                                "otherGeographicCoverage": {
+                                    "typeName": "otherGeographicCoverage",
+                                    "multiple": false,
+                                    "typeClass": "primitive",
+                                    "value": "Lake Balaton"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "typeName": "geographicUnit",
+                        "multiple": true,
+                        "typeClass": "primitive",
+                        "value": [
+                            "decimal degrees (°)"
+                        ]
+                    },
+                    {
+                        "typeName": "geographicBoundingBox",
+                        "multiple": true,
+                        "typeClass": "compound",
+                        "value": [
+                            {
+                                "westLongitude": {
+                                    "typeName": "westLongitude",
+                                    "multiple": false,
+                                    "typeClass": "primitive",
+                                    "value": "17.23773"
+                                },
+                                "eastLongitude": {
+                                    "typeName": "eastLongitude",
+                                    "multiple": false,
+                                    "typeClass": "primitive",
+                                    "value": "18.172942"
+                                },
+                                "northLongitude": {
+                                    "typeName": "northLongitude",
+                                    "multiple": false,
+                                    "typeClass": "primitive",
+                                    "value": "47.067905"
+                                },
+                                "southLongitude": {
+                                    "typeName": "southLongitude",
+                                    "multiple": false,
+                                    "typeClass": "primitive",
+                                    "value": "46.698086"
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            "socialscience": {
+                "displayName": "Social Science and Humanities Metadata",
+                "name": "socialscience",
+                "fields": [
+                    {
+                        "typeName": "unitOfAnalysis",
+                        "multiple": true,
+                        "typeClass": "primitive",
+                        "value": [
+                            "The delta notation is reported in ‰ or per mil. It refers to the relative difference, in parts per thousand, of the isotopic ratios of a sample and of a reference standard."
+                        ]
+                    }
+                ]
+            },
+            "journal": {
+                "displayName": "Journal Metadata",
+                "name": "journal",
+                "fields": []
+            }
+        },
+        "files": [
+            {
+                "label": "Lake Balaton water stable isotopic data.tab",
+                "restricted": false,
+                "version": 1,
+                "datasetVersionId": 2413,
+                "dataFile": {
+                    "id": 29831,
+                    "persistentId": "hdl:21.15109/ARP/PCKHRH/UMBAT9",
+                    "pidURL": "https://hdl.handle.net/21.15109/ARP/PCKHRH/UMBAT9",
+                    "filename": "Lake Balaton water stable isotopic data.tab",
+                    "contentType": "text/tab-separated-values",
+                    "friendlyType": "Tab-Delimited",
+                    "filesize": 411,
+                    "storageIdentifier": "s3-sztaki://concorda:18f05eca406-1a448d65cff8",
+                    "originalFileFormat": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+                    "originalFormatLabel": "MS Excel Spreadsheet",
+                    "originalFileSize": 894078,
+                    "originalFileName": "Lake Balaton water stable isotopic data.xlsx",
+                    "UNF": "UNF:6:QlWVYPy2qHexnNPGGD5SGw==",
+                    "rootDataFileId": -1,
+                    "md5": "caaf2efdd7b809807420409edb5270f7",
+                    "checksum": {
+                        "type": "MD5",
+                        "value": "caaf2efdd7b809807420409edb5270f7"
+                    },
+                    "tabularData": true,
+                    "creationDate": "2024-04-22",
+                    "publicationDate": "2024-05-14",
+                    "fileAccessRequest": false
+                }
+            }
+        ],
+        "citation": "Cserny, Tibor, 2024, \"Water stable isotope data of Lake Balaton from 1991-2008\", https://hdl.handle.net/21.15109/ARP/PCKHRH, ARP, V1, UNF:6:QlWVYPy2qHexnNPGGD5SGw== [fileUNF]"
+    }
+}

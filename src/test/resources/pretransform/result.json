@@ -1,0 +1,209 @@
+{
+    "id": 29587,
+    "identifier": "ARP/PCKHRH",
+    "persistentUrl": "https://hdl.handle.net/21.15109/ARP/PCKHRH",
+    "protocol": "hdl",
+    "authority": "21.15109",
+    "publisher": "ARP",
+    "publicationDate": "2024-05-14",
+    "storageIdentifier": "s3-sztaki://21.15109/ARP/PCKHRH",
+    "metadataLanguage": "en",
+    "datasetVersion": {
+        "id": 2413,
+        "datasetId": 29587,
+        "datasetPersistentId": "hdl:21.15109/ARP/PCKHRH",
+        "storageIdentifier": "s3-sztaki://21.15109/ARP/PCKHRH",
+        "versionNumber": 1,
+        "versionMinorNumber": 1,
+        "versionState": "RELEASED",
+        "distributionDate": "2024-04-15",
+        "UNF": "UNF:6:QlWVYPy2qHexnNPGGD5SGw==",
+        "lastUpdateTime": "2024-05-29T10:43:14Z",
+        "releaseTime": "2024-05-29T10:43:14Z",
+        "createTime": "2024-05-25T10:52:32Z",
+        "publicationDate": "2024-05-14",
+        "citationDate": "2024-05-14",
+        "license": {
+            "name": "CC BY-NC-ND 4.0",
+            "uri": "http://creativecommons.org/licenses/by-nc-nd/4.0",
+            "iconUri": "https://licensebuttons.net/l/by-nc-nd/4.0/88x31.png"
+        },
+        "fileAccessRequest": false,
+        "metadataBlocks": {
+            "citation": {
+                "title": [
+                    "Water stable isotope data of Lake Balaton from 1991-2008"
+                ],
+                "title_hu": [
+                    "Balaton vízizotóp összetételének adathalmaza"
+                ],
+                "otherId": [
+                    {
+                        "otherIdAgency": [
+                            "doi"
+                        ],
+                        "otherIdValue": [
+                            "10.5158/ARP/PCKHRH"
+                        ]
+                    }
+                ],
+                "author": [
+                    {
+                        "authorName": [
+                            "Cserny, Tibor"
+                        ],
+                        "authorAffiliation": [
+                            "Hungarian Geological Institute"
+                        ]
+                    }
+                ],
+                "datasetContact": [
+                    {
+                        "datasetContactName": [
+                            "Hatvani, István Gábor"
+                        ],
+                        "datasetContactAffiliation": [
+                            "HUN-REN Research Centre for Astronomy and Earth Sciences"
+                        ],
+                        "datasetContactEmail": [
+                            "hatvani.istvan@csfk.mta.hu"
+                        ]
+                    }
+                ],
+                "dsDescription": [
+                    {
+                        "dsDescriptionValue": [
+                            "Water stable isotopic data series of the largest shallow freshwater Lake in Europe, Lake Balaton, covering the period 1991-2008, with measurements from four sites, two from the centerline of the lake near Siófok and Balatonszéplak and two at the mouths of inputs to the lake, the River Zala and the Western Belt Canal. Sample frequency of δ18O and δ2H varies from weekly to monthly."
+                        ]
+                    }
+                ],
+                "subject": [
+                    [
+                        "Earth and Environmental Sciences"
+                    ]
+                ]
+            },
+            "geospatial": {
+                "displayName": "Geospatial Metadata",
+                "name": "geospatial",
+                "fields": [
+                    {
+                        "typeName": "geographicCoverage",
+                        "multiple": true,
+                        "typeClass": "compound",
+                        "value": [
+                            {
+                                "country": {
+                                    "typeName": "country",
+                                    "multiple": false,
+                                    "typeClass": "controlledVocabulary",
+                                    "value": "Hungary"
+                                },
+                                "otherGeographicCoverage": {
+                                    "typeName": "otherGeographicCoverage",
+                                    "multiple": false,
+                                    "typeClass": "primitive",
+                                    "value": "Lake Balaton"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "typeName": "geographicUnit",
+                        "multiple": true,
+                        "typeClass": "primitive",
+                        "value": [
+                            "decimal degrees (°)"
+                        ]
+                    },
+                    {
+                        "typeName": "geographicBoundingBox",
+                        "multiple": true,
+                        "typeClass": "compound",
+                        "value": [
+                            {
+                                "westLongitude": {
+                                    "typeName": "westLongitude",
+                                    "multiple": false,
+                                    "typeClass": "primitive",
+                                    "value": "17.23773"
+                                },
+                                "eastLongitude": {
+                                    "typeName": "eastLongitude",
+                                    "multiple": false,
+                                    "typeClass": "primitive",
+                                    "value": "18.172942"
+                                },
+                                "northLongitude": {
+                                    "typeName": "northLongitude",
+                                    "multiple": false,
+                                    "typeClass": "primitive",
+                                    "value": "47.067905"
+                                },
+                                "southLongitude": {
+                                    "typeName": "southLongitude",
+                                    "multiple": false,
+                                    "typeClass": "primitive",
+                                    "value": "46.698086"
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            "socialscience": {
+                "displayName": "Social Science and Humanities Metadata",
+                "name": "socialscience",
+                "fields": [
+                    {
+                        "typeName": "unitOfAnalysis",
+                        "multiple": true,
+                        "typeClass": "primitive",
+                        "value": [
+                            "The delta notation is reported in ‰ or per mil. It refers to the relative difference, in parts per thousand, of the isotopic ratios of a sample and of a reference standard."
+                        ]
+                    }
+                ]
+            },
+            "journal": {
+                "displayName": "Journal Metadata",
+                "name": "journal",
+                "fields": []
+            }
+        },
+        "files": [
+            {
+                "label": "Lake Balaton water stable isotopic data.tab",
+                "restricted": false,
+                "version": 1,
+                "datasetVersionId": 2413,
+                "dataFile": {
+                    "id": 29831,
+                    "persistentId": "hdl:21.15109/ARP/PCKHRH/UMBAT9",
+                    "pidURL": "https://hdl.handle.net/21.15109/ARP/PCKHRH/UMBAT9",
+                    "filename": "Lake Balaton water stable isotopic data.tab",
+                    "contentType": "text/tab-separated-values",
+                    "friendlyType": "Tab-Delimited",
+                    "filesize": 411,
+                    "storageIdentifier": "s3-sztaki://concorda:18f05eca406-1a448d65cff8",
+                    "originalFileFormat": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+                    "originalFormatLabel": "MS Excel Spreadsheet",
+                    "originalFileSize": 894078,
+                    "originalFileName": "Lake Balaton water stable isotopic data.xlsx",
+                    "UNF": "UNF:6:QlWVYPy2qHexnNPGGD5SGw==",
+                    "rootDataFileId": -1,
+                    "md5": "caaf2efdd7b809807420409edb5270f7",
+                    "checksum": {
+                        "type": "MD5",
+                        "value": "caaf2efdd7b809807420409edb5270f7"
+                    },
+                    "tabularData": true,
+                    "creationDate": "2024-04-22",
+                    "publicationDate": "2024-05-14",
+                    "fileAccessRequest": false
+                }
+            }
+        ],
+        "citation": "Cserny, Tibor, 2024, \"Water stable isotope data of Lake Balaton from 1991-2008\", https://hdl.handle.net/21.15109/ARP/PCKHRH, ARP, V1, UNF:6:QlWVYPy2qHexnNPGGD5SGw== [fileUNF]"
+    }
+}
