@@ -73,11 +73,41 @@
                 "@id": "http://creativecommons.org/licenses/by-nc-nd/4.0"
             },
             "datePublished": "2024-05-14",
-            "dateOfDeposit": "2024-04-02",
-            "title_hu": "Balaton vízizotóp összetételének adathalmaza",
-            "subject": "Earth and Environmental Sciences",
             "title": "Water stable isotope data of Lake Balaton from 1991-2008",
-            "depositor": "Hatvani, István Gábor",
+            "title_hu": "Balaton vízizotóp összetételének adathalmaza",
+            "otherId": {
+                "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/otherId/16102"
+            },
+            "author": {
+                "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/author/16101"
+            },
+            "datasetContact": {
+                "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/datasetContact/16100"
+            },
+            "dsDescription": {
+                "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/dsDescription/16103"
+            },
+            "subject": "Earth and Environmental Sciences",
+            "keyword": [
+                {
+                    "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/keyword/16486"
+                },
+                {
+                    "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/keyword/16510"
+                },
+                {
+                    "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/keyword/16485"
+                },
+                {
+                    "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/keyword/16511"
+                }
+            ],
+            "dsDescription_hu": {
+                "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/dsDescription_hu/16419"
+            },
+            "topicClassification": {
+                "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/topicClassification/16178"
+            },
             "publication": [
                 {
                     "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/publication/16487"
@@ -101,64 +131,17 @@
                     "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/publication/16497"
                 }
             ],
-            "keyword": [
-                {
-                    "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/keyword/16486"
-                },
-                {
-                    "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/keyword/16510"
-                },
-                {
-                    "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/keyword/16485"
-                },
-                {
-                    "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/keyword/16511"
-                }
+            "language": [
+                "English",
+                "Hungarian"
             ],
-            "dsDescription": {
-                "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/dsDescription/16103"
-            },
-            "otherId": {
-                "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/otherId/16102"
-            },
-            "datasetContact": {
-                "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/datasetContact/16100"
-            },
-            "author": {
-                "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/author/16101"
+            "producer": {
+                "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/producer/16174"
             },
             "productionPlace": [
                 "Budapest",
                 "Debrecen"
             ],
-            "geographicUnit": "decimal degrees (°)",
-            "distributionDate": "2024-04-15",
-            "unitOfAnalysis": "The delta notation is reported in ‰ or per mil. It refers to the relative difference, in parts per thousand, of the isotopic ratios of a sample and of a reference standard.",
-            "characteristicOfSources": "Measurements done on an isotope ration mass spectrometer (IRMS).",
-            "kindOfData": [
-                "water stable isotope",
-                "oxygen stable isotope ratio",
-                "hydrogen stable isotope ratio"
-            ],
-            "language": [
-                "English",
-                "Hungarian"
-            ],
-            "geographicCoverage": {
-                "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/geographicCoverage/16182"
-            },
-            "topicClassification": {
-                "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/topicClassification/16178"
-            },
-            "dateOfCollection": {
-                "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/dateOfCollection/16175"
-            },
-            "producer": {
-                "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/producer/16174"
-            },
-            "timePeriodCovered": {
-                "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/timePeriodCovered/16170"
-            },
             "contributor": [
                 {
                     "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/contributor/16499"
@@ -190,14 +173,31 @@
                     "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/grantNumber/16496"
                 }
             ],
+            "distributionDate": "2024-04-15",
+            "depositor": "Hatvani, István Gábor",
+            "dateOfDeposit": "2024-04-02",
+            "timePeriodCovered": {
+                "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/timePeriodCovered/16170"
+            },
+            "dateOfCollection": {
+                "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/dateOfCollection/16175"
+            },
+            "kindOfData": [
+                "water stable isotope",
+                "oxygen stable isotope ratio",
+                "hydrogen stable isotope ratio"
+            ],
+            "characteristicOfSources": "Measurements done on an isotope ration mass spectrometer (IRMS).",
+            "geographicCoverage": {
+                "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/geographicCoverage/16182"
+            },
+            "geographicUnit": "decimal degrees (°)",
             "geographicBoundingBox": {
                 "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/geographicBoundingBox/16185"
             },
+            "unitOfAnalysis": "The delta notation is reported in ‰ or per mil. It refers to the relative difference, in parts per thousand, of the isotopic ratios of a sample and of a reference standard.",
             "hasPart": {
                 "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/file/29831"
-            },
-            "dsDescription_hu": {
-                "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/dsDescription_hu/16419"
             }
         },
         {
