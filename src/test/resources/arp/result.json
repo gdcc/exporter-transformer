@@ -1,433 +1,433 @@
 {
-  "@context": [
-    "https://w3id.org/ro/crate/1.1/context",
-    {
-      "country": "https://dataverse.org/schema/geospatial/country",
-      "dateOfCollectionStart": "https://dataverse.org/schema/citation/dateOfCollectionStart",
-      "subject": "http://purl.org/dc/terms/subject",
-      "distributionDate": "https://dataverse.org/schema/citation/distributionDate",
-      "geographicBoundingBox": "https://dataverse.org/schema/geospatial/geographicBoundingBox",
-      "language": "http://purl.org/dc/terms/language",
-      "contributorName": "https://dataverse.org/schema/citation/contributorName",
-      "datasetContactName": "https://dataverse.org/schema/citation/datasetContactName",
-      "eastLongitude": "https://dataverse.org/schema/geospatial/eastLongitude",
-      "producerAbbreviation": "https://dataverse.org/schema/citation/producerAbbreviation",
-      "publication": "http://purl.org/dc/terms/isReferencedBy",
-      "unitOfAnalysis": "https://dataverse.org/schema/socialscience/unitOfAnalysis",
-      "datasetContactAffiliation": "https://dataverse.org/schema/citation/datasetContactAffiliation",
-      "journalArticleType": "https://dataverse.org/schema/journal/journalArticleType",
-      "keyword": "https://dataverse.org/schema/citation/keyword",
-      "timePeriodCoveredStart": "https://dataverse.org/schema/citation/timePeriodCoveredStart",
-      "otherIdValue": "https://dataverse.org/schema/citation/otherIdValue",
-      "dateOfCollectionEnd": "https://dataverse.org/schema/citation/dateOfCollectionEnd",
-      "otherIdAgency": "https://dataverse.org/schema/citation/otherIdAgency",
-      "publicationIDType": "http://purl.org/spar/datacite/ResourceIdentifierScheme",
-      "author": "http://purl.org/dc/terms/creator",
-      "publicationIDNumber": "http://purl.org/spar/datacite/ResourceIdentifier",
-      "publicationCitation": "http://purl.org/dc/terms/bibliographicCitation",
-      "authorAffiliation": "https://dataverse.org/schema/citation/authorAffiliation",
-      "productionPlace": "https://dataverse.org/schema/citation/productionPlace",
-      "producerAffiliation": "https://dataverse.org/schema/citation/producerAffiliation",
-      "authorName": "https://dataverse.org/schema/citation/authorName",
-      "grantNumberAgency": "https://dataverse.org/schema/citation/grantNumberAgency",
-      "producer": "https://dataverse.org/schema/citation/producer",
-      "depositor": "https://dataverse.org/schema/citation/depositor",
-      "contributorType": "https://dataverse.org/schema/citation/contributorType",
-      "publicationURL": "https://schema.org/distribution",
-      "keywordValue": "https://dataverse.org/schema/citation/keywordValue",
-      "geographicCoverage": "https://dataverse.org/schema/geospatial/geographicCoverage",
-      "dsDescriptionValue": "https://dataverse.org/schema/citation/dsDescriptionValue",
-      "characteristicOfSources": "https://dataverse.org/schema/citation/characteristicOfSources",
-      "title": "http://purl.org/dc/terms/title",
-      "contributor": "http://purl.org/dc/terms/contributor",
-      "otherGeographicCoverage": "https://dataverse.org/schema/geospatial/otherGeographicCoverage",
-      "kindOfData": "http://rdf-vocabulary.ddialliance.org/discovery#kindOfData",
-      "southLongitude": "https://dataverse.org/schema/geospatial/southLongitude",
-      "timePeriodCoveredEnd": "https://dataverse.org/schema/citation/timePeriodCoveredEnd",
-      "topicClassValue": "https://dataverse.org/schema/citation/topicClassValue",
-      "title_hu": "http://purl.org/dc/terms/title",
-      "dsDescription_hu": "https://dataverse.org/schema/citation/dsDescription_hu",
-      "westLongitude": "https://dataverse.org/schema/geospatial/westLongitude",
-      "otherId": "https://dataverse.org/schema/citation/otherId",
-      "dateOfCollection": "https://dataverse.org/schema/citation/dateOfCollection",
-      "producerName": "https://dataverse.org/schema/citation/producerName",
-      "datasetContact": "https://dataverse.org/schema/citation/datasetContact",
-      "topicClassification": "https://dataverse.org/schema/citation/topicClassification",
-      "datasetContactEmail": "https://dataverse.org/schema/citation/datasetContactEmail",
-      "geographicUnit": "https://dataverse.org/schema/geospatial/geographicUnit",
-      "dateOfDeposit": "http://purl.org/dc/terms/dateSubmitted",
-      "dsDescription": "https://dataverse.org/schema/citation/dsDescription",
-      "grantNumberValue": "https://dataverse.org/schema/citation/grantNumberValue",
-      "northLongitude": "https://dataverse.org/schema/geospatial/northLongitude",
-      "dsDescriptionValue_hu": "https://dataverse.org/schema/citation/dsDescriptionValue_hu",
-      "timePeriodCovered": "https://schema.org/temporalCoverage",
-      "grantNumber": "https://schema.org/sponsor"
-    }
-  ],
-  "@graph": [
-    {
-      "@id": "./",
-      "@type": "Dataset",
-      "@arpPid": "hdl:21.15109/ARP/PCKHRH",
-      "license": {
-        "@id": "http://creativecommons.org/licenses/by-nc-nd/4.0"
-      },
-      "datePublished": "2024-05-25T12:52:33.111+02:00",
-      "dateOfDeposit": "2024-04-02",
-      "title_hu": "Balaton vízizotóp összetételének adathalmaza",
-      "subject": "Earth and Environmental Sciences",
-      "title": "Water stable isotope data of Lake Balaton from 1991-2008",
-      "depositor": "Hatvani, István Gábor",
-      "publication": [
+    "@context": [
+        "https://w3id.org/ro/crate/1.1/context",
         {
-          "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/publication/16487"
-        },
-        {
-          "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/publication/16502"
-        },
-        {
-          "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/publication/16512"
-        },
-        {
-          "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/publication/16492"
-        },
-        {
-          "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/publication/16491"
-        },
-        {
-          "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/publication/16494"
-        },
-        {
-          "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/publication/16497"
+            "country": "https://dataverse.org/schema/geospatial/country",
+            "dateOfCollectionStart": "https://dataverse.org/schema/citation/dateOfCollectionStart",
+            "subject": "http://purl.org/dc/terms/subject",
+            "distributionDate": "https://dataverse.org/schema/citation/distributionDate",
+            "geographicBoundingBox": "https://dataverse.org/schema/geospatial/geographicBoundingBox",
+            "language": "http://purl.org/dc/terms/language",
+            "contributorName": "https://dataverse.org/schema/citation/contributorName",
+            "datasetContactName": "https://dataverse.org/schema/citation/datasetContactName",
+            "eastLongitude": "https://dataverse.org/schema/geospatial/eastLongitude",
+            "producerAbbreviation": "https://dataverse.org/schema/citation/producerAbbreviation",
+            "publication": "http://purl.org/dc/terms/isReferencedBy",
+            "unitOfAnalysis": "https://dataverse.org/schema/socialscience/unitOfAnalysis",
+            "datasetContactAffiliation": "https://dataverse.org/schema/citation/datasetContactAffiliation",
+            "journalArticleType": "https://dataverse.org/schema/journal/journalArticleType",
+            "keyword": "https://dataverse.org/schema/citation/keyword",
+            "timePeriodCoveredStart": "https://dataverse.org/schema/citation/timePeriodCoveredStart",
+            "otherIdValue": "https://dataverse.org/schema/citation/otherIdValue",
+            "dateOfCollectionEnd": "https://dataverse.org/schema/citation/dateOfCollectionEnd",
+            "otherIdAgency": "https://dataverse.org/schema/citation/otherIdAgency",
+            "publicationIDType": "http://purl.org/spar/datacite/ResourceIdentifierScheme",
+            "author": "http://purl.org/dc/terms/creator",
+            "publicationIDNumber": "http://purl.org/spar/datacite/ResourceIdentifier",
+            "publicationCitation": "http://purl.org/dc/terms/bibliographicCitation",
+            "authorAffiliation": "https://dataverse.org/schema/citation/authorAffiliation",
+            "productionPlace": "https://dataverse.org/schema/citation/productionPlace",
+            "producerAffiliation": "https://dataverse.org/schema/citation/producerAffiliation",
+            "authorName": "https://dataverse.org/schema/citation/authorName",
+            "grantNumberAgency": "https://dataverse.org/schema/citation/grantNumberAgency",
+            "producer": "https://dataverse.org/schema/citation/producer",
+            "depositor": "https://dataverse.org/schema/citation/depositor",
+            "contributorType": "https://dataverse.org/schema/citation/contributorType",
+            "publicationURL": "https://schema.org/distribution",
+            "keywordValue": "https://dataverse.org/schema/citation/keywordValue",
+            "geographicCoverage": "https://dataverse.org/schema/geospatial/geographicCoverage",
+            "dsDescriptionValue": "https://dataverse.org/schema/citation/dsDescriptionValue",
+            "characteristicOfSources": "https://dataverse.org/schema/citation/characteristicOfSources",
+            "title": "http://purl.org/dc/terms/title",
+            "contributor": "http://purl.org/dc/terms/contributor",
+            "otherGeographicCoverage": "https://dataverse.org/schema/geospatial/otherGeographicCoverage",
+            "kindOfData": "http://rdf-vocabulary.ddialliance.org/discovery#kindOfData",
+            "southLongitude": "https://dataverse.org/schema/geospatial/southLongitude",
+            "timePeriodCoveredEnd": "https://dataverse.org/schema/citation/timePeriodCoveredEnd",
+            "topicClassValue": "https://dataverse.org/schema/citation/topicClassValue",
+            "title_hu": "http://purl.org/dc/terms/title",
+            "dsDescription_hu": "https://dataverse.org/schema/citation/dsDescription_hu",
+            "westLongitude": "https://dataverse.org/schema/geospatial/westLongitude",
+            "otherId": "https://dataverse.org/schema/citation/otherId",
+            "dateOfCollection": "https://dataverse.org/schema/citation/dateOfCollection",
+            "producerName": "https://dataverse.org/schema/citation/producerName",
+            "datasetContact": "https://dataverse.org/schema/citation/datasetContact",
+            "topicClassification": "https://dataverse.org/schema/citation/topicClassification",
+            "datasetContactEmail": "https://dataverse.org/schema/citation/datasetContactEmail",
+            "geographicUnit": "https://dataverse.org/schema/geospatial/geographicUnit",
+            "dateOfDeposit": "http://purl.org/dc/terms/dateSubmitted",
+            "dsDescription": "https://dataverse.org/schema/citation/dsDescription",
+            "grantNumberValue": "https://dataverse.org/schema/citation/grantNumberValue",
+            "northLongitude": "https://dataverse.org/schema/geospatial/northLongitude",
+            "dsDescriptionValue_hu": "https://dataverse.org/schema/citation/dsDescriptionValue_hu",
+            "timePeriodCovered": "https://schema.org/temporalCoverage",
+            "grantNumber": "https://schema.org/sponsor"
         }
-      ],
-      "keyword": [
+    ],
+    "@graph": [
         {
-          "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/keyword/16486"
+            "@id": "./",
+            "@type": "Dataset",
+            "@arpPid": "hdl:21.15109/ARP/PCKHRH",
+            "license": {
+                "@id": "http://creativecommons.org/licenses/by-nc-nd/4.0"
+            },
+            "datePublished": "2024-05-25T12:52:33.111+02:00",
+            "dateOfDeposit": "2024-04-02",
+            "title_hu": "Balaton vízizotóp összetételének adathalmaza",
+            "subject": "Earth and Environmental Sciences",
+            "title": "Water stable isotope data of Lake Balaton from 1991-2008",
+            "depositor": "Hatvani, István Gábor",
+            "publication": [
+                {
+                    "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/publication/16487"
+                },
+                {
+                    "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/publication/16502"
+                },
+                {
+                    "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/publication/16512"
+                },
+                {
+                    "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/publication/16492"
+                },
+                {
+                    "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/publication/16491"
+                },
+                {
+                    "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/publication/16494"
+                },
+                {
+                    "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/publication/16497"
+                }
+            ],
+            "keyword": [
+                {
+                    "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/keyword/16486"
+                },
+                {
+                    "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/keyword/16510"
+                },
+                {
+                    "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/keyword/16485"
+                },
+                {
+                    "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/keyword/16511"
+                }
+            ],
+            "dsDescription": {
+                "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/dsDescription/16103"
+            },
+            "otherId": {
+                "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/otherId/16102"
+            },
+            "datasetContact": {
+                "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/datasetContact/16100"
+            },
+            "author": {
+                "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/author/16101"
+            },
+            "productionPlace": [
+                "Budapest",
+                "Debrecen"
+            ],
+            "geographicUnit": "decimal degrees (°)",
+            "distributionDate": "2024-04-15",
+            "unitOfAnalysis": "The delta notation is reported in ‰ or per mil. It refers to the relative difference, in parts per thousand, of the isotopic ratios of a sample and of a reference standard.",
+            "characteristicOfSources": "Measurements done on an isotope ration mass spectrometer (IRMS).",
+            "kindOfData": [
+                "water stable isotope",
+                "oxygen stable isotope ratio",
+                "hydrogen stable isotope ratio"
+            ],
+            "language": [
+                "English",
+                "Hungarian"
+            ],
+            "geographicCoverage": {
+                "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/geographicCoverage/16182"
+            },
+            "topicClassification": {
+                "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/topicClassification/16178"
+            },
+            "dateOfCollection": {
+                "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/dateOfCollection/16175"
+            },
+            "producer": {
+                "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/producer/16174"
+            },
+            "timePeriodCovered": {
+                "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/timePeriodCovered/16170"
+            },
+            "contributor": [
+                {
+                    "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/contributor/16499"
+                },
+                {
+                    "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/contributor/16513"
+                },
+                {
+                    "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/contributor/16514"
+                },
+                {
+                    "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/contributor/16515"
+                },
+                {
+                    "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/contributor/16505"
+                },
+                {
+                    "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/contributor/16508"
+                }
+            ],
+            "grantNumber": [
+                {
+                    "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/grantNumber/16490"
+                },
+                {
+                    "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/grantNumber/16507"
+                },
+                {
+                    "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/grantNumber/16496"
+                }
+            ],
+            "geographicBoundingBox": {
+                "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/geographicBoundingBox/16185"
+            },
+            "hasPart": {
+                "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/file/29831"
+            },
+            "dsDescription_hu": {
+                "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/dsDescription_hu/16419"
+            }
         },
         {
-          "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/keyword/16510"
+            "about": {
+                "@id": "./"
+            },
+            "@id": "ro-crate-metadata.json",
+            "@type": "CreativeWork"
         },
         {
-          "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/keyword/16485"
+            "@arpPid": "",
+            "hash": "caaf2efdd7b809807420409edb5270f7",
+            "name": "Lake Balaton water stable isotopic data.tab",
+            "contentSize": 894078,
+            "encodingFormat": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+            "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/file/29831",
+            "@type": "File"
         },
         {
-          "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/keyword/16511"
+            "keywordValue": "Lake Balaton",
+            "name": "Lake Balaton",
+            "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/keyword/16510",
+            "@type": "keyword"
+        },
+        {
+            "contributorType": "Hosting Institution",
+            "contributorName": "Central Transdanubian Water Directorate, Balaton Water Management Branch",
+            "name": "Hosting Institution ; Central Transdanubian Water Directorate, Balaton Water Management Branch",
+            "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/contributor/16508",
+            "@type": "contributor"
+        },
+        {
+            "keywordValue": "shallow freshwater lake",
+            "name": "shallow freshwater lake",
+            "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/keyword/16511",
+            "@type": "keyword"
+        },
+        {
+            "dsDescriptionValue_hu": "Európa legnagyobb sekély édesvizű tavának, a Balaton vízstabilizotópos adatsorai (1991-2008) négy mintavételi pontról: kettő a tó középvonaláról, Siófok és Balatonszéplak közelében, valamint kettő a beérkező vízfolyások, a Zala és a Nyugati Övcsatorna torkolatától. A δ18O és δ2H mintavételezése heti és havi gyakoriság között változott.",
+            "name": "Európa legnagyobb sekély édesvizű tavának, a Balaton vízstabilizotópos adatsorai (1991-2008) négy mintavételi pontról : kettő a tó középvonalától, Siófok és Balatonszéplak közelében, valamint kettő a beérkező vízfolyások, a Zala és a Nyugati Övcsatorna torkolatánál. A δ18O és δ2H mintavételezése heti és havi gyakoriság között változott.",
+            "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/dsDescription_hu/16419",
+            "@type": "dsDescription_hu"
+        },
+        {
+            "grantNumberAgency": "Hungarian Scientific Research Fund",
+            "grantNumberValue": "OTKA-T-014058",
+            "name": "Hungarian Scientific Research Fund; OTKA-T-014058",
+            "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/grantNumber/16507",
+            "@type": "grantNumber"
+        },
+        {
+            "westLongitude": "17.23773",
+            "eastLongitude": "18.172942",
+            "northLongitude": "47.067905",
+            "southLongitude": "46.698086",
+            "name": "17.23773; 18.172942; 47.067905; 46.698086",
+            "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/geographicBoundingBox/16185",
+            "@type": "geographicBoundingBox"
+        },
+        {
+            "otherIdAgency": "doi",
+            "otherIdValue": "10.5158/ARP/PCKHRH",
+            "name": "MTMT; 1234567",
+            "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/otherId/16102",
+            "@type": "otherId"
+        },
+        {
+            "publicationCitation": "Cserny T. et al., 1995. Acta Geologica Hungarica 38(4): 355-376;   \nSchöll-Barna, G. 2011. Journal of Limnology 70 (2):272-82;   \nBarna G. and Fórizs I. 2007. Hidrológiai Közlöny, 87 (2):35-41;   \nKoroknai et al., 2005. Hidrológiai Közlöny 85(6):62-64\nKovács et al., 2006 Magyarország Környezetgeokémiai állapota. Innova print Kft., Budapest. p. 111–117.\nKovács et al., 2006 Acta Geodaetica et Geophysica Hungarica, 41(1): 45–54\n\nSee expanded Metadata for details",
+            "name": "Cserny T. et al., 1995. Acta Geologica Hungarica 38(4): 355-376; Schöll-Barna, G. 2011. Journal of Limnology 70 (2):272-82; Barna G. and Fórizs I. 2007. Hidrológiai Közlöny, 87 (2):35-41; Koroknai et al., 2005. Hidrológiai Közlöny 85(6):62-64 Kovács et al., 2006 Magyarország Környezetgeokémiai állapota. Innova print Kft., Budapest. p. 111–117. Kovács et al., 2006 Acta Geodaetica et Geophysica Hungarica, 41(1): 45–54 See expanded Metadata for details",
+            "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/publication/16487",
+            "@type": "publication"
+        },
+        {
+            "publicationCitation": "<br>\nCserny T.,  Hertelendi E.,  Tarján S. 1995. Results of isotope-geochemical studies in sedimentological and environmental geologic investigations of Lake Balaton. Acta Geologica Hungarica 38(4): 355-376\n<br>",
+            "publicationURL": "https://real-j.mtak.hu/2990/1/ActaGeologica_38.pdf",
+            "name": "<br> Cserny T., Hertelendi E., Tarján S. 1995. Results of isotope-geochemical studies in sedimentological and environmental geologic investigations of Lake Balaton. Acta Geologica Hungarica 38(4): 355-376 <br>; <a href=\"https://real-j.mtak.hu/2990/1/ActaGeologica_38.pdf\" target=\"_blank\" rel=\"noopener\">https://real-j.mtak.hu/2990/1/ActaGeologica_38.pdf</a>",
+            "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/publication/16502",
+            "@type": "publication"
+        },
+        {
+            "datasetContactName": "Hatvani, István Gábor",
+            "datasetContactAffiliation": "HUN-REN Research Centre for Astronomy and Earth Sciences",
+            "datasetContactEmail": "hatvani.istvan@csfk.mta.hu",
+            "name": "Hatvani, István Gábor; (HUN-REN Research Centre for Astronomy and Earth Sciences); ",
+            "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/datasetContact/16100",
+            "@type": "datasetContact"
+        },
+        {
+            "country": "Hungary",
+            "otherGeographicCoverage": "Lake Balaton",
+            "name": "Hungary, ; Lake Balaton",
+            "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/geographicCoverage/16182",
+            "@type": "geographicCoverage"
+        },
+        {
+            "contributorType": "Project Member",
+            "contributorName": "Futó, István",
+            "name": "Project Member ; Futó, István",
+            "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/contributor/16513",
+            "@type": "contributor"
+        },
+        {
+            "contributorType": "Other",
+            "contributorName": "Kravinszkaja, Gabriella",
+            "name": "Other ; Kravinszkaja, Gabriella",
+            "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/contributor/16514",
+            "@type": "contributor"
+        },
+        {
+            "dsDescriptionValue": "Water stable isotopic data series of the largest shallow freshwater Lake in Europe, Lake Balaton, covering the period 1991-2008, with measurements from four sites, two from the centerline of the lake near Siófok and Balatonszéplak and two at the mouths of inputs to the lake, the River Zala and the Western Belt Canal. Sample frequency of δ18O and δ2H varies from weekly to monthly.",
+            "name": ".",
+            "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/dsDescription/16103",
+            "@type": "dsDescription"
+        },
+        {
+            "contributorType": "Project Member",
+            "contributorName": "Schöll-Barna, Gabriella",
+            "name": "Project Member ; Schöll-Barna, Gabriella",
+            "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/contributor/16515",
+            "@type": "contributor"
+        },
+        {
+            "grantNumberAgency": "Hungarian Scientific Research Fund",
+            "grantNumberValue": "OTKA-550",
+            "name": "Hungarian Scientific Research Fund; OTKA-550",
+            "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/grantNumber/16490",
+            "@type": "grantNumber"
+        },
+        {
+            "contributorType": "Project Member",
+            "contributorName": "Fórizs, István",
+            "name": "Project Member ; Fórizs, István",
+            "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/contributor/16499",
+            "@type": "contributor"
+        },
+        {
+            "topicClassValue": "lakewater stable isotopic composition",
+            "name": "lakewater stable isotopic composition",
+            "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/topicClassification/16178",
+            "@type": "topicClassification"
+        },
+        {
+            "dateOfCollectionStart": "1991-11-13",
+            "dateOfCollectionEnd": "2008-05-13",
+            "name": "Start Date: 1991-11-13 ; End Date: 2008-05-13 ",
+            "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/dateOfCollection/16175",
+            "@type": "dateOfCollection"
+        },
+        {
+            "grantNumberAgency": "Hungarian Scientific Research Fund",
+            "grantNumberValue": "OTKA-T-022371",
+            "name": "Hungarian Scientific Research Fund; OTKA-T-022371",
+            "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/grantNumber/16496",
+            "@type": "grantNumber"
+        },
+        {
+            "keywordValue": "Europe",
+            "name": "Europe",
+            "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/keyword/16485",
+            "@type": "keyword"
+        },
+        {
+            "producerName": "Cserny, Tibor",
+            "producerAffiliation": "Hungarian Geological Institute",
+            "producerAbbreviation": "C.T.",
+            "name": "Cserny, Tibor; (Hungarian Geological Institute); (C.T.)",
+            "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/producer/16174",
+            "@type": "producer"
+        },
+        {
+            "keywordValue": "water stable isotopes",
+            "name": "water stable isotopes",
+            "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/keyword/16486",
+            "@type": "keyword"
+        },
+        {
+            "timePeriodCoveredStart": "1991-11-13",
+            "timePeriodCoveredEnd": "2008-05-13",
+            "name": "Start Date: 1991-11-13 ; End Date: 2008-05-13 ",
+            "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/timePeriodCovered/16170",
+            "@type": "timePeriodCovered"
+        },
+        {
+            "authorName": "Cserny, Tibor",
+            "authorAffiliation": "Hungarian Geological Institute",
+            "name": "Cserny, Tibor; (Hungarian Geological Survey)",
+            "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/author/16101",
+            "@type": "author"
+        },
+        {
+            "publicationCitation": "<br>\nKovács, J., Koroknai, Zs., Futó, I., Kovácsné Székely I. (2006): Period estimation and using multivariable data analysis methods in Lake Balaton time-series — Acta Geodaetica et Geophysica Hungarica, 41(1): 45–54.\n<br>",
+            "name": "<br> Kovács, J., Koroknai, Zs., Futó, I., Kovácsné Székely I. (2006): Period estimation and using multivariable data analysis methods in Lake Balaton time-series — Acta Geodaetica et Geophysica Hungarica, 41(1): 45–54. <br>",
+            "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/publication/16497",
+            "@type": "publication"
+        },
+        {
+            "publicationCitation": "<br>\nSchöll-Barna, G. 2011. An Isotope Mass Balance Model for the Correlation of Freshwater Bivalve Shell (Unio Pictorum) Carbonate δ18O to Climatic Conditions and Water δ18O in Lake Balaton (Hungary). Journal of Limnology 70 (2):272-82.\n<br>",
+            "publicationIDType": "doi",
+            "publicationIDNumber": "10.4081/jlimnol.2011.272",
+            "publicationURL": "https://www.jlimnol.it/index.php/jlimnol/article/view/jlimnol.2011.272",
+            "name": "<br> Schöll-Barna, G. 2011. An Isotope Mass Balance Model for the Correlation of Freshwater Bivalve Shell (Unio Pictorum) Carbonate δ18O to Climatic Conditions and Water δ18O in Lake Balaton (Hungary). Journal of Limnology 70 (2):272-82. <br>; doi: ; 10.4081/jlimnol.2011.272; <a href=\"https://www.jlimnol.it/index.php/jlimnol/article/view/jlimnol.2011.272\" target=\"_blank\" rel=\"noopener\">https://www.jlimnol.it/index.php/jlimnol/article/view/jlimnol.2011.272</a>",
+            "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/publication/16512",
+            "@type": "publication"
+        },
+        {
+            "publicationCitation": "<br>\nBarna G., Fórizs I. 2007. A Balaton stabilizotóp-hidrológiai karakterisztikája. Hidrológiai Közlöny, 87 (2):35-41.\n<br>",
+            "publicationIDType": "url",
+            "publicationURL": "https://library.hungaricana.hu/hu/view/HidrologiaiKozlony_2007/?query=barna%20gabriella&pg=109&layout=s",
+            "name": "<br> Barna G., Fórizs I. 2007. A Balaton stabilizotóp-hidrológiai karakterisztikája. Hidrológiai Közlöny, 87 (2):35-41. <br>; url: ; <a href=\"https://library.hungaricana.hu/hu/view/HidrologiaiKozlony_2007/?query=barna%20gabriella&amp;pg=109&amp;layout=s\" target=\"_blank\" rel=\"noopener\">https://library.hungaricana.hu/hu/view/HidrologiaiKozlony_2007/?query=barna%20gabriella&amp;pg=109&amp;layout=s</a>",
+            "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/publication/16492",
+            "@type": "publication"
+        },
+        {
+            "publicationCitation": "<br>\nKoroknai Zs., Kovács J., Kovácsné Székely I. (2005): A Balaton “medence-felosztásának” vizsgálata többváltozós adatelemzéssel — Hidrológiai Közlöny 85(6):62-64\n<br>",
+            "name": "<br> Koroknai Zs., Kovács J., Kovácsné Székely I. (2005): A Balaton “medence-felosztásának” vizsgálata többváltozós adatelemzéssel — Hidrológiai Közlöny 85(6):62-64 <br>",
+            "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/publication/16491",
+            "@type": "publication"
+        },
+        {
+            "contributorType": "Hosting Institution",
+            "contributorName": "Hungarian Geological Institute",
+            "name": "Hosting Institution ; Hungarian Geological Institute",
+            "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/contributor/16505",
+            "@type": "contributor"
+        },
+        {
+            "publicationCitation": "<br>\nKovács, J., Koroknai, Zs., Kovácsné Székely I.(2006): A Balaton környezeti állapotának vizsgálata többváltozós adatelemzõ módszerekkel. — In: Szendrei G. (szerk): Magyarország Környezetgeokémiai állapota. Innova print Kft., Budapest. p. 111–117.\n<br>",
+            "name": "<br> Kovács, J., Koroknai, Zs., Kovácsné Székely I.(2006): A Balaton környezeti állapotának vizsgálata többváltozós adatelemzõ módszerekkel. — In: Szendrei G. (szerk): Magyarország Környezetgeokémiai állapota. Innova print Kft., Budapest. p. 111–117. <br>",
+            "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/publication/16494",
+            "@type": "publication"
         }
-      ],
-      "dsDescription": {
-        "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/dsDescription/16103"
-      },
-      "otherId": {
-        "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/otherId/16102"
-      },
-      "datasetContact": {
-        "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/datasetContact/16100"
-      },
-      "author": {
-        "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/author/16101"
-      },
-      "productionPlace": [
-        "Budapest",
-        "Debrecen"
-      ],
-      "geographicUnit": "decimal degrees (°)",
-      "distributionDate": "2024-04-15",
-      "unitOfAnalysis": "The delta notation is reported in ‰ or per mil. It refers to the relative difference, in parts per thousand, of the isotopic ratios of a sample and of a reference standard.",
-      "characteristicOfSources": "Measurements done on an isotope ration mass spectrometer (IRMS).",
-      "kindOfData": [
-        "water stable isotope",
-        "oxygen stable isotope ratio",
-        "hydrogen stable isotope ratio"
-      ],
-      "language": [
-        "English",
-        "Hungarian"
-      ],
-      "geographicCoverage": {
-        "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/geographicCoverage/16182"
-      },
-      "topicClassification": {
-        "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/topicClassification/16178"
-      },
-      "dateOfCollection": {
-        "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/dateOfCollection/16175"
-      },
-      "producer": {
-        "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/producer/16174"
-      },
-      "timePeriodCovered": {
-        "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/timePeriodCovered/16170"
-      },
-      "contributor": [
-        {
-          "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/contributor/16499"
-        },
-        {
-          "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/contributor/16513"
-        },
-        {
-          "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/contributor/16514"
-        },
-        {
-          "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/contributor/16515"
-        },
-        {
-          "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/contributor/16505"
-        },
-        {
-          "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/contributor/16508"
-        }
-      ],
-      "grantNumber": [
-        {
-          "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/grantNumber/16490"
-        },
-        {
-          "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/grantNumber/16507"
-        },
-        {
-          "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/grantNumber/16496"
-        }
-      ],
-      "geographicBoundingBox": {
-        "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/geographicBoundingBox/16185"
-      },
-      "hasPart": {
-        "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/file/29831"
-      },
-      "dsDescription_hu": {
-        "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/dsDescription_hu/16419"
-      }
-    },
-    {
-      "about": {
-        "@id": "./"
-      },
-      "@id": "ro-crate-metadata.json",
-      "@type": "CreativeWork"
-    },
-    {
-      "@arpPid": "",
-      "hash": "caaf2efdd7b809807420409edb5270f7",
-      "name": "Lake Balaton water stable isotopic data.tab",
-      "contentSize": 894078,
-      "encodingFormat": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-      "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/file/29831",
-      "@type": "File"
-    },
-    {
-      "keywordValue": "Lake Balaton",
-      "name": "Lake Balaton",
-      "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/keyword/16510",
-      "@type": "keyword"
-    },
-    {
-      "contributorType": "Hosting Institution",
-      "contributorName": "Central Transdanubian Water Directorate, Balaton Water Management Branch",
-      "name": "Hosting Institution ; Central Transdanubian Water Directorate, Balaton Water Management Branch",
-      "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/contributor/16508",
-      "@type": "contributor"
-    },
-    {
-      "keywordValue": "shallow freshwater lake",
-      "name": "shallow freshwater lake",
-      "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/keyword/16511",
-      "@type": "keyword"
-    },
-    {
-      "dsDescriptionValue_hu": "Európa legnagyobb sekély édesvizű tavának, a Balaton vízstabilizotópos adatsorai (1991-2008) négy mintavételi pontról: kettő a tó középvonaláról, Siófok és Balatonszéplak közelében, valamint kettő a beérkező vízfolyások, a Zala és a Nyugati Övcsatorna torkolatától. A δ18O és δ2H mintavételezése heti és havi gyakoriság között változott.",
-      "name": "Európa legnagyobb sekély édesvizű tavának, a Balaton vízstabilizotópos adatsorai (1991-2008) négy mintavételi pontról : kettő a tó középvonalától, Siófok és Balatonszéplak közelében, valamint kettő a beérkező vízfolyások, a Zala és a Nyugati Övcsatorna torkolatánál. A δ18O és δ2H mintavételezése heti és havi gyakoriság között változott.",
-      "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/dsDescription_hu/16419",
-      "@type": "dsDescription_hu"
-    },
-    {
-      "grantNumberAgency": "Hungarian Scientific Research Fund",
-      "grantNumberValue": "OTKA-T-014058",
-      "name": "Hungarian Scientific Research Fund; OTKA-T-014058",
-      "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/grantNumber/16507",
-      "@type": "grantNumber"
-    },
-    {
-      "westLongitude": "17.23773",
-      "eastLongitude": "18.172942",
-      "northLongitude": "47.067905",
-      "southLongitude": "46.698086",
-      "name": "17.23773; 18.172942; 47.067905; 46.698086",
-      "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/geographicBoundingBox/16185",
-      "@type": "geographicBoundingBox"
-    },
-    {
-      "otherIdAgency": "doi",
-      "otherIdValue": "10.5158/ARP/PCKHRH",
-      "name": "MTMT; 1234567",
-      "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/otherId/16102",
-      "@type": "otherId"
-    },
-    {
-      "publicationCitation": "Cserny T. et al., 1995. Acta Geologica Hungarica 38(4): 355-376;   \nSchöll-Barna, G. 2011. Journal of Limnology 70 (2):272-82;   \nBarna G. and Fórizs I. 2007. Hidrológiai Közlöny, 87 (2):35-41;   \nKoroknai et al., 2005. Hidrológiai Közlöny 85(6):62-64\nKovács et al., 2006 Magyarország Környezetgeokémiai állapota. Innova print Kft., Budapest. p. 111–117.\nKovács et al., 2006 Acta Geodaetica et Geophysica Hungarica, 41(1): 45–54\n\nSee expanded Metadata for details",
-      "name": "Cserny T. et al., 1995. Acta Geologica Hungarica 38(4): 355-376; Schöll-Barna, G. 2011. Journal of Limnology 70 (2):272-82; Barna G. and Fórizs I. 2007. Hidrológiai Közlöny, 87 (2):35-41; Koroknai et al., 2005. Hidrológiai Közlöny 85(6):62-64 Kovács et al., 2006 Magyarország Környezetgeokémiai állapota. Innova print Kft., Budapest. p. 111–117. Kovács et al., 2006 Acta Geodaetica et Geophysica Hungarica, 41(1): 45–54 See expanded Metadata for details",
-      "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/publication/16487",
-      "@type": "publication"
-    },
-    {
-      "publicationCitation": "<br>\nCserny T.,  Hertelendi E.,  Tarján S. 1995. Results of isotope-geochemical studies in sedimentological and environmental geologic investigations of Lake Balaton. Acta Geologica Hungarica 38(4): 355-376\n<br>",
-      "publicationURL": "https://real-j.mtak.hu/2990/1/ActaGeologica_38.pdf",
-      "name": "<br> Cserny T., Hertelendi E., Tarján S. 1995. Results of isotope-geochemical studies in sedimentological and environmental geologic investigations of Lake Balaton. Acta Geologica Hungarica 38(4): 355-376 <br>; <a href=\"https://real-j.mtak.hu/2990/1/ActaGeologica_38.pdf\" target=\"_blank\" rel=\"noopener\">https://real-j.mtak.hu/2990/1/ActaGeologica_38.pdf</a>",
-      "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/publication/16502",
-      "@type": "publication"
-    },
-    {
-      "datasetContactName": "Hatvani, István Gábor",
-      "datasetContactAffiliation": "HUN-REN Research Centre for Astronomy and Earth Sciences",
-      "datasetContactEmail": "hatvani.istvan@csfk.mta.hu",
-      "name": "Hatvani, István Gábor; (HUN-REN Research Centre for Astronomy and Earth Sciences); ",
-      "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/datasetContact/16100",
-      "@type": "datasetContact"
-    },
-    {
-      "country": "Hungary",
-      "otherGeographicCoverage": "Lake Balaton",
-      "name": "Hungary, ; Lake Balaton",
-      "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/geographicCoverage/16182",
-      "@type": "geographicCoverage"
-    },
-    {
-      "contributorType": "Project Member",
-      "contributorName": "Futó, István",
-      "name": "Project Member ; Futó, István",
-      "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/contributor/16513",
-      "@type": "contributor"
-    },
-    {
-      "contributorType": "Other",
-      "contributorName": "Kravinszkaja, Gabriella",
-      "name": "Other ; Kravinszkaja, Gabriella",
-      "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/contributor/16514",
-      "@type": "contributor"
-    },
-    {
-      "dsDescriptionValue": "Water stable isotopic data series of the largest shallow freshwater Lake in Europe, Lake Balaton, covering the period 1991-2008, with measurements from four sites, two from the centerline of the lake near Siófok and Balatonszéplak and two at the mouths of inputs to the lake, the River Zala and the Western Belt Canal. Sample frequency of δ18O and δ2H varies from weekly to monthly.",
-      "name": ".",
-      "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/dsDescription/16103",
-      "@type": "dsDescription"
-    },
-    {
-      "contributorType": "Project Member",
-      "contributorName": "Schöll-Barna, Gabriella",
-      "name": "Project Member ; Schöll-Barna, Gabriella",
-      "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/contributor/16515",
-      "@type": "contributor"
-    },
-    {
-      "grantNumberAgency": "Hungarian Scientific Research Fund",
-      "grantNumberValue": "OTKA-550",
-      "name": "Hungarian Scientific Research Fund; OTKA-550",
-      "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/grantNumber/16490",
-      "@type": "grantNumber"
-    },
-    {
-      "contributorType": "Project Member",
-      "contributorName": "Fórizs, István",
-      "name": "Project Member ; Fórizs, István",
-      "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/contributor/16499",
-      "@type": "contributor"
-    },
-    {
-      "topicClassValue": "lakewater stable isotopic composition",
-      "name": "lakewater stable isotopic composition",
-      "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/topicClassification/16178",
-      "@type": "topicClassification"
-    },
-    {
-      "dateOfCollectionStart": "1991-11-13",
-      "dateOfCollectionEnd": "2008-05-13",
-      "name": "Start Date: 1991-11-13 ; End Date: 2008-05-13 ",
-      "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/dateOfCollection/16175",
-      "@type": "dateOfCollection"
-    },
-    {
-      "grantNumberAgency": "Hungarian Scientific Research Fund",
-      "grantNumberValue": "OTKA-T-022371",
-      "name": "Hungarian Scientific Research Fund; OTKA-T-022371",
-      "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/grantNumber/16496",
-      "@type": "grantNumber"
-    },
-    {
-      "keywordValue": "Europe",
-      "name": "Europe",
-      "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/keyword/16485",
-      "@type": "keyword"
-    },
-    {
-      "producerName": "Cserny, Tibor",
-      "producerAffiliation": "Hungarian Geological Institute",
-      "producerAbbreviation": "C.T.",
-      "name": "Cserny, Tibor; (Hungarian Geological Institute); (C.T.)",
-      "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/producer/16174",
-      "@type": "producer"
-    },
-    {
-      "keywordValue": "water stable isotopes",
-      "name": "water stable isotopes",
-      "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/keyword/16486",
-      "@type": "keyword"
-    },
-    {
-      "timePeriodCoveredStart": "1991-11-13",
-      "timePeriodCoveredEnd": "2008-05-13",
-      "name": "Start Date: 1991-11-13 ; End Date: 2008-05-13 ",
-      "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/timePeriodCovered/16170",
-      "@type": "timePeriodCovered"
-    },
-    {
-      "authorName": "Cserny, Tibor",
-      "authorAffiliation": "Hungarian Geological Institute",
-      "name": "Cserny, Tibor; (Hungarian Geological Survey)",
-      "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/author/16101",
-      "@type": "author"
-    },
-    {
-      "publicationCitation": "<br>\nKovács, J., Koroknai, Zs., Futó, I., Kovácsné Székely I. (2006): Period estimation and using multivariable data analysis methods in Lake Balaton time-series — Acta Geodaetica et Geophysica Hungarica, 41(1): 45–54.\n<br>",
-      "name": "<br> Kovács, J., Koroknai, Zs., Futó, I., Kovácsné Székely I. (2006): Period estimation and using multivariable data analysis methods in Lake Balaton time-series — Acta Geodaetica et Geophysica Hungarica, 41(1): 45–54. <br>",
-      "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/publication/16497",
-      "@type": "publication"
-    },
-    {
-      "publicationCitation": "<br>\nSchöll-Barna, G. 2011. An Isotope Mass Balance Model for the Correlation of Freshwater Bivalve Shell (Unio Pictorum) Carbonate δ18O to Climatic Conditions and Water δ18O in Lake Balaton (Hungary). Journal of Limnology 70 (2):272-82.\n<br>",
-      "publicationIDType": "doi",
-      "publicationIDNumber": "10.4081/jlimnol.2011.272",
-      "publicationURL": "https://www.jlimnol.it/index.php/jlimnol/article/view/jlimnol.2011.272",
-      "name": "<br> Schöll-Barna, G. 2011. An Isotope Mass Balance Model for the Correlation of Freshwater Bivalve Shell (Unio Pictorum) Carbonate δ18O to Climatic Conditions and Water δ18O in Lake Balaton (Hungary). Journal of Limnology 70 (2):272-82. <br>; doi: ; 10.4081/jlimnol.2011.272; <a href=\"https://www.jlimnol.it/index.php/jlimnol/article/view/jlimnol.2011.272\" target=\"_blank\" rel=\"noopener\">https://www.jlimnol.it/index.php/jlimnol/article/view/jlimnol.2011.272</a>",
-      "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/publication/16512",
-      "@type": "publication"
-    },
-    {
-      "publicationCitation": "<br>\nBarna G., Fórizs I. 2007. A Balaton stabilizotóp-hidrológiai karakterisztikája. Hidrológiai Közlöny, 87 (2):35-41.\n<br>",
-      "publicationIDType": "url",
-      "publicationURL": "https://library.hungaricana.hu/hu/view/HidrologiaiKozlony_2007/?query=barna%20gabriella&pg=109&layout=s",
-      "name": "<br> Barna G., Fórizs I. 2007. A Balaton stabilizotóp-hidrológiai karakterisztikája. Hidrológiai Közlöny, 87 (2):35-41. <br>; url: ; <a href=\"https://library.hungaricana.hu/hu/view/HidrologiaiKozlony_2007/?query=barna%20gabriella&amp;pg=109&amp;layout=s\" target=\"_blank\" rel=\"noopener\">https://library.hungaricana.hu/hu/view/HidrologiaiKozlony_2007/?query=barna%20gabriella&amp;pg=109&amp;layout=s</a>",
-      "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/publication/16492",
-      "@type": "publication"
-    },
-    {
-      "publicationCitation": "<br>\nKoroknai Zs., Kovács J., Kovácsné Székely I. (2005): A Balaton “medence-felosztásának” vizsgálata többváltozós adatelemzéssel — Hidrológiai Közlöny 85(6):62-64\n<br>",
-      "name": "<br> Koroknai Zs., Kovács J., Kovácsné Székely I. (2005): A Balaton “medence-felosztásának” vizsgálata többváltozós adatelemzéssel — Hidrológiai Közlöny 85(6):62-64 <br>",
-      "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/publication/16491",
-      "@type": "publication"
-    },
-    {
-      "contributorType": "Hosting Institution",
-      "contributorName": "Hungarian Geological Institute",
-      "name": "Hosting Institution ; Hungarian Geological Institute",
-      "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/contributor/16505",
-      "@type": "contributor"
-    },
-    {
-      "publicationCitation": "<br>\nKovács, J., Koroknai, Zs., Kovácsné Székely I.(2006): A Balaton környezeti állapotának vizsgálata többváltozós adatelemzõ módszerekkel. — In: Szendrei G. (szerk): Magyarország Környezetgeokémiai állapota. Innova print Kft., Budapest. p. 111–117.\n<br>",
-      "name": "<br> Kovács, J., Koroknai, Zs., Kovácsné Székely I.(2006): A Balaton környezeti állapotának vizsgálata többváltozós adatelemzõ módszerekkel. — In: Szendrei G. (szerk): Magyarország Környezetgeokémiai állapota. Innova print Kft., Budapest. p. 111–117. <br>",
-      "@id": "https://w3id.org/arp/ro-id/hdl:21.15109/ARP/PCKHRH/publication/16494",
-      "@type": "publication"
-    }
-  ]
+    ]
 }
