@@ -178,9 +178,9 @@ public class TransformerExporterTest {
     public void testPreTransformer() throws Exception {
         final TransformerFactory factory = TransformerFactory.factory(new NashornScriptEngineFactory());
         final String pathStr = TransformerExporterTest.class.getClassLoader().getResource(".").getPath().toString() + "pretransform";
-        final Transformer t = factory.createFromFile(pathStr + "/pre_transformer.json");
+        final Transformer t = factory.createFromFile(pathStr + "/pre_transformer.json", pathStr);
         final JsonObject res = t.transform(parse("pretransform/input.json"));
         final String expected = parse("pretransform/result.json").toString();
-        assertEquals(expected.trim(), Utils.asJsonValue(res).toString().trim());
+        assertEquals(expected.trim(), res.toString().trim());
     }
 }
