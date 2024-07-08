@@ -5,8 +5,8 @@
             "resultPointer": "/title"
         },
         {
-            "sourcePointer": "/preTransformed/datasetVersion/metadataBlocks/citation/author[i]/authorName[i]",
-            "resultPointer": "/author[i]/authorName[i]"
+            "sourcePointer": "/preTransformed/datasetVersion/metadataBlocks/citation/author[i]/authorName",
+            "resultPointer": "/author[i]/authorName"
         },
         {
             "sourcePointer": "/datasetSchemaDotOrg/distribution[i]/contentUrl",

@@ -130,11 +130,11 @@ mvn test -Dtest="TransformerExporterTest#testPythonScript"
 You can start by changing the code in the [transformer.py](/src/test/resources/transformer.py), shown below, and testing your code until the desired outcome is achieved (see also [py-input.json](/src/test/resources/py-input.json) and [py-result.json](/src/test/resources/py-result.json)). When you are done, just place the new `transformer.py` together with a `config.json` files in a new folder in the exporters directory (make sure that the transformer-exporter JAR file is also placed in the exporters directory). After restarting the server, your new exporter should be ready to use.
 
 ```py
-res["title"] = x["preTransformed"]["datasetVersion"]["metadataBlocks"]["citation"]["title"][0]
+res["title"] = x["preTransformed"]["datasetVersion"]["metadataBlocks"]["citation"]["title"]
 
 res["author"] = []
 for author in x["preTransformed"]["datasetVersion"]["metadataBlocks"]["citation"]["author"]:
-    res["author"].append(author["authorName"][0])
+    res["author"].append(author["authorName"])
 
 res["files"] = []
 for distribution in x["datasetSchemaDotOrg"]["distribution"]:

@@ -191,92 +191,30 @@
                 "characteristicOfSources": "Measurements done on an isotope ration mass spectrometer (IRMS)."
             },
             "geospatial": {
-                "displayName": "Geospatial Metadata",
-                "name": "geospatial",
-                "fields": [
+                "geographicCoverage": [
                     {
-                        "typeName": "geographicCoverage",
-                        "multiple": true,
-                        "typeClass": "compound",
-                        "value": [
-                            {
-                                "country": {
-                                    "typeName": "country",
-                                    "multiple": false,
-                                    "typeClass": "controlledVocabulary",
-                                    "value": "Hungary"
-                                },
-                                "otherGeographicCoverage": {
-                                    "typeName": "otherGeographicCoverage",
-                                    "multiple": false,
-                                    "typeClass": "primitive",
-                                    "value": "Lake Balaton"
-                                }
-                            }
-                        ]
-                    },
+                        "country": "Hungary",
+                        "otherGeographicCoverage": "Lake Balaton"
+                    }
+                ],
+                "geographicUnit": [
+                    "decimal degrees (°)"
+                ],
+                "geographicBoundingBox": [
                     {
-                        "typeName": "geographicUnit",
-                        "multiple": true,
-                        "typeClass": "primitive",
-                        "value": [
-                            "decimal degrees (°)"
-                        ]
-                    },
-                    {
-                        "typeName": "geographicBoundingBox",
-                        "multiple": true,
-                        "typeClass": "compound",
-                        "value": [
-                            {
-                                "westLongitude": {
-                                    "typeName": "westLongitude",
-                                    "multiple": false,
-                                    "typeClass": "primitive",
-                                    "value": "17.23773"
-                                },
-                                "eastLongitude": {
-                                    "typeName": "eastLongitude",
-                                    "multiple": false,
-                                    "typeClass": "primitive",
-                                    "value": "18.172942"
-                                },
-                                "northLongitude": {
-                                    "typeName": "northLongitude",
-                                    "multiple": false,
-                                    "typeClass": "primitive",
-                                    "value": "47.067905"
-                                },
-                                "southLongitude": {
-                                    "typeName": "southLongitude",
-                                    "multiple": false,
-                                    "typeClass": "primitive",
-                                    "value": "46.698086"
-                                }
-                            }
-                        ]
+                        "westLongitude": "17.23773",
+                        "eastLongitude": "18.172942",
+                        "northLongitude": "47.067905",
+                        "southLongitude": "46.698086"
                     }
                 ]
             },
             "socialscience": {
-                "displayName": "Social Science and Humanities Metadata",
-                "name": "socialscience",
-                "fields": [
-                    {
-                        "typeName": "unitOfAnalysis",
-                        "multiple": true,
-                        "typeClass": "primitive",
-                        "value": [
-                            "The delta notation is reported in ‰ or per mil. It refers to the relative difference, in parts per thousand, of the isotopic ratios of a sample and of a reference standard."
-                        ]
-                    }
+                "unitOfAnalysis": [
+                    "The delta notation is reported in ‰ or per mil. It refers to the relative difference, in parts per thousand, of the isotopic ratios of a sample and of a reference standard."
                 ]
             },
-            "journal": {
-                "displayName": "Journal Metadata",
-                "name": "journal",
-                "fields": []
-            }
+            "journal": {}
         },
         "files": [
             {

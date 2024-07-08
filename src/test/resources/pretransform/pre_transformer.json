@@ -2,8 +2,8 @@
     "transformations": [
         {},
         {
-            "sourcePointer": "/datasetVersion/metadataBlocks/citation/fields",
-            "resultPointer": "/datasetVersion/metadataBlocks/citation",
+            "sourcePointer": "/datasetVersion/metadataBlocks",
+            "resultPointer": "/datasetVersion/metadataBlocks",
             "expressions": [
                 "script(importJS /js/map_metadata_fields.js endImport)"
             ]

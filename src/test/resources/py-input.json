@@ -177,7 +177,7 @@
         }
     },
     "datasetORE": {
-        "dcterms:modified": "2024-07-04",
+        "dcterms:modified": "2024-07-08",
         "dcterms:creator": "KU Leuven RDR",
         "@type": "ore:ResourceMap",
         "schema:additionalType": "Dataverse OREMap Format v1.0.0",
@@ -410,50 +410,29 @@
             "fileAccessRequest": true,
             "metadataBlocks": {
                 "citation": {
-                    "title": [
-                        "Some title"
-                    ],
+                    "title": "Some title",
                     "author": [
                         {
-                            "authorName": [
-                                "Test Researcher, KU Leuven"
-                            ]
+                            "authorName": "Test Researcher, KU Leuven"
                         }
                     ],
                     "datasetContact": [
                         {
-                            "datasetContactEmail": [
-                                "test2@kuleuven.be"
-                            ]
+                            "datasetContactEmail": "test2@kuleuven.be"
                         }
                     ],
                     "dsDescription": [
                         {
-                            "dsDescriptionValue": [
-                                "Description 2"
-                            ]
+                            "dsDescriptionValue": "Description 2"
                         }
                     ],
                     "keyword": [
                         {
-                            "keywordValue": [
-                                "keyword"
-                            ]
+                            "keywordValue": "keyword"
                         }
                     ],
-                    "technicalFormat": [
-                        "pdf"
-                    ],
-                    "access": [
-                        {
-                            "accessRights": {
-                                "typeName": "accessRights",
-                                "multiple": false,
-                                "typeClass": "controlledVocabulary",
-                                "value": "open"
-                            }
-                        }
-                    ]
+                    "technicalFormat": "pdf",
+                    "access": "accessRights"
                 }
             },
             "files": [
@@ -512,10 +491,11 @@
         }
     },
     "config": {
-        "formatName": "debug_py",
+        "formatName": "debug",
         "harvestable": false,
         "availableToUsers": true,
         "mediaType": "application/json",
-        "displayName": "Debug Python"
-    }
+        "displayName": "Debug"
+    },
+    "path": "/exporters/debug"
 }

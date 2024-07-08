@@ -7,12 +7,7 @@ mapSubField = function (subField, multiple) {
         if (value.keySet) {
             var mappedSubField = {}
             value.keySet().forEach(function (key) {
-                var mapped = mapSubField(value.get(key).value, value.get(key).multiple)
-                if (!value.get(key).multiple) {
-                    mappedSubField[key] = mapped
-                } else {
-                    mappedSubField[key] = mappedSubField[key] ? mappedSubField[key].add(mapped) : new List([mapped])
-                }
+                mappedSubField[key] = mapSubField(value.get(key).value, value.get(key).multiple)
             })
             resArray.add(mappedSubField)
         } else {
@@ -23,11 +18,9 @@ mapSubField = function (subField, multiple) {
 }
 
 res = {}
-x.stream().forEach(function (field) {
-    var mapped = mapSubField(field.value, field.multiple)
-    if (!field.multiple) {
-        res[field.typeName] = mapped
-    } else {
-        res[field.typeName] = res[field.typeName] ? res[field.typeName].addAll(mapped) : mapped
-    }
+x.keySet().stream().forEach(function (key) {
+    res[key] = {}
+    x[key].fields.stream().forEach(function (field) {
+        res[key][field.typeName] = mapSubField(field.value, field.multiple)
+    })
 })
