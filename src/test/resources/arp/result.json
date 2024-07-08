@@ -212,10 +212,10 @@
             "name": "Lake Balaton water stable isotopic data.tab",
             "encodingFormat": "text/tab-separated-values",
             "contentSize": 894078,
-            "hash": "caaf2efdd7b809807420409edb5270f7",
             "@id": "https://hdl.handle.net/21.15109/ARP/PCKHRH/UMBAT9",
             "identifier": "https://hdl.handle.net/21.15109/ARP/PCKHRH/UMBAT9",
-            "contentUrl": "https://repo.researchdata.hu/api/access/datafile/29831"
+            "contentUrl": "https://repo.researchdata.hu/api/access/datafile/29831",
+            "hash": "caaf2efdd7b809807420409edb5270f7"
         },
         {
             "keywordValue": "Lake Balaton",
