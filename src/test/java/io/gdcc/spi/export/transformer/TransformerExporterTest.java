@@ -171,7 +171,7 @@ public class TransformerExporterTest {
         engine.eval(pyScript);
         final Object res = engine.get("res");
         final String expected = parse("arp/result.json").toString();
-        //assertEquals(expected.trim(), Utils.asJsonValue(res).toString().trim());
+        assertEquals(expected.trim(), Utils.asJsonValue(res).toString().trim());
     }
 
     @Test
