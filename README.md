@@ -106,6 +106,10 @@ This exporter takes JSON input from a prerequisite exporter (`short_example_py` 
 
 This exporter is entirely based on the [DDI PDF Exporter](https://github.com/gdcc/exporter-ddipdf). It is simply a port of that exporter into Python (Jython). It illustrates how to convert XML input to PDF in an exporter.
 
+### ARP RO-Crate
+
+This exporter is entirely based on the [Dataverse PR 10086](https://github.com/IQSS/dataverse/pull/10086). It is simply a port of that exporter into Python (Jython).
+
 ## Developer guide
 
 The easiest way to start is to write JavasCript code. You can use the provided [Croissant](/examples/croissant/js/croissant.js) code as the start point. You will need to restart the server after changing that code. Note that the exporters use caching, you will need to either to wait until the cache is expired or delete the cached exporter output manually to see the changes.
