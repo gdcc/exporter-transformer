@@ -42,6 +42,9 @@ jobs:
           gpg-private-key: ${{ secrets.DATAVERSEBOT_GPG_KEY }}
           gpg-passphrase: MAVEN_GPG_PASSPHRASE
 
+      - name: clean
+        run: mvn clean
+
       - name: Sign + Publish release
         run: mvn -Prelease deploy -DskipUT -DskipIT -Dflatten.skip
         env:
