@@ -89,7 +89,7 @@ public class TransformerExporterTest {
 
     @Test
     public void testGetFormatName() {
-        assertEquals("transformer_json", transformerExporter.getFormatName());
+        assertEquals("example_transformer_json", transformerExporter.getFormatName());
     }
 
     @Test
