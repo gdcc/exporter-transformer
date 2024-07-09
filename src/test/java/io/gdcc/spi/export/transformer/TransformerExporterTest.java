@@ -1,9 +1,10 @@
 package io.gdcc.spi.export.transformer;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 import java.io.ByteArrayOutputStream;
-import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.InputStream;
@@ -21,7 +22,6 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.openjdk.nashorn.api.scripting.NashornScriptEngineFactory;
-import org.python.google.common.io.Files;
 import org.python.jsr223.PyScriptEngineFactory;
 
 import io.gdcc.spi.export.ExportDataProvider;
@@ -154,7 +154,9 @@ public class TransformerExporterTest {
         engine.eval(pyScript);
         final Object res = engine.get("res");
         final byte[] decoded = Base64.getDecoder().decode(Utils.asJsonValue(res).asJsonObject().getString("base64"));
-        Files.write(decoded, new File("/home/eryk/projects/exporter-transformer/src/test/resources/fop/output.pdf"));
+        assertNotNull(decoded);
+        assertNotEquals(decoded.length, 0);
+        //Files.write(decoded, new File("/home/eryk/projects/exporter-transformer/src/test/resources/fop/output.pdf"));
     }
 
     // example based on https://repo.researchdata.hu/dataset.xhtml?persistentId=hdl:21.15109/ARP/PCKHRH
