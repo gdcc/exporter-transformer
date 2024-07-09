@@ -1,19 +1,12 @@
 from java.io import ByteArrayInputStream, ByteArrayOutputStream, File
-from java.lang import System, String
+from java.lang import System
 from java.util import Base64
 from javax.xml.transform import TransformerFactory
 from javax.xml.transform.sax import SAXResult
 from javax.xml.transform.stream import StreamSource
 from org.apache.fop.apps import FopFactory, MimeConstants
 
-localeEnvVar = System.getenv().get("LANG") if System.getenv().get("LANG") else "en"
-localeEnvVar = str(localeEnvVar)
-if localeEnvVar.index(".") > 0:
-    localeEnvVar = str(localeEnvVar[0 : localeEnvVar.index(".")])
-if localeEnvVar.index("_") > 0:
-    localeEnvVar = str(localeEnvVar[0 : localeEnvVar.index("_")])
-if localeEnvVar == "C":
-    localeEnvVar = "en"
+localeEnvVar = "en"
 
 fopFactory = FopFactory.newInstance(File(".").toURI())
 foUserAgent = fopFactory.newFOUserAgent()
