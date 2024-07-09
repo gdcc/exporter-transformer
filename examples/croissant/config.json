@@ -1,5 +1,5 @@
 {
-    "formatName": "croissant",
+    "formatName": "example_croissant",
     "harvestable": false,
     "availableToUsers": true,
     "mediaType": "application/json",

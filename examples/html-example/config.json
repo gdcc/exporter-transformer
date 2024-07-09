@@ -1,8 +1,8 @@
 {
-    "formatName": "html_py",
+    "formatName": "example_html_py",
     "harvestable": false,
     "availableToUsers": true,
     "mediaType": "text/html",
     "displayName": "HTML Python",
-    "prerequisiteFormatName": "short_example_py"
+    "prerequisiteFormatName": "example_short_example_py"
 }

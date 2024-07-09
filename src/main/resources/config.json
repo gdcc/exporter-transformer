@@ -1,5 +1,5 @@
 {
-    "formatName": "transformer_json",
+    "formatName": "example_transformer_json",
     "harvestable": false,
     "availableToUsers": true,
     "mediaType": "application/json",

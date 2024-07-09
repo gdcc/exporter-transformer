@@ -1,5 +1,5 @@
 {
-    "formatName": "arp_ro_crate",
+    "formatName": "example_arp_ro_crate",
     "harvestable": false,
     "availableToUsers": true,
     "mediaType": "application/json",
