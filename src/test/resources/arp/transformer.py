@@ -66,6 +66,7 @@ res["@context"] = [
 
 from java.util import ArrayList, LinkedHashMap, List, Map
 
+datasetVersion = x["preTransformed"]["datasetVersion"]
 root = LinkedHashMap()
 about = LinkedHashMap()
 res["@graph"] = ArrayList()
@@ -76,15 +77,14 @@ about["about"] = {"@id": "./"}
 about["@id"] = "ro-crate-metadata.json"
 about["@type"] = "CreativeWork"
 root["@type"] = "Dataset"
-root["@arpPid"] = x["preTransformed"]["datasetVersion"]["datasetPersistentId"]
-root["license"] = {"@id": x["preTransformed"]["datasetVersion"]["license"]["uri"]}
-root["datePublished"] = x["preTransformed"]["datasetVersion"]["publicationDate"]
+root["@arpPid"] = datasetVersion["datasetPersistentId"]
+if datasetVersion.containsKey("license") and datasetVersion["license"].containsKey(
+    "uri"
+):
+    root["license"] = {"@id": datasetVersion["license"]["uri"]}
+root["datePublished"] = datasetVersion["publicationDate"]
 
-hdl_id = (
-    "https://w3id.org/arp/ro-id/"
-    + x["preTransformed"]["datasetVersion"]["datasetPersistentId"]
-    + "/"
-)
+hdl_id = "https://w3id.org/arp/ro-id/" + datasetVersion["datasetPersistentId"] + "/"
 idx = 0
 
 
@@ -102,15 +102,19 @@ def refField(fieldName, field):
 
 
 hasPart = ArrayList()
-files = x["datasetSchemaDotOrg"]["distribution"]
+files = []
+if x["datasetSchemaDotOrg"].containsKey("distribution"):
+    files = x["datasetSchemaDotOrg"]["distribution"]
 for i, file in enumerate(files):
-    if x["datasetFileDetails"][i]["originalFileSize"]:
+    if x["datasetFileDetails"][i].containsKey("originalFileSize"):
         file["contentSize"] = x["datasetFileDetails"][i]["originalFileSize"]
     file["hash"] = x["datasetFileDetails"][i]["md5"]
+    if not file.containsKey("@id"):
+        file["@id"] = file["contentUrl"]
     res["@graph"].append(file)
     hasPart.append({"@id": file["@id"]})
 
-mdBlocks = x["preTransformed"]["datasetVersion"]["metadataBlocks"]
+mdBlocks = datasetVersion["metadataBlocks"]
 for mdBlock in mdBlocks:
     for field in mdBlocks[mdBlock]:
         if isinstance(mdBlocks[mdBlock][field], List):
