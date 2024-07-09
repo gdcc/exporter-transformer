@@ -29,6 +29,9 @@ jobs:
           distribution: 'temurin'
           cache: 'maven'
 
+      - name: clean
+        run: mvn clean
+        
       - name: Update version in pom.xml and tag
         run: | 
           mvn -B versions:set -DnewVersion="${{ inputs.version }}" -DgenerateBackupPoms=false -Psingle

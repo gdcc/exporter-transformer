@@ -19,5 +19,8 @@ jobs:
           distribution: 'temurin'
           cache: 'maven'
 
+      - name: clean
+        run: mvn clean
+        
       - name: Build, test, analyze
         run: mvn -B verify -Psingle

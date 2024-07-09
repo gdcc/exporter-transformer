@@ -20,6 +20,10 @@ jobs:
           java-version: ${{ env.JAVA_VERSION }}
           distribution: 'temurin'
           cache: 'maven'
+          
+      - name: clean
+        run: mvn clean
+
       - name: Build, test, verify
         run: mvn -B verify -Dflatten.skip -Psingle
 
