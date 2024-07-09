@@ -6,11 +6,15 @@ from javax.xml.transform.sax import SAXResult
 from javax.xml.transform.stream import StreamSource
 from org.apache.fop.apps import FopFactory, MimeConstants
 
-localeEnvVar = System.getenv().get("LANG") if System.getenv().get("LANG") else "en"
+localeEnvVar = (
+    System.getenv().get("LANG") if System.getenv().get("LANG") else String("en")
+)
 if localeEnvVar.index(".") > 0:
-    localeEnvVar = localeEnvVar[0 : localeEnvVar.index(".")]
+    localeEnvVar = String(localeEnvVar[0 : localeEnvVar.index(".")])
 if localeEnvVar.index("_") > 0:
-    localeEnvVar = localeEnvVar[0 : localeEnvVar.index("_")]
+    localeEnvVar = String(localeEnvVar[0 : localeEnvVar.index("_")])
+if localeEnvVar == "C":
+    localeEnvVar = "en"
 
 fopFactory = FopFactory.newInstance(File(".").toURI())
 foUserAgent = fopFactory.newFOUserAgent()
@@ -18,9 +22,7 @@ out = ByteArrayOutputStream()
 fop = fopFactory.newFop(MimeConstants.MIME_PDF, foUserAgent, out)
 
 factory = TransformerFactory.newInstance()
-factory.setURIResolver(
-    lambda href, base: StreamSource(File(path + "/xslt/" + href))
-)
+factory.setURIResolver(lambda href, base: StreamSource(File(path + "/xslt/" + href)))
 transformer = factory.newTransformer(StreamSource(File(path + "/xslt/ddi-to-fo.xsl")))
 transformer.setParameter("language-code", localeEnvVar)
 src = StreamSource(ByteArrayInputStream(Base64.getDecoder().decode(x["base64"])))
