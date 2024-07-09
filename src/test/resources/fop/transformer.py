@@ -9,6 +9,7 @@ from org.apache.fop.apps import FopFactory, MimeConstants
 localeEnvVar = System.getenv().get("LANG") if System.getenv().get("LANG") else "en"
 if localeEnvVar.index(".") > 0:
     localeEnvVar = localeEnvVar[0 : localeEnvVar.index(".")]
+print(localeEnvVar)
 if localeEnvVar.index("_") > 0:
     localeEnvVar = localeEnvVar[0 : localeEnvVar.index("_")]
 
