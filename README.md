@@ -10,7 +10,7 @@ If you haven’t already configured it, set the [dataverse-spi-exporters-directo
 
 ```shell
 # download the jar
-wget -O transformer-exporter-1.0.7.jar https://repo1.maven.org/maven2/io/gdcc/export/exporter-transformer/1.0.9/exporter-transformer-1.0.9-jar-with-dependencies.jar
+wget -O exporter-transformer-1.0.9-jar-with-dependencies.jar https://repo1.maven.org/maven2/io/gdcc/export/exporter-transformer/1.0.9/exporter-transformer-1.0.9-jar-with-dependencies.jar
 # download the hello-world example
 mkdir hello-world
 wget -O hello-world/config.json https://raw.githubusercontent.com/gdcc/exporter-transformer/main/examples/hello-world/config.json
