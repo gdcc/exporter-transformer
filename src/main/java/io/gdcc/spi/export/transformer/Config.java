@@ -18,6 +18,7 @@ public class Config {
     private static final String harvestable = "harvestable";
     private static final String availableToUsers = "availableToUsers";
     private static final String prerequisiteFormatName = "prerequisiteFormatName";
+    private static final String includeDefaultInputWithPrerequisiteInput = "includeDefaultInputWithPrerequisiteInput";
     private static final String mediaType = "mediaType";
 
     private final JsonObject object;
@@ -101,6 +102,19 @@ public class Config {
      */
     public String getPrerequisiteFormatName() {
         return object.containsKey(prerequisiteFormatName) ? object.getString(prerequisiteFormatName) : null;
+    }
+
+    /**
+     * Whether the default input should be included when prerequisite input is
+     * requested.
+     * Defaults to false.
+     * 
+     * @return The prerequisite format name
+     */
+    public Boolean isIncludeDefaultInputWithPrerequisiteInput() {
+        return object.containsKey(includeDefaultInputWithPrerequisiteInput)
+                ? object.getBoolean(includeDefaultInputWithPrerequisiteInput)
+                : false;
     }
 
     /**

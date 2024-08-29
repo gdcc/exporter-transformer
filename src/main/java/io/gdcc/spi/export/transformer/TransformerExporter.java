@@ -62,6 +62,7 @@ import jakarta.json.JsonValue.ValueType;
 // interface that extends it.
 public class TransformerExporter implements Exporter {
     private static final String base64 = "base64";
+    private static final String defaultInputFromDataProvider = "defaultInputFromDataProvider";
     private static final Logger logger = Logger.getLogger(TransformerFactory.class.getName());
     private static final TransformerFactory factory = TransformerFactory.factory(new NashornScriptEngineFactory());
     private static final PyScriptEngineFactory pyFactory = new PyScriptEngineFactory();
@@ -298,14 +299,25 @@ public class TransformerExporter implements Exporter {
         return new StreamSource(dataProvider.getPrerequisiteInputStream().get());
     }
 
+    private JsonObjectBuilder includeDefaultInputWithPrerequisiteInput(final JsonObjectBuilder builder,
+            final ExportDataProvider dataProvider) {
+        if (config.isIncludeDefaultInputWithPrerequisiteInput()) {
+            builder.add(defaultInputFromDataProvider, getInputAsJsonObject(dataProvider));
+        }
+        return builder;
+    }
+
     private JsonObject getPrerequisiteInputAsJsonObject(final ExportDataProvider dataProvider) throws IOException {
         final byte[] bytes = dataProvider.getPrerequisiteInputStream().get().readAllBytes();
         try (final JsonReader jsonReader = Json.createReader(new ByteArrayInputStream(bytes))) {
-            return jsonReader.readObject();
+            final JsonObjectBuilder builder = Json.createObjectBuilder(jsonReader.readObject());
+            return includeDefaultInputWithPrerequisiteInput(builder, dataProvider).build();
         } catch (final Exception ignore) {
         }
         final String encoded = Base64.getEncoder().encodeToString(bytes);
-        return Json.createObjectBuilder().add(base64, encoded).build();
+        final JsonObjectBuilder builder = Json.createObjectBuilder();
+        builder.add(base64, encoded);
+        return includeDefaultInputWithPrerequisiteInput(builder, dataProvider).build();
     }
 
     private URIResolver getResolver(final Path outPath) {
