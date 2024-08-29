@@ -6,7 +6,7 @@
 
   <groupId>io.gdcc.export</groupId>
   <artifactId>exporter-transformer</artifactId>
-  <version>1.0.11-SNAPSHOT</version>
+  <version>1.0.10-SNAPSHOT</version>
   <packaging>jar</packaging>
 
   <name>Dataverse Transformer Exporter</name>
