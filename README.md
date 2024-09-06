@@ -155,3 +155,14 @@ print('Unix time from Java: ' + str(System.currentTimeMillis()))
 ```
 
 See also the documentation from [Jython](https://www.jython.org/) and the [DDI-PDF](/examples/ddi-pdf/transformer.py) example for how it is used in practice.
+
+## Configuration
+
+The configuration file (config.json) for the exporter can contain the following fields:
+- `formatName` (default: **transformer_json**): The name of the format it creates. If this format is already provided by a built-in exporter, this Exporter will override the built-in one. (Note that exports are cached, so existing metadata export files are not updated immediately.)
+- `displayName` (default: **Transformer example**): The display name shown in the UI.
+- `harvestable` (default: **false**): Whether the exported format should be available as an option for Harvesting.
+- `availableToUsers` (default: **true**): Whether the exported format should be available for download in the UI and API.
+- `mediaType` (default: **transformer_json**): Defines the mime type of the exported format - used when metadata is downloaded, i.e. to trigger an appropriate viewer in the user's browser.
+- `prerequisiteFormatName` (default: **null**): Defines the name of the export format that will be used as input for this exporter (if left null or omitted, the default input will be used).
+- `includeDefaultInputWithPrerequisiteInput` (default: **false**): Whether the default input should be included when prerequisite input is requested. When set to yes, the default input will be added in `defaultInputFromDataProvider` field inside the prerequisite input JSON that is specified as input for this transformer.
