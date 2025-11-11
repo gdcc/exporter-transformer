@@ -1,0 +1,7 @@
+{
+    "formatName": "cdi",
+    "harvestable": true,
+    "availableToUsers": true,
+    "mediaType": "application/ld+json; profile=\"http://www.w3.org/ns/json-ld#flattened http://www.w3.org/ns/json-ld#compacted https://ddialliance.org/Specification/DDI-CDI/1.0\"",
+    "displayName": "DDI-CDI (Cross Domain Integration)"
+}
