@@ -93,12 +93,13 @@ def find_cdi_file():
                     continue
                 
                 # Check for EXACT MIME type: application/ld+json with DDI-CDI profile
-                # Must match: application/ld+json; profile="http://ddialliance.org/Specification/DDI-CDI/1.0/DDI-CDI.jsonld"
-                content_type_str = str(content_type)
+                # Must match: application/ld+json with ddialliance.org profile (case-insensitive)
+                content_type_str = str(content_type).lower()
                 is_cdi_mime = (
                     'application/ld+json' in content_type_str and 
                     'profile=' in content_type_str and
-                    'ddialliance.org/Specification/DDI-CDI' in content_type_str
+                    'ddialliance.org' in content_type_str and
+                    'ddi-cdi' in content_type_str
                 )
                 
                 if is_cdi_mime:
