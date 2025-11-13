@@ -25,11 +25,10 @@ def get_cdi_file_content(site_url, file_id):
         url = site_url + '/api/access/datafile/' + str(file_id)
         request = urllib2.Request(url)
         response = urllib2.urlopen(request, timeout=30)
-        content = response.read()
-        # Try to parse as JSON to validate
-        parsed = json.loads(content)
-        return parsed
-    except:
+        return response.read()
+    except Exception as e:
+        import sys
+        sys.stderr.write('Error downloading CDI file: ' + str(e) + '\n')
         return None
 
 # Try to find and return existing CDI file
