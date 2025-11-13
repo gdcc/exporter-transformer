@@ -122,7 +122,7 @@ This exporter provides DDI-CDI metadata export in two modes:
 
 The exporter is written in Python (Jython) and makes public API calls to check for existing CDI files before falling back to generation. It uses the specific MIME type with DDI-CDI profile to distinguish CDI files from other JSON-LD files, making it ideal for datasets that may have curated CDI metadata while providing automatic generation for others.
 
-**MIME Type:** `application/ld+json; profile="http://www.w3.org/ns/json-ld#flattened http://www.w3.org/ns/json-ld#compacted https://ddialliance.org/Specification/DDI-CDI/1.0"`
+**MIME Type:** `application/ld+json;profile="http://www.w3.org/ns/json-ld#flattened http://www.w3.org/ns/json-ld#compacted https://ddialliance.org/Specification/DDI-CDI/1.0"`
 
 ## Developer guide
 
