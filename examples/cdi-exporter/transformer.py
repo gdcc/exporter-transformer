@@ -34,124 +34,68 @@ def get_cdi_file_content(site_url, file_id):
 # Try to find and return existing CDI file
 def find_cdi_file():
     """Find the latest CDI file with application/ld+json MIME type"""
+    import sys
     
     # Extract site URL and dataset ID from the input data
     site_url = None
     dataset_id = None
+    files = []
     
-    # Try to get site URL from ORE export
+    # First, try to get site URL from ORE export (we always need this for downloading files)
     if 'datasetORE' in x and 'ore:describes' in x['datasetORE']:
         describes = x['datasetORE']['ore:describes']
         if '@id' in describes:
             dataset_url = describes['@id']
-            # Extract base URL (everything before /dataset.xhtml or /api)
+            
+            # Extract base URL (everything before /dataset.xhtml or /api or /citation)
             if '/dataset.xhtml' in dataset_url:
                 site_url = dataset_url.split('/dataset.xhtml')[0]
             elif '/citation' in dataset_url:
                 site_url = dataset_url.split('/citation')[0]
+            elif '/api/' in dataset_url:
+                site_url = dataset_url.split('/api/')[0]
+            # If it's just a DOI or persistent URL without path, we need to extract from config or path
+            elif dataset_url.startswith('http'):
+                # Try to get site URL from config or path
+                if 'config' in x and 'server-url' in x['config']:
+                    site_url = x['config']['server-url']
+                elif 'path' in x:
+                    # Path might be something like /api/datasets/export...
+                    # We can assume localhost:8080 or extract from request context
+                    site_url = 'http://localhost:8080'
     
     # Try to get dataset ID from datasetJson
     if 'datasetJson' in x and 'id' in x['datasetJson']:
         dataset_id = x['datasetJson']['id']
     
-    if not site_url or not dataset_id:
-        return None
+    # First, try to get files from the input data (already available in export)
+    if 'datasetJson' in x:
+        dataset_json = x['datasetJson']
+        if 'datasetVersion' in dataset_json and 'files' in dataset_json['datasetVersion']:
+            files = dataset_json['datasetVersion']['files']
     
-    # Get list of files
-    files = get_dataset_files(site_url, dataset_id)
+    # If no files in input data, try to fetch from API
+    if not files and site_url and dataset_id:
+        files = get_dataset_files(site_url, dataset_id)
     
     # Find CDI files - ONLY files with exact DDI-CDI MIME type
-    cdi_files = []
-    try:
-        for file_info in files:
-            try:
-                # Safe access for Jython/Java HashMap
-                datafile = None
-                try:
-                    datafile = file_info.get('dataFile')
-                except:
-                    try:
-                        datafile = file_info['dataFile']
-                    except:
-                        continue
+    for file_info in files:
+        try:
+            datafile = file_info['dataFile']
+            content_type = str(datafile['contentType']).lower()
+            
+            # Check for application/ld+json with DDI-CDI profile (case-insensitive)
+            if 'application/ld+json' in content_type and 'ddialliance.org' in content_type and 'ddi-cdi' in content_type:
+                file_id = datafile['id']
                 
-                if not datafile:
-                    continue
-                
-                # Get content type safely
-                content_type = ''
-                try:
-                    content_type = datafile.get('contentType', '')
-                except:
-                    try:
-                        content_type = datafile['contentType']
-                    except:
-                        content_type = ''
-                
-                if not content_type:
-                    continue
-                
-                # Check for EXACT MIME type: application/ld+json with DDI-CDI profile
-                # Must match: application/ld+json with ddialliance.org profile (case-insensitive)
-                content_type_str = str(content_type).lower()
-                is_cdi_mime = (
-                    'application/ld+json' in content_type_str and 
-                    'profile=' in content_type_str and
-                    'ddialliance.org' in content_type_str and
-                    'ddi-cdi' in content_type_str
-                )
-                
-                if is_cdi_mime:
-                    # Safely extract file metadata
-                    file_id = None
-                    filename = ''
-                    create_date = ''
-                    
-                    try:
-                        file_id = datafile.get('id')
-                    except:
-                        try:
-                            file_id = datafile['id']
-                        except:
-                            pass
-                    
-                    try:
-                        filename = datafile.get('filename', '')
-                    except:
-                        try:
-                            filename = datafile['filename']
-                        except:
-                            pass
-                    
-                    try:
-                        create_date = datafile.get('createDate', '')
-                    except:
-                        try:
-                            create_date = datafile['createDate']
-                        except:
-                            pass
-                    
-                    if file_id:
-                        cdi_files.append({
-                            'id': file_id,
-                            'filename': filename,
-                            'createDate': create_date
-                        })
-            except:
-                pass
-    except:
-        pass
-    
-    # Sort by creation date (newest first) and get the most recent
-    if cdi_files:
-        cdi_files.sort(key=lambda f: f.get('createDate', ''), reverse=True)
-        latest_file = cdi_files[0]
-        
-        # Download and return the content
-        content = get_cdi_file_content(site_url, latest_file['id'])
-        if content:
-            return content
-    
+                # Found a CDI file - download and return it immediately
+                content = get_cdi_file_content(site_url, file_id)
+                if content:
+                    return content
+        except Exception as e:
+            # Skip files that don't have the expected structure
+            pass
+
     return None
 
 # Helper functions
@@ -188,8 +132,15 @@ def get_compound_values(fields, field_name):
 # Try to get existing CDI file first
 existing_cdi = find_cdi_file()
 if existing_cdi:
-    res = existing_cdi
-else:
+    # Parse the JSON content and assign to res
+    try:
+        res = json.loads(existing_cdi)
+    except:
+        # If parsing fails, fall back to generating metadata
+        res = {}
+        existing_cdi = None
+    
+if not existing_cdi:
     # Generate CDI JSON-LD from dataset metadata
     res = {}
     
@@ -1142,5 +1093,5 @@ else:
         if date_info:
             pass  # Add to an annotation or note entity if needed
     
-        # Set the graph
-        res['@graph'] = graph
+    # Set the graph
+    res['@graph'] = graph
