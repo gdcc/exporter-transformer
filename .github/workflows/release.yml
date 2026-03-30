@@ -14,9 +14,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - if: ${{ github.event_name == 'push' }}
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
       - if: ${{ inputs.version }}
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           ref: "${{ inputs.version }}"
       - name: Determine Java version from POM
